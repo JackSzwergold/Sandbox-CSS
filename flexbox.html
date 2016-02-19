@@ -75,6 +75,7 @@
 		.box
 		{
 			flex-basis: 10%;
+			flex-grow: 1;
 			min-width: 50px;
 			margin: 0 5px 5px 0;
 			text-align: left;
@@ -86,17 +87,21 @@
 		.box:last-child { margin: 0 0 5px 0; }
 		.box:nth-child(1) {
 			background-color: #800;
+			order: 1;
 		}
 		
 		.box:nth-child(2)
 		{
 			background-color: #080;
 			align-self: flex-end;
+			flex-grow: 2;
+			order: 2;
 		}
 		
 		.box:nth-child(3) 
 		{
 			background-color: #008;
+			order: 3;
 		}
 
 </style>
