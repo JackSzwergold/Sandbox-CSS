@@ -88,6 +88,7 @@ html, body
 	padding: 5px;
 }
 
+/*
 .box:nth-child(1) { background-color: #111; }
 .box:nth-child(2) { background-color: #222; }
 .box:nth-child(3) { background-color: #333; }
@@ -97,3 +98,8 @@ html, body
 .box:nth-child(7) { background-color: #777; }
 .box:nth-child(8) { background-color: #888; }
 .box:nth-child(9) { background-color: #999; }
+*/
+
+.box:nth-child(-n+3) { background: #111; }
+.box:nth-child(n+4):nth-child(-n+6) { background: #555; }
+.box:nth-child(n+7) { background: #999; }
