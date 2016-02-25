@@ -17,44 +17,13 @@ body
 	background-color: #fff;
 }
 
-a, a:visited, a:hover, a:active
-{
-	text-decoration: none;
-	color: #000;
-}
-
-ul, li { list-style: none; }
-:focus { -moz-outline-style: none; }
-a { outline: none; }
-
-hr
-{
-	border: 0;
-	background-color: #000;
-	height: 1px;
-	margin: 0.75em 0 1.5em 0;
-	clear: both;
-}
-
 /**************************************************************************************************/
-.container, .box
-{
-	position: relative;
-	float: left;
-	display: inline;
-}
-
 .container
 {
 	display: flex;
-	flex-flow: row wrap;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: center;
-	align-content: stretch;
 	width: calc(100% - 32px);
-	height: 200px;
+	height: 75%;
 	border: solid #000 1px;
 	margin: 10px 10px 0 10px;
 	padding: 5px 5px 0 5px;
@@ -63,8 +32,9 @@ hr
 .box
 {
 	flex-basis: 10%;
-	flex-grow: 0;
+	flex-grow: 1;
 	min-width: 50px;
+	min-height: 50px;
 	margin: 0 5px 5px 0;
 	text-align: left;
 	padding: 5px;
@@ -77,19 +47,20 @@ hr
 .box:nth-child(1)
 {
 	background-color: #800;
+	align-self: flex-start;
 	order: 1;
 }
 
 .box:nth-child(2)
 {
 	background-color: #080;
-	align-self: flex-end;
-	flex-grow: 0;
+	align-self: center;
 	order: 2;
 }
 
 .box:nth-child(3)
 {
 	background-color: #008;
+	align-self: flex-end;
 	order: 3;
 }
