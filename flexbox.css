@@ -47,14 +47,9 @@ hr
 .container
 {
 	display: flex;
-	/* display: -webkit-box; */
-	/* display: -moz-flex; */
-	/* display: -ms-flexbox; */
-	/* display: -webkit-flex; */
 	flex-flow: row wrap;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	/* justify-content: space-around; */
 	justify-content: flex-end;
 	align-items: center;
 	align-content: stretch;
