@@ -54,18 +54,26 @@ html, body
 	/* justify-content: center; */
 	/* justify-content: space-between; */
 	/* justify-content: space-around; */
-	justify-content: space-between;
+	justify-content: center;
+	/* align-content: flex-start; */
+	/* align-content: flex-end; */
+	/* align-content: center; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	align-content: center;
 	width: calc(100% - 10px);
 	height: calc(100% - 10px);
+	width: 600px;
 	margin: 0 0 10px 10px;
 	padding: 0;
+	background-color: #444;
 }
 
 .box
 {
 	flex-basis: 5%;
 	flex-grow: 1;
-	min-width: 50px;
+	min-width: 150px;
 	min-height: 50px;
 	margin: 10px 10px 0 0;
 	padding: 0;
