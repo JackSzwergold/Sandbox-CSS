@@ -26,6 +26,15 @@ html, body
 
 /**************************************************************************************************/
 /* Simplify the progress bar. */
+
+progress {
+  color: #0063a6;
+
+}
+
+progress::-webkit-progress-bar { background: #fff; }
+progress::-webkit-progress-value { background: #0063a6; }
+
 progress[value]
 {
 	-webkit-appearance: none;
@@ -35,3 +44,4 @@ progress[value]
 	width: 250px;
 	height: 20px;
 }
+
