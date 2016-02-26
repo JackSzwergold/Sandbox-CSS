@@ -14,7 +14,7 @@ body
 	font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
 	font-size: 100%;
 	line-height: 1.2em;
-	text-align: center;
+
 	padding: 10px 10px 10px 10px;
 }
 
@@ -24,24 +24,24 @@ html, body
 	height: 100%;
 }
 
-/**************************************************************************************************/
+/****************************************************************************************/
 /* Simplify the progress bar. */
-
-progress {
-  color: #0063a6;
-
-}
-
-progress::-webkit-progress-bar { background: #fff; }
-progress::-webkit-progress-value { background: #0063a6; }
-
 progress[value]
 {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	border: none;
-	width: 250px;
+	width: calc(100% - 20px);
 	height: 20px;
+	margin: 0 0 10px 0;
+	padding: 0;
 }
 
+progress { background-color: #ffc; }
+progress::-moz-progress-bar { background-color: #800; }
+
+progress::-webkit-progress-value { background-color: #800; }
+progress::-webkit-progress-bar { background-color: #ffc; }
+
+/****************************************************************************************/
