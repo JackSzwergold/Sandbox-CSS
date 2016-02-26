@@ -31,14 +31,14 @@ progress[value]
 	-moz-appearance: none;
 	appearance: none;
 	border: none;
-	width: calc(100% - 20px);
-	height: 20px;
+	width: calc(100% - 40px);
+	height: 60px;
 	margin: 0 0 10px 0;
-	padding: 0;
 }
 
 /****************************************************************************************/
 /* Progress background and foreground colors. */
+
 /* progress { background-color: #ffc; }
 progress::-moz-progress-bar { background-color: #800; }
 progress::-webkit-progress-value { background-color: #800; }
@@ -47,14 +47,14 @@ progress::-webkit-progress-bar { background-color: #ffc; } */
 /****************************************************************************************/
 /* Progress background colors. */
 /* Firefox/Opera */
-progress { background-color: #ffc !important; }
+progress { background-color: #333 !important; }
 
 /* Polyfill */
 /* !important is needed by the polyfill */
-progress[role][aria-valuenow] { background-color: #ffc !important; }
+progress[role][aria-valuenow] { background-color: #333 !important; }
 
 /* WebKit (Chrome/Safari) */
-progress::-webkit-progress-bar { background-color: #ffc; }
+progress::-webkit-progress-bar { background-color: #333; }
 
 /****************************************************************************************/
 /* Progress foreground colors. */
