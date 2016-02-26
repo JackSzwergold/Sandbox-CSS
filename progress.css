@@ -4,11 +4,7 @@
 	padding: 0;
 }
 
-html
-{
-	font-size: 9pt;
-	background-color: #600;
-}
+html { font-size: 9pt; }
 
 body
 {
@@ -19,7 +15,7 @@ body
 	font-size: 100%;
 	line-height: 1.2em;
 	text-align: center;
-	background-color: #060;
+	padding: 10px 10px 10px 10px;
 }
 
 html, body
@@ -29,4 +25,38 @@ html, body
 }
 
 /**************************************************************************************************/
+/* Simplify the progress bar. */
+progress[value]
+{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	width: 250px;
+	height: 20px;
+}
 
+/**************************************************************************************************/
+/* Safari basics. */
+progress[value]::-webkit-progress-bar
+{
+	background-color: #eee;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value
+{
+	background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0,0, 0, .1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(left, #09c, #f44);
+	border-radius: 2px;
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+/**************************************************************************************************/
+/* Firefox basics. */
+progress[value]::-moz-progress-bar
+{
+	background-image: -moz-linear-gradient( 135deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66% ), -moz-linear-gradient( top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25) ), -moz-linear-gradient( left, #09c, #f44 );
+	border-radius: 2px;
+	background-size: 35px 20px, 100% 100%, 100% 100%;
+}
