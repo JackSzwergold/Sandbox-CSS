@@ -43,8 +43,9 @@ progress[value]
 	position: relative;
 	float: left;
 	display: inline;
-	background-color: #500;
+	background-color: #ccc;
 	width: calc(100% - 40px);
+	height: calc(100% - 30px);
 	padding: 10px 10px 0 10px;
 }
 
