@@ -73,7 +73,7 @@ html, body
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: auto;
-	min-width: 180px;
+	min-width: 270px;
 	min-height: 90px;
 	margin: 10px 10px 0 0;
 	padding: 0;
@@ -103,3 +103,18 @@ html, body
 .box:nth-child(-n+3) { background: #111; }
 .box:nth-child(n+4):nth-child(-n+6) { background: #555; }
 .box:nth-child(n+7) { background: #999; }
+
+/**************************************************************************************************/
+/* Media queries. */
+
+@media only screen and (max-width : 768px)
+{
+	.container { flex-direction: row; }
+	
+	.box
+	{
+		min-width: 135px;
+		min-height: 90px;
+		.box { background: #100;
+	}
+}
