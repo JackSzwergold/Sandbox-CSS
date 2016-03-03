@@ -21,7 +21,7 @@ window.onload=function() {
 	  waveform.update({
 		data: data
 	  });
-	}, 50);
+	}, 5);
 
 	/* Weird demo. */
 	new Waveform({
