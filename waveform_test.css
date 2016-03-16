@@ -130,6 +130,6 @@ html, body
 	{
 		min-width: 135px;
 		min-height: 90px;
-		.box { background: #100;
+		background: #ff6;
 	}
 }
