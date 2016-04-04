@@ -121,40 +121,54 @@ html, body
 /****************************************************************************************/
 .cube .face.front
 {
-	background: rgb( 14, 1, 76 );
-	opacity: 0.5;
+	background: rgb( 66, 185, 170 );
+	opacity: 0.75;
 }
 
 .cube .face.back
 {
-	background: rgb( 244, 149, 30 );
-	opacity: 0.5;
+	background: rgb( 66, 185, 170 );
+	opacity: 0.75;
 }
 
 .cube .face.right
 {
-	background: rgb( 255, 255, 255 );
-	opacity: 0.5;
+	background: rgb( 49, 98, 123 );
+	opacity: 0.75;
 }
 
 .cube .face.left
 {
-	background: rgb( 241, 21, 1 );
-	opacity: 0.5;
+	background: rgb( 49, 98, 123 );
+	opacity: 0.75;
 }
 
 .cube .face.top
 {
-	background: rgb( 255, 255, 255 );
-	opacity: 0.5;
+	background: rgb( 202, 25, 59 );
+	opacity: 0.75;
 }
 
 .cube .face.bottom
 {
-	background: rgb( 251, 255, 72 );
-	opacity: 0.5;
+	background: rgb( 202, 25, 59 );
+	opacity: 0.75;
 }
 
+/****************************************************************************************/
+/* 239, 165, 207 (pink) */
+/* 246, 184, 0 (orange) */
+/* 66, 185, 170 (teal) */
+/* 202, 25, 59 (maroon) */
+/* 248, 228, 0 (yellow) */
+/* 49, 98, 123 (blue) */
+/* 240, 11, 121 (watermelon) */
+/* 208, 227, 94 (lime) */
+/* 19, 19, 19 (black) */
+/* 180, 202, 218 (gun blue) */
+/* 245, 223, 177 (peach) */
+/* 242, 39, 63 (cherry red) */
+/****************************************************************************************/
 /****************************************************************************************/
 .cube .face.front
 {
