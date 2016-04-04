@@ -97,6 +97,7 @@ html, body
 	-moz-transition: -moz-transform 1s;
 	-o-transition: -o-transform 1s;
 	transition: transform 1s;
+	animation: around_and_round 36s linear infinite;
 }
 
 .cube .face
@@ -115,6 +116,14 @@ html, body
 {
 	width: 160px;
 	height: 160px;
+}
+
+.cube:hover
+{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
 }
 
 /****************************************************************************************/
@@ -234,7 +243,6 @@ html, body
 	transform: translateZ( -90px ) rotateX( -180deg );
 }
 
-.cube:hover,
 .cube.rotate_right
 {
 	-webkit-transform: translateZ( -90px ) rotateY( -90deg );
@@ -251,7 +259,6 @@ html, body
 	transform: translateZ( -90px ) rotateY( 90deg );
 }
 
-.cube:active,
 .cube.rotate_top
 {
 	-webkit-transform: translateZ( -90px ) rotateX( -90deg );
@@ -266,4 +273,11 @@ html, body
 	-moz-transform: translateZ( -90px ) rotateX( 90deg );
 	-o-transform: translateZ( -90px ) rotateX( 90deg );
 	transform: translateZ( -90px ) rotateX( 90deg );
+}
+
+/****************************************************************************************/
+
+@keyframes around_and_round {
+  0% { transform: rotateY( 0deg ) rotateX( 0deg ); }
+  100% { transform: rotateY( -360deg ) rotateX( 360deg ); }
 }
