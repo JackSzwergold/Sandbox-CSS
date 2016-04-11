@@ -100,6 +100,7 @@ html, body
 	-moz-transform-style: preserve-3d;
 	-o-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+	animation: around_and_round 36s linear infinite;
 }
 
 .cube .face
@@ -520,6 +521,13 @@ html, body
 @keyframes rotate_down_right {
   0% { transform: rotateY( 0deg ) rotateX( 0deg ); }
   100% { transform: rotateY( 360deg ) rotateX( -360deg ); }
+}
+
+/****************************************************************************************/
+
+@keyframes around_and_round {
+  0% { transform: rotateY( 0deg ) rotateX( 0deg ); }
+  100% { transform: rotateY( -360deg ) rotateX( 360deg ); }
 }
 
 /**************************************************************************************************/
