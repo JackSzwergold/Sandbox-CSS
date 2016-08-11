@@ -129,8 +129,8 @@ html, body
 
 @media (max-width: 767px)
 {
-	.Background { background: url('video/test_video.png') center center / cover no-repeat; }
-	.BackgroundVideo { display: none; }
+	/* .Background { background: url('video/test_video.png') center center / cover no-repeat; } */
+	/* .BackgroundVideo { display: none; } */
 }
 
 /**************************************************************************************************/
