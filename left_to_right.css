@@ -120,30 +120,47 @@ img {
   line-height: 0.9em;
   font-size: 1250%;
   color: #fff;
-
 }
 
 /**************************************************************************************************/
 
 .Object:nth-child(1) {
-  animation: moveX 9.05s linear 0s infinite normal, moveY 12.05s linear 0s infinite normal, rotateFlat 3s linear 0s infinite;
+  animation: moveLeftRight 9.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal;
 }
 
 .Object:nth-child(2) {
-  animation: moveX 12.05s linear 0s infinite normal, moveY 9.05s linear 0s infinite normal, rotateFlat 2s linear 0s infinite;
+  animation: moveLeftRight 12.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
 }
 
 .Object:nth-child(3) {
-  animation: moveX 17.05s linear 0s infinite normal, moveY 10.05s linear 0s infinite normal, rotateFlat 4s linear 0s infinite;
+  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 10.05s linear 0s infinite normal
 }
 
 .Object:nth-child(4) {
-  animation: moveX 10.05s linear 0s infinite normal, moveY 17.05s linear 0s infinite normal, rotateFlat 6s linear 0s infinite;
+  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 17.05s linear 0s infinite normal;
 }
 
 /**************************************************************************************************/
 
-@keyframes moveX {
+/*.Object:nth-child(1) h1 {
+  animation: rotateFlat 3s linear 0s infinite;
+}
+
+.Object:nth-child(2) h1 {
+  animation: rotateFlat 2s linear 0s infinite;
+}
+
+.Object:nth-child(3) h1 {
+  animation: rotateFlat 4s linear 0s infinite;
+}
+
+.Object:nth-child(4) h1 {
+  animation: rotateFlat 6s linear 0s infinite;
+}*/
+
+/**************************************************************************************************/
+
+@keyframes moveLeftRight {
   0% {
     left: 0px;
     opacity: 0;
@@ -159,16 +176,16 @@ img {
 
 /**************************************************************************************************/
 
-@keyframes moveY {
+@keyframes moveTopBottom {
   0% {
-    bottom: 0px;
+    top: 0px;
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    bottom: 100%;
+    top: 100%;
     opacity: 0;
   }
 }
