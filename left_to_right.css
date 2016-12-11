@@ -100,15 +100,12 @@ img {
   background-color: #d00;
   width: 100%;
   height: 100%;
-  background: -moz-linear-gradient(-45deg, #6689CC 0%, #C4D8E2 100%);
-  background: -webkit-linear-gradient(-45deg, #6689CC 0%, #C4D8E2 100%);
-  background: linear-gradient(135deg, #6689CC 0%, #C4D8E2 100%);
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#6689CC', endColorstr='#C4D8E2', GradientType=1);
+  background: #002654;
   overflow: hidden;
-  -webkit-perspective: 500px;
-  -moz-perspective: 500px;
-  -o-perspective: 500px;
-  perspective: 500px;
+  -webkit-perspective: 750px;
+  -moz-perspective: 750px;
+  -o-perspective: 750px;
+  perspective: 750px;
 
 }
 
@@ -119,12 +116,14 @@ img {
   display: block;
   background-color: transparent;
   position: absolute;
-  top: 0px;
-  bottom: initial;
-  -webkit-animation: moveX 9.09s linear 0s infinite alternate, moveY 4.04s linear 0s infinite alternate;
-  -moz-animation: moveX 9.09s linear 0s infinite alternate, moveY 4.04s linear 0s infinite alternate;
-  -o-animation: moveX 9.09s linear 0s infinite alternate, moveY 4.04s linear 0s infinite alternate;
-  animation: moveX 9.09s linear 0s infinite alternate, moveY 4.04s linear 0s infinite alternate;
+  top: 0%;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  -webkit-animation: moveX 9.09s linear 0s infinite normal, moveY 14.04s linear 0s infinite normal;
+  -moz-animation: moveX 9.09s linear 0s infinite normal, moveY 14.04s linear 0s infinite normal;
+  -o-animation: moveX 9.09s linear 0s infinite normal, moveY 14.04s linear 0s infinite normal;
+  animation: moveX 9.09s linear 0s infinite normal, moveY 14.04s linear 0s infinite normal;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -132,12 +131,25 @@ img {
 }
 
 .Object:nth-child(2) {
-  top: initial;
-  bottom: 0px;
-  -webkit-animation: moveX 5.05s linear 0s infinite alternate, moveY 7.07s linear 0s infinite alternate;
-  -moz-animation: moveX 5.05s linear 0s infinite alternate, moveY 7.07s linear 0s infinite alternate;
-  -o-animation: moveX 5.05s linear 0s infinite alternate, moveY 7.07s linear 0s infinite alternate;
-  animation: moveX 5.05s linear 0s infinite alternate, moveY 7.07s linear 0s infinite alternate;
+  top: 0%;
+  right: inherit;
+  bottom: inherit;
+  left: inherit;
+  -webkit-animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
+  -moz-animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
+  -o-animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
+  animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
+}
+
+.Object:nth-child(3) {
+  top: inherit;
+  right: inherit;
+  bottom: 0%;
+  left: inherit;
+  -webkit-animation: moveX 18.08s linear 0s infinite normal, moveY 13.03s linear 0s infinite normal;
+  -moz-animation: moveX 18.08s linear 0s infinite normal, moveY 13.03s linear 0s infinite normal;
+  -o-animation: moveX 18.08s linear 0s infinite normal, moveY 13.03s linear 0s infinite normal;
+  animation: moveX 18.08s linear 0s infinite normal, moveY 13.03s linear 0s infinite normal;
 }
 
 .Object h1 {
@@ -146,7 +158,7 @@ img {
 	text-transform: uppercase;
 	line-height: 0.9em;
   font-size: 1250%;
-  color: #333;
+  color: #fff;
 }
 
 
@@ -160,10 +172,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     left: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -176,10 +189,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     left: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -192,10 +206,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     left: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -208,10 +223,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     left: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -228,10 +244,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     bottom: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -244,10 +261,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     bottom: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -260,10 +278,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     bottom: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
@@ -276,10 +295,11 @@ img {
   }
   50% {
     opacity: 1;
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     bottom: calc(100% - 0px);
-    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
