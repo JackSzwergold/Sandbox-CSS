@@ -24,6 +24,7 @@ html, body {
   background-color: #fff;
 }
 
+
 /**************************************************************************************************/
 
 a, a:visited, a:hover, a:active {
@@ -56,6 +57,7 @@ img {
   display: block;
 }
 
+
 /**************************************************************************************************/
 /* Font faces. */
 
@@ -66,7 +68,9 @@ img {
   font-style: normal;
 }
 
+
 /**************************************************************************************************/
+
 .Wrapper {
   display: flex;
   flex-direction: column;
@@ -86,7 +90,9 @@ img {
   user-select: none;
 }
 
+
 /**************************************************************************************************/
+
 .Core {
   position: relative;
   text-align: left;
@@ -98,29 +104,30 @@ img {
   perspective: 750px;
 }
 
+
 /**************************************************************************************************/
 
 .Object {
-  display: block;
-  background-color: transparent;
   position: absolute;
-  width: auto;
-  top: inherit;
-  right: inherit;
-  bottom: inherit;
-  left: inherit;
   transform-style: preserve-3d;
+  background-color: #d00;
+  overflow: hidden;
 }
 
+
 /**************************************************************************************************/
+
 .Object h1 {
   font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: 0.9em;
+  line-height: normal;
+  vertical-align: normal;
   font-size: 1250%;
   color: #fff;
+  background-color: #0d0;
 }
+
 
 /**************************************************************************************************/
 
@@ -140,23 +147,25 @@ img {
   animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 17.05s linear 0s infinite normal;
 }
 
+
 /**************************************************************************************************/
 
-/*.Object:nth-child(1) h1 {
-  animation: rotateFlat 3s linear 0s infinite;
+.Object:nth-child(1) h1 {
+  font-size: 950%;
 }
 
 .Object:nth-child(2) h1 {
-  animation: rotateFlat 2s linear 0s infinite;
+  font-size: 750%;
 }
 
 .Object:nth-child(3) h1 {
-  animation: rotateFlat 4s linear 0s infinite;
+  font-size: 1500%;
 }
 
 .Object:nth-child(4) h1 {
-  animation: rotateFlat 6s linear 0s infinite;
-}*/
+  font-size: 2250%;
+}
+
 
 /**************************************************************************************************/
 
@@ -174,6 +183,7 @@ img {
   }
 }
 
+
 /**************************************************************************************************/
 
 @keyframes moveTopBottom {
@@ -190,7 +200,9 @@ img {
   }
 }
 
+
 /**************************************************************************************************/
+
 @keyframes rotateFlat {
   0% {
     transform: rotate(0deg);
@@ -209,7 +221,9 @@ img {
   }
 }
 
+
 /**************************************************************************************************/
+
 @keyframes rotate3D {
   0% {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
