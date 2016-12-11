@@ -24,7 +24,6 @@ html, body {
   background-color: #fff;
 }
 
-
 /**************************************************************************************************/
 
 a, a:visited, a:hover, a:active {
@@ -57,10 +56,7 @@ img {
   display: block;
 }
 
-
 /**************************************************************************************************/
-
-
 /* Font faces. */
 
 @font-face {
@@ -70,9 +66,7 @@ img {
   font-style: normal;
 }
 
-
 /**************************************************************************************************/
-
 .Wrapper {
   display: flex;
   flex-direction: column;
@@ -94,7 +88,6 @@ img {
 
 
 /**************************************************************************************************/
-
 .Core {
   position: relative;
   text-align: left;
@@ -106,13 +99,13 @@ img {
   perspective: 750px;
 }
 
-
 /**************************************************************************************************/
 
 .Object {
   display: block;
   background-color: transparent;
   position: absolute;
+  width: auto;
   top: inherit;
   right: inherit;
   bottom: inherit;
@@ -120,9 +113,7 @@ img {
   transform-style: preserve-3d;
 }
 
-
 /**************************************************************************************************/
-
 .Object h1 {
   font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
   font-weight: normal;
@@ -130,6 +121,7 @@ img {
   line-height: 0.9em;
   font-size: 1250%;
   color: #fff;
+  background-color: #d00;
 }
 
 .Object:nth-child(1) h1 {
@@ -148,21 +140,20 @@ img {
   font-size: 1250%;
 }
 
-
 /**************************************************************************************************/
 
 .Object:nth-child(1) {
   top: -10%;
   bottom: inherit;
   left: inherit;
-  animation: moveX 9.09s linear 0s infinite normal, moveY 14.04s linear 0s infinite normal;
+  animation: moveX 9.05s linear 0s infinite normal, moveY 12.05s linear 0s infinite normal, rotateFlat 3s linear 0s infinite;
 }
 
 .Object:nth-child(2) {
   top: -10%;
   bottom: inherit;
   left: inherit;
-  animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
+  animation: moveX 12.05s linear 0s infinite normal, moveY 9.05s linear 0s infinite normal, rotateFlat 2s linear 0s infinite;
 }
 
 .Object:nth-child(3) {
@@ -170,7 +161,8 @@ img {
   right: inherit;
   bottom: -10%;
   left: inherit;
-  animation: moveX 18.08s linear 0s infinite normal, moveY 13.03s linear 0s infinite normal;
+  animation: moveX 17.05s linear 0s infinite normal, moveY 10.05s linear 0s infinite normal, rotateFlat 4s linear 0s infinite;
+  background-color: #f00;
 }
 
 .Object:nth-child(4) {
@@ -178,45 +170,63 @@ img {
   right: inherit;
   bottom: -10%;
   left: inherit;
-  animation: moveX 9.09s linear 0s infinite normal, moveY 11.01s linear 0s infinite normal;
+  animation: moveX 10.05s linear 0s infinite normal, moveY 17.05s linear 0s infinite normal, rotateFlat 6s linear 0s infinite;
 }
-
 
 /**************************************************************************************************/
 
 @keyframes moveX {
   0% {
     left: 0px;
-    transform: rotate(0deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
-    transform: rotate(90deg) rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     left: 100%;
-    transform: rotate(360deg) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
   }
 }
-
 
 /**************************************************************************************************/
 
 @keyframes moveY {
   0% {
     bottom: 0px;
-    transform: rotate(0deg) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     opacity: 0;
   }
   50% {
     opacity: 1;
-    transform: rotate(90deg) rotateX(90deg) rotateY(90deg) rotateZ(90deg);
   }
   100% {
     bottom: 100%;
-    transform: rotate(360deg) rotateX(360deg) rotateY(360deg) rotateZ(360deg);
     opacity: 0;
+  }
+}
+
+/**************************************************************************************************/
+@keyframes rotateFlat {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/**************************************************************************************************/
+@keyframes rotate3D {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
   }
 }
