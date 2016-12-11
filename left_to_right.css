@@ -124,23 +124,34 @@ img {
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
 }
 
 
 /**************************************************************************************************/
 
 .Object h1 {
-  /*font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;*/
+  font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
   font-weight: normal;
   text-transform: uppercase;
   line-height: 0.9em;
   font-size: 1250%;
   color: #fff;
+}
+
+.Object:nth-child(1) h1 {
+  font-size: 950%;
+}
+
+.Object:nth-child(2) h1 {
+  font-size: 1500%;
+}
+
+.Object:nth-child(3) h1 {
+  font-size: 1750%;
+}
+
+.Object:nth-child(4) h1 {
+  font-size: 1250%;
 }
 
 
@@ -187,6 +198,7 @@ img {
   -o-animation: moveX 9.09s linear 0s infinite normal, moveY 11.01s linear 0s infinite normal;
   animation: moveX 9.09s linear 0s infinite normal, moveY 11.01s linear 0s infinite normal;
 }
+
 
 /**************************************************************************************************/
 
