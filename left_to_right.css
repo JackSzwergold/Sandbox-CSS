@@ -106,7 +106,6 @@ img {
   -moz-perspective: 750px;
   -o-perspective: 750px;
   perspective: 750px;
-
 }
 
 
@@ -132,7 +131,6 @@ img {
 
 .Object:nth-child(2) {
   top: 0%;
-  right: inherit;
   bottom: inherit;
   left: inherit;
   -webkit-animation: moveX 15.05s linear 0s infinite normal, moveY 17.07s linear 0s infinite normal;
