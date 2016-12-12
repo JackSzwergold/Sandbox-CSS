@@ -149,15 +149,23 @@ img {
   animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 17.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
 }
 
+.Object:nth-child(5) {
+  animation: moveLeftRight 7.05s linear 0s infinite normal, moveTopBottom 15.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
+}
+
+.Object:nth-child(6) {
+  animation: moveLeftRight 11.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
+}
+
 
 /**************************************************************************************************/
 
 .Object:nth-child(1) h1 {
-  font-size: 950%;
+  font-size: 750%;
 }
 
 .Object:nth-child(2) h1 {
-  font-size: 750%;
+  font-size: 950%;
 }
 
 .Object:nth-child(3) h1 {
@@ -166,6 +174,14 @@ img {
 
 .Object:nth-child(4) h1 {
   font-size: 1500%;
+}
+
+.Object:nth-child(5) h1 {
+  font-size: 1750%;
+}
+
+.Object:nth-child(6) h1 {
+  font-size: 2000%;
 }
 
 
