@@ -62,22 +62,41 @@ img {
 /* Font faces. */
 
 @font-face {
-  font-family: 'LangdonRegular';
-  src: url('fonts/langdon-webfont.woff2') format('woff2'), url('fonts/langdon-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'ChunkFiveRoman';
+    src: url('fonts/chunkfive-webfont.eot');
+    src: url('fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/chunkfive-webfont.woff2') format('woff2'),
+         url('fonts/chunkfive-webfont.woff') format('woff'),
+         url('fonts/chunkfive-webfont.ttf') format('truetype'),
+         url('fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/**************************************************************************************************/
+.Wrapper,
+.Text,
+.Text h1
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 
 /**************************************************************************************************/
 
 .Wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   margin: 0;
@@ -106,6 +125,42 @@ img {
 
 /**************************************************************************************************/
 
+.Text {
+  width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	/*background-image: url("../media/clouds_2.jpg");
+	background-color: #222;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;*/
+}
+
+
+/**************************************************************************************************/
+
+.Text h1 {
+  position: absolute;
+	top: 0;
+	left: 0;
+  font-family: "ChunkFiveRoman", "Georgia", "New York", "Times New Roman", "Times", serif;
+	font-weight: normal;
+	text-transform: none;
+	line-height: 0.9em;
+  font-size: 1500%;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	margin: 0;
+	padding: 10px;
+	color: #933311;
+	clear: both;
+	background-color: transparent;
+	cursor: default;
+  z-index: 1;
+}
+
+
+/**************************************************************************************************/
+
 .Object {
   position: absolute;
   transform-style: preserve-3d;
@@ -125,7 +180,7 @@ img {
   text-transform: uppercase;
   line-height: 100%;
   font-size: 1250%;
-  color: #fff;
+  color: #FFC61E;
 }
 
 
@@ -185,7 +240,7 @@ img {
 .Object:nth-child(even) h1 {
   font-size: 950%;
   filter: blur(5px);
-  color: #777;
+  color: #FFC61E;
 }
 
 .Object:nth-child(odd) h1 {
