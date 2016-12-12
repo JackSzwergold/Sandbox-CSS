@@ -96,7 +96,7 @@ img {
 .Core {
   position: relative;
   text-align: left;
-  background-color: #d00;
+
   width: 100%;
   height: 100%;
   background: #002654;
@@ -110,8 +110,12 @@ img {
 .Object {
   position: absolute;
   transform-style: preserve-3d;
-  background-color: #d00;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  vertical-align: bottom;
+
 }
 
 
@@ -121,30 +125,28 @@ img {
   font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;
   font-weight: normal;
   text-transform: uppercase;
-  line-height: normal;
-  vertical-align: normal;
+  line-height: 100%;
   font-size: 1250%;
   color: #fff;
-  background-color: #0d0;
 }
 
 
 /**************************************************************************************************/
 
 .Object:nth-child(1) {
-  animation: moveLeftRight 9.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal;
+  animation: moveLeftRight 9.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(2) {
-  animation: moveLeftRight 12.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
+  animation: moveLeftRight 12.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(3) {
-  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 10.05s linear 0s infinite normal
+  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 10.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(4) {
-  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 17.05s linear 0s infinite normal;
+  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 17.05s linear 0s infinite normal, rotateFlat 5s linear 0s infinite normal;
 }
 
 
@@ -159,11 +161,11 @@ img {
 }
 
 .Object:nth-child(3) h1 {
-  font-size: 1500%;
+  font-size: 1250%;
 }
 
 .Object:nth-child(4) h1 {
-  font-size: 2250%;
+  font-size: 1500%;
 }
 
 
