@@ -327,57 +327,57 @@ img {
 /**************************************************************************************************/
 
 .Object:nth-child(1) {
-  animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(2) {
-  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(3) {
-  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(4) {
-  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(5) {
-  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(6) {
-  animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(7) {
-  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 4.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 4.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(8) {
-  animation: moveLeftRight 15.05s linear 0s infinite normal, moveTopBottom 10.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 15.05s linear 0s infinite normal, moveTopBottom 10.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(9) {
-  animation: moveLeftRight 14.05s linear 0s infinite normal, moveTopBottom 11.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 14.05s linear 0s infinite normal, moveTopBottom 11.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(10) {
-  animation: moveLeftRight 22.05s linear 0s infinite normal, moveTopBottom 4.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 22.05s linear 0s infinite normal, moveTopBottom 4.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 .Object:nth-child(11) {
-  animation: moveLeftRight 30.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 30.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
   z-index: 100;
 }
 
 .Object:nth-child(12) {
-  animation: moveLeftRight 14.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  animation: moveLeftRight 14.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal, rotateFlatClockwise 5s linear 0s infinite normal;
 }
 
 
@@ -429,7 +429,7 @@ img {
 
 /**************************************************************************************************/
 
-@keyframes linearrotateFlatClockwise {
+@keyframes rotateFlatClockwise {
   0% {
     transform: rotate(0deg);
   }
