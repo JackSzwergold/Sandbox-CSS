@@ -126,13 +126,13 @@ img {
 /**************************************************************************************************/
 
 .Text {
-  width: calc(100% - 20px);
-	height: calc(100% - 20px);
+  width: 100%;
+	height: 100%;
 	/*background-image: url("../media/clouds_2.jpg");
-	background-color: #222;
 	background-repeat: no-repeat;
 	background-position: left top;
-	background-size: cover;*/
+	background-size: cover;
+	background-color: #222;*/
 }
 
 
@@ -155,7 +155,34 @@ img {
 	clear: both;
 	background-color: transparent;
 	cursor: default;
-  z-index: 1;
+  z-index: 10;
+}
+
+
+/****************************************************************************************/
+
+.Text h1.front {
+  transform: translateZ(90px);
+}
+
+.Text h1.back {
+  transform: rotateX(-180deg) translateZ(90px);
+}
+
+.Text h1.right {
+  transform: rotateY(90deg) translateZ(90px);
+}
+
+.Text h1.left {
+  transform: rotateY(-90deg) translateZ(90px);
+}
+
+.Text h1.top {
+  transform: rotateX(90deg) translateZ(90px);
+}
+
+.Text h1.bottom {
+  transform: rotateX(-90deg) translateZ(90px);
 }
 
 
@@ -189,6 +216,7 @@ img {
 
 .Object:nth-child(1) {
   animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(2) {
@@ -197,6 +225,7 @@ img {
 
 .Object:nth-child(3) {
   animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(4) {
@@ -205,6 +234,7 @@ img {
 
 .Object:nth-child(5) {
   animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(6) {
@@ -213,6 +243,7 @@ img {
 
 .Object:nth-child(7) {
   animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 4.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(8) {
@@ -221,6 +252,7 @@ img {
 
 .Object:nth-child(9) {
   animation: moveLeftRight 14.05s linear 0s infinite normal, moveTopBottom 11.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(10) {
@@ -229,6 +261,7 @@ img {
 
 .Object:nth-child(11) {
   animation: moveLeftRight 30.05s linear 0s infinite normal, moveTopBottom 12.05s linear 0s infinite normal, linearrotateFlatClockwise 5s linear 0s infinite normal;
+  z-index: 100;
 }
 
 .Object:nth-child(12) {
