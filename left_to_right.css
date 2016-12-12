@@ -113,11 +113,11 @@ img {
   height: 100%;
   overflow: hidden;
   perspective: 1500px;
-  background: #002D47;
-  background: -webkit-linear-gradient(left top, #002D47, #FFD2B8);
-  background: -o-linear-gradient(bottom right, #002D47, #FFD2B8);
-  background: -moz-linear-gradient(bottom right, #002D47, #FFD2B8);
-  background: linear-gradient(to bottom right, #002D47, #FFD2B8);
+  background: #282821;
+  /*background: -webkit-linear-gradient(left top, #002D47, #282821);
+  background: -o-linear-gradient(bottom right, #002D47, #282821);
+  background: -moz-linear-gradient(bottom right, #002D47, #282821);
+  background: linear-gradient(to bottom right, #002D47, #282821);*/
 }
 
 
