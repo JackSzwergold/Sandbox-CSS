@@ -151,7 +151,7 @@ img {
 	height: calc(100% - 20px);
 	margin: 0;
 	padding: 10px;
-	color: #933311;
+  color: #933311;
 	clear: both;
 	background-color: transparent;
 	cursor: default;
@@ -180,7 +180,8 @@ img {
   text-transform: uppercase;
   line-height: 100%;
   font-size: 1250%;
-  color: #FFC61E;
+  /*color: #FFC61E;*/
+  color: #fff;
 }
 
 
@@ -240,7 +241,6 @@ img {
 .Object:nth-child(even) h1 {
   font-size: 950%;
   filter: blur(5px);
-  color: #FFC61E;
 }
 
 .Object:nth-child(odd) h1 {
