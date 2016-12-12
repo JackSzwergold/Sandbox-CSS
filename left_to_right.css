@@ -111,9 +111,13 @@ img {
   text-align: left;
   width: 100%;
   height: 100%;
-  background: #002D47;
   overflow: hidden;
   perspective: 1500px;
+  background: #002D47;
+  background: -webkit-linear-gradient(left top, #002D47, #FFD2B8);
+  background: -o-linear-gradient(bottom right, #002D47, #FFD2B8);
+  background: -moz-linear-gradient(bottom right, #002D47, #FFD2B8);
+  background: linear-gradient(to bottom right, #002D47, #FFD2B8);
 }
 
 
@@ -190,35 +194,35 @@ img {
 /****************************************************************************************/
 
 .Text.animate_up {
-  animation: rotate_up 9s linear infinite;
+  animation: rotate_up 18s linear infinite;
 }
 
 .Text.animate_down {
-  animation: rotate_down 9s linear infinite;
+  animation: rotate_down 18s linear infinite;
 }
 
 .Text.animate_left {
-  animation: rotate_left 9s linear infinite;
+  animation: rotate_left 18s linear infinite;
 }
 
 .Text.animate_right {
-  animation: rotate_right 9s linear infinite;
+  animation: rotate_right 18s linear infinite;
 }
 
 .Text.animate_up_left {
-  animation: rotate_up_left 9s linear infinite;
+  animation: rotate_up_left 18s linear infinite;
 }
 
 .Text.animate_down_left {
-  animation: rotate_down_left 9s linear infinite;
+  animation: rotate_down_left 18s linear infinite;
 }
 
 .Text.animate_up_right {
-  animation: rotate_up_right 9s linear infinite;
+  animation: rotate_up_right 18s linear infinite;
 }
 
 .Text.animate_down_right {
-  animation: rotate_down_right 9s linear infinite;
+  animation: rotate_down_right 18s linear infinite;
 }
 
 
