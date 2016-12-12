@@ -96,10 +96,9 @@ img {
 .Core {
   position: relative;
   text-align: left;
-
   width: 100%;
   height: 100%;
-  background: #002654;
+  background: #002D47;
   overflow: hidden;
   perspective: 750px;
 }
@@ -186,7 +185,7 @@ img {
 .Object:nth-child(even) h1 {
   font-size: 950%;
   filter: blur(5px);
-  color: #888;
+  color: #777;
 }
 
 .Object:nth-child(odd) h1 {
