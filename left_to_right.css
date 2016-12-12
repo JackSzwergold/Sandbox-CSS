@@ -169,7 +169,7 @@ img {
 }
 
 .Text h1.back {
-  transform: rotate(180deg) rotateX(-180deg) translateZ(240px);
+  transform: rotate(180deg) rotateX(180deg) translateZ(240px);
 }
 
 .Text h1.right {
