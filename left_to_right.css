@@ -165,7 +165,7 @@ img {
 /****************************************************************************************/
 
 .Text h1.front {
-  transform: translateZ(240px);
+  transform: rotate(0deg) rotateX(0deg) translateZ(240px);
 }
 
 .Text h1.back {
@@ -173,19 +173,19 @@ img {
 }
 
 .Text h1.right {
-  transform: rotateY(90deg) translateZ(300px);
+  transform: rotate(0deg) rotateY(90deg) translateZ(300px);
 }
 
 .Text h1.left {
-  transform: rotateY(-90deg) translateZ(300px);
+  transform: rotate(0deg) rotateY(-90deg) translateZ(300px);
 }
 
 .Text h1.top {
-  transform: rotateX(90deg) translateZ(120px);
+  transform: rotate(0deg) rotateX(90deg) translateZ(120px);
 }
 
 .Text h1.bottom {
-  transform: rotateX(-90deg) translateZ(120px);
+  transform: rotate(0deg) rotateX(-90deg) translateZ(120px);
 }
 
 /****************************************************************************************/
