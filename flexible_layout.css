@@ -101,16 +101,3 @@ html, body
 	background-color: #333;
 	max-width: 80px;
 }
-
-/**************************************************************************************************/
-/* Media queries. */
-
-@media only screen and (max-width : 768px)
-{
-	.main { flex-direction: row; }
-
-	.sidebar
-	{
-		background: #100;
-	}
-}
