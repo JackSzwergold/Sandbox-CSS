@@ -202,7 +202,7 @@ hr {
   }
   .main {
     min-width: 100%;
-    min-height: 50%;
+    min-height: auto;
   }
   .sidebar {
     min-width: 100%;
