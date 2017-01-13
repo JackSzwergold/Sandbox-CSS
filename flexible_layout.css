@@ -197,10 +197,11 @@ hr {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    align-items: stretch;
     justify-content: space-between;
-    align-content: stretch;
   }
   .main {
+    flex-grow: 2;
     min-width: 100%;
     min-height: auto;
   }
@@ -223,8 +224,11 @@ hr {
 @media (max-width: 480px) {
   .container {
     flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
   }
   .main {
+    flex-grow: 2;
     min-width: 100%;
     min-height: auto;
   }
