@@ -102,22 +102,6 @@ html, body
 	max-width: 80px;
 }
 
-/*
-.box:nth-child(1) { background-color: #111; }
-.box:nth-child(2) { background-color: #222; }
-.box:nth-child(3) { background-color: #333; }
-.box:nth-child(4) { background-color: #444; }
-.box:nth-child(5) { background-color: #555; }
-.box:nth-child(6) { background-color: #666; }
-.box:nth-child(7) { background-color: #777; }
-.box:nth-child(8) { background-color: #888; }
-.box:nth-child(9) { background-color: #999; }
-*/
-
-.box:nth-child(-n+3) { background: #111; }
-.box:nth-child(n+4):nth-child(-n+6) { background: #555; }
-.box:nth-child(n+7) { background: #999; }
-
 /**************************************************************************************************/
 /* Media queries. */
 
@@ -125,10 +109,8 @@ html, body
 {
 	.main { flex-direction: row; }
 
-	.box
+	.sidebar
 	{
-		min-width: 135px;
-		min-height: 90px;
 		background: #100;
 	}
 }
