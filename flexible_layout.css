@@ -113,13 +113,11 @@ hr
 	max-height: calc(100% - 300px);
 }
 
-.main
-{
+.main {
 	max-width: 800px;
 }
 
-.sidebar
-{
+.sidebar {
 	max-width: 160px;
 	background-color: #aaa;
 }
@@ -149,18 +147,34 @@ hr
 	max-width: 960px;
 }
 
+.header p, .footer p {
+	font-size: 90%;
+	padding: 5px;
+	background-color: #333;
+	max-width: 80px;
+}
+
 .header {
 	min-height: 120px;
 }
 
 .footer {
 	min-height: 180px;
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	-o-column-count: 3;
 	column-count: 3;
 }
 
-.header p, .footer p {
-	font-size: 90%;
-	padding: 5px;
-	background-color: #333;
-	max-width: 80px;
+/**************************************************************************************************/
+
+.footer ul
+{
+	background-color: #00f;
+}
+
+.footer li
+{
+	background-color: #f00;
+	margin-bottom: 5px;
 }
