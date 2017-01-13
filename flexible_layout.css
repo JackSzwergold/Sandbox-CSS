@@ -107,13 +107,12 @@ body
 /******************************************************************************/
 
 .header, .footer {
-{
 	flex-grow: 1;
 	flex-shrink: 0;
 	flex-basis: auto;
 	text-align: left;
 	color: #fff;
-	background-color: #bbb;
+	background-color: #444;
 	margin: 0;
 	padding: 0;
 }
