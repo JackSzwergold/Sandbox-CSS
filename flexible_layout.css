@@ -77,7 +77,7 @@ body
 
 .container,
 .main, .sidebar {
-	min-height: 180px;
+	min-height: 360px;
 }
 
 .main, .sidebar
