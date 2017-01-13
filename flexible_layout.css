@@ -195,12 +195,14 @@ hr {
 @media (max-width: 1024px) {}
 
 @media (max-width: 768px) {
-	.container {
+  .container {
     flex-direction: column;
+    justify-content: space-between;
+    align-content: stretch;
   }
   .main {
     min-width: 100%;
-    min-height: auto;
+    min-height: 50%;
   }
   .sidebar {
     min-width: 100%;
@@ -219,7 +221,7 @@ hr {
 }
 
 @media (max-width: 480px) {
-	.container {
+  .container {
     flex-direction: column;
   }
   .main {
