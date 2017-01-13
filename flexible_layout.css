@@ -180,3 +180,33 @@ hr {
 	background-color: #ddd;
 	margin-bottom: 5px;
 }
+
+@media only screen and (max-width : 768px)
+{
+	.container {
+		flex-direction: column;
+	}
+
+	.main {
+		min-width: 100%;
+		min-height: auto;
+	}
+
+	.sidebar {
+		min-width: 100%;
+		min-height: auto;
+	}
+
+	.header,
+	.footer {
+		width: calc(100% - 20px);
+	}
+
+	.footer {
+		width: calc(100% - 20px);
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		-o-column-count: 1;
+		column-count: 1;
+	}
+}
