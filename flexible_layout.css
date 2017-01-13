@@ -85,7 +85,7 @@ body
 	background-color: #bbb;
 	margin: 0;
 	padding: 0;
-	max-height: calc(100% - 150px);
+	max-height: calc(100% - 360px);
 }
 
 .main
@@ -124,7 +124,7 @@ body
 .header, .footer {
 	min-width: 960px;
 	max-width: 960px;
-	min-height: 75px;
+	min-height: 180px;
 }
 
 .header p, .footer p {
