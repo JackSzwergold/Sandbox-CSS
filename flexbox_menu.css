@@ -97,16 +97,16 @@ ul
 
 li
 {
-	flex-grow: 1;
+	flex-grow: 0;
 	flex-shrink: 0;
 	flex-basis: auto;
-	min-width: 18rem;
+	min-width: 12rem;
 	min-height: 6rem;
 	margin: 1rem 1rem 0 0;
 	padding: 0;
 	text-align: right;
 	color: #ffffff;
-	background-color: #ff0000;
+	background-color: #000000;
 }
 
 li:last-child
@@ -145,8 +145,9 @@ li:nth-child(n+7) { background: #999; }*/
 
 	li
 	{
-		min-width: 13.5rem;
+		flex-grow: 1;
+		min-width: 36rem;
 		min-height: 6rem;
-		background: #100;
+		background: #700;
 	}
 }
