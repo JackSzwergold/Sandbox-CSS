@@ -130,7 +130,7 @@ ul, li {
   flex-basis: auto;
   width: calc(100% - 20px);
   text-align: left;
-  background-color: #ffffcc;
+  /*background-color: #ffffcc;*/
 }
 
 /**************************************************************************************************/
@@ -145,11 +145,11 @@ header, footer {
 }
 
 header {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 footer {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 header p, footer p {
