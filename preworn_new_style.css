@@ -283,23 +283,6 @@ ul, li {
 
 /**************************************************************************************************/
 
-/*article footer .Copyright {
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #eee;
-  clear: both;
-}*/
-
-/*article footer .Copyright p {
-  font-style: italic;
-  font-size: 0.85rem;
-  color: #777777;
-  margin: 0;
-}*/
-
-
-/**************************************************************************************************/
-
 .Header, .Footer {
   display: flex;
   flex-direction: column;
