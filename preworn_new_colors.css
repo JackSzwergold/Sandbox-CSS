@@ -4,19 +4,13 @@ html, body {
   /*background-color: #333333;*/
 }
 
+
 /**************************************************************************************************/
 
-.Core h1 a:active, .Core h1 a:hover,
-.Core h2 a:active, .Core h2 a:hover,
-.Core h3 a:active, .Core h3 a:hover,
-.Core h4 a:active, .Core h4 a:hover,
-.Core h5 a:active, .Core h5 a:hover,
-.Core h6 a:active, .Core h6 a:hover,
-.Core p a:active, .Core p a:hover,
-.Core ul li a:active, .Core ul li a:hover,
-.Core ol li a:active, .Core ol li a:hover {
+.Core h1 a:active, .Core h1 a:hover, .Core h2 a:active, .Core h2 a:hover, .Core h3 a:active, .Core h3 a:hover, .Core h4 a:active, .Core h4 a:hover, .Core h5 a:active, .Core h5 a:hover, .Core h6 a:active, .Core h6 a:hover, .Core p a:active, .Core p a:hover, .Core ul li a:active, .Core ul li a:hover, .Core ol li a:active, .Core ol li a:hover {
   /*color: #FCA311;*/
 }
+
 
 /**************************************************************************************************/
 
@@ -30,4 +24,21 @@ html, body {
   /*background-color: #F74902;*/
   /*background-color: #00A3DD;*/
   /*background-color: #FCA311;*/
+}
+
+
+/**************************************************************************************************/
+
+header {
+  flex-shrink: 0;
+}
+
+/*.body {
+  flex-grow: 1;
+  overflow: auto;
+  min-height: 2em;
+}*/
+
+footer {
+  flex-shrink: 0;
 }

@@ -92,7 +92,7 @@ ul, li {
 	/* flex-direction: column-reverse; */
 	/* flex-direction: row; */
 	/* flex-direction: row-reverse; */
-	flex-direction: row;
+	flex-direction: column;
 	/* flex-wrap: nowrap; */
 	/* flex-wrap: wrap; */
 	/* flex-wrap: wrap-reverse; */
@@ -126,11 +126,37 @@ ul, li {
 
 .Core {
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
   flex-basis: auto;
   width: calc(100% - 20px);
   text-align: left;
-  /*background-color: #ffc;*/
+  background-color: #ffffcc;
+}
+
+/**************************************************************************************************/
+
+header, footer {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: calc(100% - 40px);
+  padding: 10px;
+  background-color: #888888;
+}
+
+header {
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+header p, footer p {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 1.35em;
 }
 
 /**************************************************************************************************/
@@ -256,7 +282,7 @@ ul, li {
 
 /**************************************************************************************************/
 
-.Navigation {
+/*.Navigation {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -267,11 +293,11 @@ ul, li {
   padding: 0px;
   width: 100%;
   background-color: transparent;
-}
+}*/
 
 /**************************************************************************************************/
 
-.Header, .Footer {
+/*.Header, .Footer {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -281,8 +307,8 @@ ul, li {
   margin: 0;
   width: 100%;
   clear: both;
-  /*word-wrap: normal;
-  word-break: normal;*/
+  word-wrap: normal;
+  word-break: normal;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -291,17 +317,17 @@ ul, li {
   user-select: none;
   cursor: default;
   min-height: 3rem;
-}
+}*/
 
 /**************************************************************************************************/
 
-.Header {
+/*.Header {
   padding: 0.25rem 0 1.75rem 0;
-}
+}*/
 
 /**************************************************************************************************/
 
-.Footer {
+/*.Footer {
   padding: 0.25rem 0 1.75rem 0;
   background-color: #333333;
 }
@@ -335,7 +361,7 @@ ul, li {
 .Footer .Left p a:hover {
 	color: #ffffff;
 	background-image: linear-gradient(#ffffff 50%, #ffffff 50%);
-}
+}*/
 
 /**************************************************************************************************/
 /* Media queries. */
