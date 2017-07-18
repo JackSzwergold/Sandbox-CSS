@@ -283,64 +283,6 @@ ul, li {
 
 /**************************************************************************************************/
 
-.Navigation .Left,
-.Navigation .Right {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  /*min-height: 2rem;*/
-}
-
-.Navigation .Left ul li,
-.Navigation .Right ul li {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 5rem;
-  text-transform: none;
-  color: #fff;
-}
-
-.Navigation .Left ul li a,
-.Navigation .Left ul li a:visited,
-.Navigation .Left ul li a:active,
-.Navigation .Left ul li a:hover,
-.Navigation .Right ul li a,
-.Navigation .Right ul li a:visited,
-.Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover {
-  display: inline-block;
-  line-height: 1rem;
-  padding: 5px 80px 5px 10px;
-  border-radius: 0.5rem;
-  box-shadow: 5px 5px 0px 0px rgba(18, 18, 18, 0.25);
-  color: #fff;
-  background-color: #333;
-}
-
-/**************************************************************************************************/
-
-.Navigation .Left ul li a:active,
-.Navigation .Left ul li a:hover,
-.Navigation .Right ul li a:active,
-.Navigation .Right ul li a:hover {
-  color: #333;
-  background-color: #fff;
-  box-shadow: 5px 5px 0px 0px rgba(237, 237, 237, 0.25);
-}
-
-/**************************************************************************************************/
-
-.Navigation .Left ul {
-  margin: 0 0 0 0.5rem;
-}
-
-.Navigation .Right ul {
-  margin: 0 0.5rem 0 0;
-}
-
-/**************************************************************************************************/
-
 /*article footer .Copyright {
   padding: 0.5rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
