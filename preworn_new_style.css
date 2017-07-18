@@ -5,7 +5,7 @@
 
 html {
   font-size: 16px;
-  background-color: #ffffff;
+  background-color: #00dd00;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   line-height: 1em;
   text-align: center;
   -webkit-text-size-adjust: 100%;
-  background-color: #ffffff;
+  background-color: #dd0000;
 }
 
 html, body {
