@@ -135,13 +135,30 @@ ul, li {
 
 /**************************************************************************************************/
 
+.Logo {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 10px 10px 0 0;
+  padding: 15px 30px 15px 30px;
+  background-color: #333333;
+}
+
+.Logo h1 {
+  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+/**************************************************************************************************/
+
 header, footer {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   width: calc(100% - 40px);
   padding: 10px;
-  background-color: #888888;
+  /*background-color: #888888;*/
 }
 
 header {

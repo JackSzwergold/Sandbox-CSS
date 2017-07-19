@@ -14,31 +14,11 @@ html, body {
 
 /**************************************************************************************************/
 
-.Header {
-  /*background-color: #F74902;*/
-  /*background-color: #00A3DD;*/
-  /*background-color: #FCA311;*/
-}
-
-.Footer {
-  /*background-color: #F74902;*/
-  /*background-color: #00A3DD;*/
-  /*background-color: #FCA311;*/
-}
-
-
-/**************************************************************************************************/
-
 header {
-  flex-shrink: 0;
+  color: #fff;
+  background-color: #002e4b;
 }
-
-/*.body {
-  flex-grow: 1;
-  overflow: auto;
-  min-height: 2em;
-}*/
 
 footer {
-  flex-shrink: 0;
+  background-color: #ff6253;
 }
