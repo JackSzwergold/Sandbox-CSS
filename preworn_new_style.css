@@ -13,18 +13,6 @@ html {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7f04', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-
-header {
-  margin-bottom: 20px;
-  color: #fff;
-  /*background-color: #002e4b;*/
-}
-
-footer {
-  margin-top: 20px;
-  /*background-color: #ff6253;*/
-}
-
 body {
   z-index: 0;
   position: relative;
@@ -74,11 +62,11 @@ hr {
 /**************************************************************************************************/
 
 *::selection {
-  background: #ffc;
+  background: #888888;
 }
 
 *::-moz-selection {
-  background: #ffc;
+  background: #888888;
 }
 
 /**************************************************************************************************/
@@ -98,6 +86,31 @@ ul, li {
   src: url('fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/chunkfive-webfont.woff2') format('woff2'), url('fonts/chunkfive-webfont.woff') format('woff'), url('fonts/chunkfive-webfont.ttf') format('truetype'), url('fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+/**************************************************************************************************/
+
+.Logo {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 20px 20px 0 0;
+  padding: 15px 30px 15px 30px;
+  background-color: #000000;
+  transform: rotate(1deg);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.Logo h1 {
+  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  letter-spacing: 0.025em;
+  color: #ffffff;
 }
 
 /**************************************************************************************************/
@@ -137,6 +150,8 @@ ul, li {
   margin: 40px;
 	padding: 20px;
   background-color: #ffffff;
+  /*border-radius: 1.25rem;*/
+  box-shadow: -0.625rem 0.625rem 0 #000000;
 }
 
 /**************************************************************************************************/
@@ -152,52 +167,71 @@ ul, li {
 
 /**************************************************************************************************/
 
-.Logo {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  margin: 20px 20px 0 0;
-  padding: 15px 30px 15px 30px;
-  background-color: #000000;
-  /*border-radius: 1rem 0 0 1rem;*/
-  /*box-shadow: 0.25rem 0.25rem 0 #ffffff;*/
-  transform: rotate(1deg);
-}
-
-.Logo h1 {
-  font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
-  letter-spacing: 0.025em;
-  color: #ffffff;
-}
-
-/**************************************************************************************************/
-
 header, footer {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
   width: calc(100% - 40px);
-  padding: 10px;
+  /*padding: 10px;*/
   /*background-color: #888888;*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 header {
+  padding: 10px 10px 20px 10px;
   margin-bottom: 20px;
-  color: #fff;
-  /*background-color: #002e4b;*/
+  border-bottom: 1px solid #000000;
+  /*background-color: #999999;*/
 }
 
 footer {
+  padding: 20px 10px 10px 10px;
   margin-top: 20px;
-  /*background-color: #ff6253;*/
+  border-top: 1px solid #000000;
+  /*background-color: #999999;*/
 }
 
-header p, footer p {
+header p,
+footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
-  font-size: 1.125rem;
-  line-height: 1.35em;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************************************************************************************/
+
+header p:before,
+header p:after,
+footer p:before,
+footer p:after {
+  content: '❖';
+  font-size: 0.6em;
+}
+
+header p:after {
+  margin: 0 0 0 2rem;
+}
+
+header p:before {
+  margin: 0 2rem 0 0;
+}
+
+footer p:after {
+  margin: 0 0 0 2rem;
+}
+
+footer p:before {
+  margin: 0 2rem 0 0;
 }
 
 /**************************************************************************************************/
@@ -271,6 +305,10 @@ header p, footer p {
 
 .Core p {
   margin: 0 0 1.25em 0;
+}
+
+.Core p:last-child {
+  margin: 0;
 }
 
 .Core p a,
