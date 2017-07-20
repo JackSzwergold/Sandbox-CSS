@@ -141,7 +141,9 @@ ul, li {
   right: 0px;
   margin: 20px 20px 0 0;
   padding: 15px 30px 15px 30px;
-  background-color: #333333;
+  background-color: #000000;
+  /*border-radius: 1rem 0 0 1rem;*/
+  /*box-shadow: 0.25rem 0.25rem 0 #ffffff;*/
 }
 
 .Logo h1 {
@@ -165,12 +167,12 @@ header, footer {
 header {
   margin-bottom: 20px;
   color: #fff;
-  background-color: #002e4b;
+  /*background-color: #002e4b;*/
 }
 
 footer {
   margin-top: 20px;
-  background-color: #ff6253;
+  /*background-color: #ff6253;*/
 }
 
 header p, footer p {
