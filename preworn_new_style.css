@@ -117,8 +117,8 @@ ul, li {
 	/* align-content: space-around; */
   /*width: calc(100% - 30px);*/
   /*height: calc(100% - 30px);*/
-  margin: 10px;
-	padding: 30px;
+  margin: 40px;
+	padding: 20px;
   background-color: #ffffff;
 }
 
@@ -139,7 +139,7 @@ ul, li {
   position: fixed;
   top: 0px;
   right: 0px;
-  margin: 10px 10px 0 0;
+  margin: 20px 20px 0 0;
   padding: 15px 30px 15px 30px;
   background-color: #333333;
 }
@@ -147,6 +147,7 @@ ul, li {
 .Logo h1 {
   font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
+  letter-spacing: 0.025em;
   color: #ffffff;
 }
 
