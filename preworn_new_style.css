@@ -94,8 +94,8 @@ body > header {
   position: fixed;
   top: 0px;
   right: 0px;
-  margin: 20px 20px 0 0;
-  padding: 15px 30px 15px 30px;
+  margin: 20px -20px 0 0;
+  padding: 15px 60px 15px 40px;
   background-color: #000000;
   transform: rotate(1deg);
   -webkit-touch-callout: none;
@@ -109,8 +109,48 @@ body > header {
 body > header h1 {
   font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
+  font-size: 2.25rem;
+  line-height: 0.75em;
   letter-spacing: 0.025em;
   color: #ffffff;
+}
+
+/**************************************************************************************************/
+
+main + footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  margin: 0 0 20px -20px;
+  padding: 15px 30px 15px 50px;
+  width: 75%;
+  background-color: #000000;
+  transform: rotate(-0.75deg);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main + footer p {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.35em;
+  letter-spacing: 0.025em;
+  clear: both;
+  text-align: left;
+  color: #ffffff;
+}
+
+main + footer p a,
+main + footer p a:active,
+main + footer p a:hover,
+main + footer p a:visited {
+ font-weight: bold;
+ color: #ffffff;
 }
 
 /**************************************************************************************************/
@@ -161,7 +201,7 @@ article {
   flex-basis: auto;
   width: calc(100% - 40px);
   text-align: left;
-  background-color: #ffffcc;
+  /*background-color: #ffffcc;*/
 }
 
 /**************************************************************************************************/
@@ -201,7 +241,7 @@ main > footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 0.95rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
