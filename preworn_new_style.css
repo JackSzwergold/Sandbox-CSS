@@ -7,10 +7,10 @@ html {
   font-size: 16px;
   background-color: #660000;
   background: #ff7f04; /* Old browsers */
-  background: -moz-linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(30deg, #ff7f04 0%, #ff7f04 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7f04', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(30deg, #b42121 0%, #b42121 25%, #002e4b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b42121', endColorstr='#002e4b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 body {
