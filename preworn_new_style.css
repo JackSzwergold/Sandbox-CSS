@@ -406,6 +406,45 @@ article ol li {
 }
 
 /**************************************************************************************************/
+
+article pre {
+  white-space: pre-wrap;
+  font-size: 0.8rem;
+  line-height: 1.4em;
+  font-weight: normal;
+  border-radius: 0.5rem;
+  padding: 20px 20px 20px 30px;
+  margin: 0 0 10px 0;
+  color: #0d0;
+  background-color: #333;
+}
+
+article p code {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  font-weight: normal;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 0.25rem;
+  /*color: #333;*/
+  background-color: #ddd;
+  /*-webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;*/
+  /*cursor: default;*/
+  transition: all 600ms ease;
+}
+
+article p code:active,
+article p code:hover {
+  color: #0d0;
+  background-color: #333;
+}
+
+/**************************************************************************************************/
 /* Media queries. */
 
 /*@media (min-width: 320px) {
@@ -420,7 +459,7 @@ article ol li {
 
 }*/
 
-@media (min-width: 480px) {
+/*@media (min-width: 480px) {
 
   main {
     min-width: 460px;
@@ -430,21 +469,9 @@ article ol li {
     width: 460px;
   }
 
-}
+}*/
 
-@media (min-width: 768px) {
-
-  main {
-    min-width: 748px;
-  }
-
-  article {
-    width: 748px;
-  }
-
-}
-
-@media (min-width: 1024px) {
+/*@media (min-width: 768px) {
 
   main {
     min-width: 748px;
@@ -454,4 +481,16 @@ article ol li {
     width: 748px;
   }
 
-}
+}*/
+
+/*@media (min-width: 1024px) {
+
+  main {
+    min-width: 748px;
+  }
+
+  article {
+    width: 748px;
+  }
+
+}*/
