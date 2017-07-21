@@ -186,6 +186,7 @@ main {
 	/* align-content: space-between; */
 	/* align-content: space-around; */
 	align-content: center;
+  width: calc(100% - 120px);
   margin: 40px;
 	padding: 20px;
   background-color: #ffffff;
@@ -246,6 +247,8 @@ main > footer p {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  word-break: break-all;
+  white-space: normal;
 }
 
 /**************************************************************************************************/
@@ -288,6 +291,9 @@ article h1, article h2, article h3, article h4, article h5, article h6 {
   font-family: ChunkFiveRoman, Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   clear: both;
+  word-break: break-all;
+  white-space: normal;
+  /*hyphens: auto;*/
 }
 
 article h1 a, article h1 a:active, article h1 a:hover, article h1 a:visited,
@@ -397,4 +403,55 @@ article ul li {
 
 article ol li {
   list-style-type: decimal;
+}
+
+/**************************************************************************************************/
+/* Media queries. */
+
+/*@media (min-width: 320px) {
+
+  main {
+    min-width: 335px;
+  }
+
+  article {
+    width: 335px;
+  }
+
+}*/
+
+@media (min-width: 480px) {
+
+  main {
+    min-width: 460px;
+  }
+
+  article {
+    width: 460px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  main {
+    min-width: 748px;
+  }
+
+  article {
+    width: 748px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  main {
+    min-width: 748px;
+  }
+
+  article {
+    width: 748px;
+  }
+
 }
