@@ -200,20 +200,6 @@ body > nav ul li a::before {
   font-size: 3.5rem;
 }
 
-/*body > nav ul li::after {
-  content: "\00a0";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #0f0;
-  opacity: 0.25;
-  z-index: 1;
-  box-shadow: inset -5px -5px 5px rgba(0, 0, 0, 0.6);
-}*/
-
 /******************************************************************************/
 /*  _____           _
 /* |  ___|__   ___ | |_ ___ _ __
@@ -234,6 +220,7 @@ main + footer {
   transform: rotate(-0.75deg);
   background-color: #000000;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
+  border-radius: 0 6rem 6rem 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -256,7 +243,7 @@ main + footer::before {
   z-index: -10;
 }
 
-/*main + footer::after {
+main + footer::after {
   content: "\00a0";
   position: absolute;
   top: 0.0125rem;
@@ -267,7 +254,15 @@ main + footer::before {
   background-color: #000;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.5);
   z-index: 1;
-}*/
+}
+
+foo {
+  font-family: "FontAwesome";
+  content: "\f137";
+  display: inline-block;
+  font-size: 3.5rem;
+
+}
 
 main + footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
