@@ -243,26 +243,33 @@ main + footer::before {
   z-index: -10;
 }
 
-main + footer::after {
-  content: "\00a0";
+main + footer span {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   position: absolute;
-  top: 0.0125rem;
-  right: -1.5rem;
-  min-width: 3rem;
-  min-height: 3rem;
-  border-radius: 50%;
-  background-color: #000;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.5);
-  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  height: 100%;
+  background-color: #f00;
+  opacity: 0.75;
 }
 
-foo {
+main + footer span::after {
   font-family: "FontAwesome";
   content: "\f137";
-  display: inline-block;
-  font-size: 3.5rem;
-
+  font-size: 4rem;
+  padding: 0;
+  transform: rotate(-5deg);
+  border-radius: 50%;
+  color: #ffffff;
 }
+
+/******************************************************************************/
 
 main + footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
