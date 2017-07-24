@@ -191,7 +191,7 @@ body > nav ul li a:focus {
 }
 
 body > nav ul li a::after {
-  font-family: FontAwesome;
+  font-family: "FontAwesome";
   content: "\f137";
   display: inline-block;
   font-size: 3.5rem;
@@ -226,6 +226,19 @@ main + footer {
   min-height: 3rem;
 }
 
+main + footer::before {
+  content: "\00a0";
+  position: fixed;
+  top: -1.25rem;
+  left: 0;
+  width: calc(100% - 2.5rem);
+  height: 100%;
+  padding: 1.25rem 0 1.25rem 0;
+  /*background-color: #0f0;*/
+  /*opacity: 0.25;*/
+  z-index: -10;
+}
+
 main + footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
@@ -247,7 +260,8 @@ main + footer p a:visited {
 /******************************************************************************/
 
 main + footer:active,
-main + footer:hover {
+main + footer:hover,
+main + footer:focus {
   margin: 0 0 2.5rem -0.125rem;
   padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
 }
