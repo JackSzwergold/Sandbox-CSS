@@ -238,8 +238,6 @@ main + footer::before {
   width: calc(100% - 2.5rem);
   height: 100%;
   padding: 1.625rem 0 1.625rem 0;
-  /*background-color: #0f0;
-  opacity: 0.25;*/
   z-index: -10;
 }
 
@@ -253,18 +251,16 @@ main + footer span {
   position: absolute;
   top: 0;
   right: 0;
-  width: 6rem;
+  width: 5rem;
   height: 100%;
-  background-color: #f00;
-  opacity: 0.75;
 }
 
 main + footer span::after {
   font-family: "FontAwesome";
-  content: "\f137";
-  font-size: 4rem;
+  content: "\f059";
+  font-size: 3.25rem;
   padding: 0;
-  transform: rotate(-5deg);
+  transform: rotate(0.75deg);
   border-radius: 50%;
   color: #ffffff;
 }
@@ -294,8 +290,13 @@ main + footer p a:active {
 
 main + footer:hover,
 main + footer:active {
-  margin: 0 0 2.5rem -0.125rem;
-  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
+  margin-bottom: 2.5rem;
+  margin-left: -0.125rem;
+}
+
+main + footer:hover span::after,
+main + footer:active span::after {
+  content: "\f0a8";
 }
 
 main + footer:hover p,
