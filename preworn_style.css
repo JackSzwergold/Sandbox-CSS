@@ -234,7 +234,7 @@ main + footer p {
   letter-spacing: 0.025em;
   clear: both;
   text-align: left;
-  color: #ffffff;
+  color: #000;
 }
 
 main + footer p a,
@@ -242,13 +242,22 @@ main + footer p a:active,
 main + footer p a:hover,
 main + footer p a:visited {
  font-weight: bold;
- color: #ffffff;
 }
 
 /******************************************************************************/
 
+main + footer:active,
 main + footer:hover {
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 2.5rem -0.125rem;
+  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
+}
+
+main + footer:hover p,
+main + footer:hover p a,
+main + footer:hover p a:active,
+main + footer:hover p a:hover,
+main + footer:hover p a:visited {
+  color: #ffffff;
 }
 
 /******************************************************************************/
