@@ -24,7 +24,7 @@ html, body {
   background-color: #ffffff;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 a,
 a:link,
@@ -33,6 +33,7 @@ a:hover,
 a:active {
   text-decoration: none;
   color: #000000;
+  transition: all 600ms ease;
 }
 
 ul, li {
@@ -58,13 +59,16 @@ hr {
   clear: both;
 }
 
-img {
-  display: block;
-}
+/******************************************************************************/
+/*  __  __       _
+/* |  \/  | __ _(_)_ __
+/* | |\/| |/ _` | | '_ \
+/* | |  | | (_| | | | | |
+/* |_|  |_|\__,_|_|_| |_|
+/*
+/******************************************************************************/
 
-/**************************************************************************************************/
-
-.Wrapper {
+main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,7 +89,7 @@ img {
 
 /**************************************************************************************************/
 
-.Core {
+article {
   position: relative;
   text-align: left;
   width: 100%;
@@ -93,28 +97,30 @@ img {
   overflow: hidden;
   perspective: 1500px;
   background: #b42121; /* Old browsers */
-  background: -moz-linear-gradient(30deg, #002e4b 0%, #002e4b 25%, #b42121 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(30deg, #002e4b 0%, #002e4b 25%, #b42121 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(30deg, #002e4b 0%, #002e4b 25%, #b42121 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002e4b', endColorstr='#b42121',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: -moz-linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e68c28', endColorstr='#b42121',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /**************************************************************************************************/
 
-.Object {
+div {
   position: absolute;
-  transform-style: preserve-3d;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   vertical-align: bottom;
+  width: 50%;
+  white-space: normal;
+  word-break: keep-all;
 }
 
 /**************************************************************************************************/
 
-.Object h1 {
+div > h1 {
   font-weight: normal;
   text-transform: uppercase;
   line-height: 100%;
@@ -123,42 +129,41 @@ img {
 
 /**************************************************************************************************/
 
-.Object:nth-child(1) {
-  animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 18.05s linear 0s infinite normal;
+div:nth-child(even) > h1 {
+  font-size: 5rem;
+  filter: blur(5px);
   z-index: 100;
 }
 
-.Object:nth-child(2) {
-  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal;
-}
-
-.Object:nth-child(3) {
-  animation: moveLeftRight 15.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal;
-  z-index: 100;
-}
-
-.Object:nth-child(4) {
-  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal;
-}
-
-.Object:nth-child(5) {
-  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal;
-  z-index: 100;
-}
-
-.Object:nth-child(6) {
-  animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
+div:nth-child(odd) > h1 {
+  font-size: 7rem;
+  z-index: 0;
 }
 
 /**************************************************************************************************/
 
-.Object:nth-child(even) h1 {
-  font-size: 500%;
-  filter: blur(5px);
+div:nth-child(1) {
+  animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 18.05s linear 0s infinite normal;
 }
 
-.Object:nth-child(odd) h1 {
-  font-size: 900%;
+div:nth-child(2) {
+  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal;
+}
+
+div:nth-child(3) {
+  animation: moveLeftRight 15.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal;
+}
+
+div:nth-child(4) {
+  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal;
+}
+
+div:nth-child(5) {
+  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal;
+}
+
+div:nth-child(6) {
+  animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
 }
 
 /**************************************************************************************************/
