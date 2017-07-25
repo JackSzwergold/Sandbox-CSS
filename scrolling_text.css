@@ -24,7 +24,6 @@ html, body {
   background-color: #fff;
 }
 
-
 /**************************************************************************************************/
 
 a, a:visited, a:hover, a:active {
@@ -57,7 +56,6 @@ img {
   display: block;
 }
 
-
 /**************************************************************************************************/
 /* Font faces. */
 
@@ -69,28 +67,15 @@ img {
   font-style: normal;
 }
 
-
 /**************************************************************************************************/
 
-.Wrapper, .Text, .Text h1 {
+.Wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   align-content: center;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-
-/**************************************************************************************************/
-
-.Wrapper {
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   margin: 0;
@@ -102,7 +87,6 @@ img {
   -ms-user-select: none;
   user-select: none;
 }
-
 
 /**************************************************************************************************/
 
@@ -113,193 +97,8 @@ img {
   height: 100%;
   overflow: hidden;
   perspective: 1500px;
-  background: #282821;
-  /*background: -webkit-linear-gradient(left top, #002D47, #282821);
-  background: -o-linear-gradient(bottom right, #002D47, #282821);
-  background: -moz-linear-gradient(bottom right, #002D47, #282821);
-  background: linear-gradient(to bottom right, #002D47, #282821);*/
+  background: #45A9C7;
 }
-
-
-/**************************************************************************************************/
-
-.Text {
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-  /*background-image: url("../media/clouds_2.jpg");
-	background-repeat: no-repeat;
-	background-position: left top;
-	background-size: cover;
-	background-color: #222;*/
-}
-
-
-/**************************************************************************************************/
-
-.Text h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: "ChunkFiveRoman", "Georgia", "New York", "Times New Roman", "Times", serif;
-  font-weight: normal;
-  text-transform: none;
-  line-height: 0.9em;
-  font-size: 1500%;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  margin: 0;
-  padding: 10px;
-  color: #933311;
-  clear: both;
-  background-color: transparent;
-  cursor: default;
-  z-index: 10;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-
-/****************************************************************************************/
-
-.Text h1.front {
-  transform: rotate(0deg) rotate3d(0, 0, 0, 0deg) translateZ(240px);
-}
-
-.Text h1.back {
-  transform: rotate(180deg) rotate3d(1, 0, 0, 180deg) translateZ(240px);
-}
-
-.Text h1.right {
-  transform: rotate(0deg) rotate3d(0, 1, 0, 90deg) translateZ(300px);
-  color: #234F33;
-}
-
-.Text h1.left {
-  transform: rotate(0deg) rotate3d(0, 1, 0, -90deg) translateZ(300px);
-  color: #234F33;
-}
-
-.Text h1.top {
-  transform: rotate(0deg) rotate3d(1, 0, 0, 90deg) translateZ(120px);
-  color: #EAAF0F;
-}
-
-.Text h1.bottom {
-  transform: rotate(0deg) rotate3d(1, 0, 0, -90deg) translateZ(120px);
-  color: #EAAF0F;
-}
-
-
-/****************************************************************************************/
-
-.Text.animate_up {
-  animation: rotate_up 18s linear infinite;
-}
-
-.Text.animate_down {
-  animation: rotate_down 18s linear infinite;
-}
-
-.Text.animate_left {
-  animation: rotate_left 18s linear infinite;
-}
-
-.Text.animate_right {
-  animation: rotate_right 18s linear infinite;
-}
-
-.Text.animate_up_left {
-  animation: rotate_up_left 18s linear infinite;
-}
-
-.Text.animate_down_left {
-  animation: rotate_down_left 18s linear infinite;
-}
-
-.Text.animate_up_right {
-  animation: rotate_up_right 18s linear infinite;
-}
-
-.Text.animate_down_right {
-  animation: rotate_down_right 18s linear infinite;
-}
-
-
-/****************************************************************************************/
-
-@keyframes rotate_up {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(0deg) rotateX(360deg);
-  }
-}
-
-@keyframes rotate_down {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(0deg) rotateX(-360deg);
-  }
-}
-
-@keyframes rotate_left {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(-360deg) rotateX(0deg);
-  }
-}
-
-@keyframes rotate_right {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotateX(0deg);
-  }
-}
-
-@keyframes rotate_up_left {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(-360deg) rotateX(360deg);
-  }
-}
-
-@keyframes rotate_down_left {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(-360deg) rotateX(-360deg);
-  }
-}
-
-@keyframes rotate_up_right {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotateX(360deg);
-  }
-}
-
-@keyframes rotate_down_right {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  100% {
-    transform: rotateY(360deg) rotateX(-360deg);
-  }
-}
-
 
 /**************************************************************************************************/
 
@@ -313,19 +112,15 @@ img {
   vertical-align: bottom;
 }
 
-
 /**************************************************************************************************/
 
 .Object h1 {
-  /*font-family: "LangdonRegular", "Georgia", "New York", "Times New Roman", "Times", serif;*/
   font-weight: normal;
   text-transform: uppercase;
   line-height: 100%;
   font-size: 1250%;
-  /*color: #FFC61E;*/
-  color: #fff;
+  color: #ffffff;
 }
-
 
 /**************************************************************************************************/
 
