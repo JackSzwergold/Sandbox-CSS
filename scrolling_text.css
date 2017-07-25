@@ -26,14 +26,20 @@ html, body {
 
 /**************************************************************************************************/
 
-a, a:visited, a:hover, a:active {
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
 }
 
 ul, li {
   list-style: none;
+  position: relative;
+  float: left;
+  display: inline;
 }
 
 :focus {
@@ -47,8 +53,8 @@ a {
 hr {
   border: 0;
   height: 1px;
-  margin: 0.75em 0 1.5em 0;
-  background-color: #000;
+  margin: 1.25em 0 1.25em 0;
+  background-color: #000000;
   clear: both;
 }
 
