@@ -1,3 +1,7 @@
 $(document).ready(function() {
-  // alert('Shalom!');
+
+  var widthBody = document.body.clientWidth
+  var widthHeight = document.body.clientHeight;
+  alert (widthBody + ' x ' + widthHeight);
+
 });
