@@ -102,6 +102,7 @@ article {
   background: linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e68c28', endColorstr='#b42121',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  transform-style: preserve-3d;
 }
 
 /**************************************************************************************************/
@@ -204,6 +205,7 @@ div:nth-child(6) {
   0% {
     left: -11rem;
     opacity: 0;
+    transform: rotate3d(0, 1, 0, -18deg);
   }
   75% {
     opacity: 1;
@@ -211,6 +213,7 @@ div:nth-child(6) {
   100% {
     left: calc(100% + 1rem);
     opacity: 0;
+    transform: rotate3d(0, 1, 0, 18deg);
   }
 }
 
@@ -220,6 +223,7 @@ div:nth-child(6) {
   0% {
     right: -11rem;
     opacity: 0;
+    transform: rotate3d(0, 1, 0, -18deg);
   }
   75% {
     opacity: 1;
@@ -227,6 +231,7 @@ div:nth-child(6) {
   100% {
     right: calc(100% + 1rem);
     opacity: 0;
+    transform: rotate3d(0, 1, 0, 18deg);
   }
 }
 
