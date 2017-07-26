@@ -142,7 +142,7 @@ div:nth-child(odd) > h1 {
 
 /**************************************************************************************************/
 
-div:nth-child(1) {
+/*div:nth-child(1) {
   animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 18.05s linear 0s infinite normal;
 }
 
@@ -164,6 +164,38 @@ div:nth-child(5) {
 
 div:nth-child(6) {
   animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
+}
+
+/**************************************************************************************************/
+
+div:nth-child(1) {
+  top: 10%;
+  animation: moveLeftRight 19.05s linear 0s infinite normal;
+}
+
+div:nth-child(2) {
+  top: 20%;
+  animation: moveLeftRight 13.05s linear 0s infinite normal;
+}
+
+div:nth-child(3) {
+  top: 40%;
+  animation: moveLeftRight 15.05s linear 0s infinite normal;
+}
+
+div:nth-child(4) {
+  top: 60%;
+  animation: moveLeftRight 10.05s linear 0s infinite normal;
+}
+
+div:nth-child(5) {
+  top: 80%;
+  animation: moveLeftRight 17.05s linear 0s infinite normal;
+}
+
+div:nth-child(6) {
+  top: 90%;
+  animation: moveLeftRight 21.05s linear 0s infinite normal;
 }
 
 /**************************************************************************************************/
