@@ -136,22 +136,15 @@ article {
 
 /**************************************************************************************************/
 
-/*ul {
-  position: absolute;
-	overflow: hidden;
-  margin: 0.625rem 0 0 0.625rem;
-  clear: both;
+ul {
+  margin: 0 0 0 0.625rem;
 }
-
-ul:nth-child(1) { top: 10%; }
-ul:nth-child(2) { top: 30%; }
-ul:nth-child(3) { top: 50%; }
-ul:nth-child(4) { top: 70%; }*/
 
 ul:nth-child(1) > li { background-color: #333333; }
 ul:nth-child(2) > li { background-color: #555555; }
 ul:nth-child(3) > li { background-color: #777777; }
 ul:nth-child(4) > li { background-color: #999999; }
+ul:nth-child(5) > li { background-color: #bbbbbb; }
 
 /**************************************************************************************************/
 
