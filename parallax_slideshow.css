@@ -115,18 +115,115 @@ article {
 
 /******************************************************************************/
 
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/******************************************************************************/
+
+input[type="radio"] {
+  display: none;
+}
+
+nav label {
+  margin: 0 0 0.125rem 0;
+}
+
+nav label em {
+  display: flex;
+  align-items: center;
+	justify-content: center;
+	align-content: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.75rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.125rem #666666 solid;
+  transition: background-color 300ms ease;
+}
+
+nav label em:after {
+  content: '';
+  display: inline-block;
+  flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 0.125rem #fff solid;
+}
+
+nav label:active em {
+  border-color: #ffdd35;
+}
+
+/******************************************************************************/
+
+input[type="radio"].side_1:checked ~ div.cube {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].side_2:checked ~ div.cube {
+  -webkit-transform: rotateY(90deg);
+  -moz-transform: rotateY(90deg);
+  -o-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+
+input[type="radio"].side_3:checked ~ div.cube {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+input[type="radio"].side_4:checked ~ div.cube {
+  -webkit-transform: rotateY(270deg);
+  -moz-transform: rotateY(270deg);
+  -o-transform: rotateY(270deg);
+  transform: rotateY(270deg);
+}
+
+/******************************************************************************/
+
+input[type="radio"].side_1:checked ~ div.cube div.face:nth-child(1) {
+  background-color: #ffffff;
+}
+
+input[type="radio"].side_2:checked ~ div.cube div.face:nth-child(4) {
+  background-color: #ffffff;
+}
+
+input[type="radio"].side_3:checked ~ div.cube div.face:nth-child(3) {
+  background-color: #ffffff;
+}
+
+input[type="radio"].side_4:checked ~ div.cube div.face:nth-child(2) {
+  background-color: #ffffff;
+}
+
+/******************************************************************************/
+
 div.cube {
   width: 20rem;
   height: 20rem;
-  -webkit-transform: rotateY(45deg);
-  -moz-transform: rotateY(45deg);
-  -o-transform: rotateY(45deg);
-  transform: rotateY(45deg);
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -144,8 +241,9 @@ div.face {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #ffffff;
-  opacity: 0.75;
+  border-radius: 2rem;
+  /*background: #ffffff;*/
+  /*opacity: 0.75;*/
   /*backface-visibility: hidden;*/
 }
 
@@ -166,10 +264,10 @@ div.face:nth-child(2) {
 }
 
 div.face:nth-child(3) {
-  -webkit-transform: rotateX(-180deg) translateZ(11rem);
-  -moz-transform: rotateX(-180deg) translateZ(11rem);
-  -o-transform: rotateX(-180deg) translateZ(11rem);
-  transform: rotateX(-180deg) translateZ(11rem);
+  -webkit-transform: rotateY(-180deg) translateZ(11rem);
+  -moz-transform: rotateY(-180deg) translateZ(11rem);
+  -o-transform: rotateY(-180deg) translateZ(11rem);
+  transform: rotateY(-180deg) translateZ(11rem);
 }
 
 div.face:nth-child(4) {
