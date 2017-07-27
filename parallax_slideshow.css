@@ -131,20 +131,24 @@ article {
   background: linear-gradient(0deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd35', endColorstr='#2880bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  /*-webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  -o-perspective: 1500px;
+  perspective: 1500px;*/
 }
 
 /******************************************************************************/
 
 ul {
   margin: 0 0 0 0.625rem;
-  -webkit-transform: translateZ(120px);
-  -moz-transform: translateZ(120px);
-  -o-transform: translateZ(120px);
-  transform: translateZ(120px);
+  -webkit-transform: rotateY(45deg) translateZ(120px);
+  -moz-transform: rotateY(45deg) translateZ(120px);
+  -o-transform: rotateY(45deg) translateZ(120px);
+  transform: rotateY(45deg) translateZ(120px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 ul > li {
@@ -155,6 +159,10 @@ ul > li {
 	text-align: left;
 	background-color: #666666;
   opacity: 0.75;
+  -webkit-transform: rotateY(-45deg);
+  -moz-transform: rotateY(-45deg);
+  -o-transform: rotateY(-45deg);
+  transform: rotateY(-45deg);
 }
 
 ul > li > p {
