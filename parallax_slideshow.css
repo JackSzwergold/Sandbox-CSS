@@ -144,8 +144,8 @@ div.face {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #ffffcc;
-  opacity: 0.5;
+  background: #ffffff;
+  opacity: 0.75;
   /*backface-visibility: hidden;*/
 }
 
