@@ -92,33 +92,10 @@ main {
 article {
   display: flex;
 	overflow: hidden;
-	/* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
 	flex-direction: column;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
 	flex-wrap: wrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
 	align-items: center;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
 	justify-content: center;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
 	align-content: center;
   text-align: left;
   width: 100%;
@@ -139,19 +116,69 @@ article {
 
 /******************************************************************************/
 
-ul {
-  margin: 0 0 0 0.625rem;
-  -webkit-transform: rotateY(45deg);
-  -moz-transform: rotateY(45deg);
-  -o-transform: rotateY(45deg);
-  transform: rotateY(45deg);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+div {
+  position: absolute;
+  display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+  text-align: left;
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+  perspective: 1500px;
+  background: #ffffcc;
+  opacity: 0.5;
 }
 
-ul > li {
+/******************************************************************************/
+
+div:nth-child(1) {
+  -webkit-transform: translateZ(18rem);
+  -moz-transform: translateZ(18rem);
+  -o-transform: translateZ(18rem);
+  transform: translateZ(18rem);
+}
+
+div:nth-child(2) {
+  -webkit-transform: rotateY(90deg) translateZ(18rem);
+  -moz-transform: rotateY(90deg) translateZ(18rem);
+  -o-transform: rotateY(90deg) translateZ(18rem);
+  transform: rotateY(90deg) translateZ(18rem);
+}
+
+div:nth-child(3) {
+  -webkit-transform: rotateX(-180deg) translateZ(18rem);
+  -moz-transform: rotateX(-180deg) translateZ(18rem);
+  -o-transform: rotateX(-180deg) translateZ(18rem);
+  transform: rotateX(-180deg) translateZ(18rem);
+}
+
+div:nth-child(4) {
+  -webkit-transform: rotateY(-90deg) translateZ(18rem);
+  -moz-transform: rotateY(-90deg) translateZ(18rem);
+  -o-transform: rotateY(-90deg) translateZ(18rem);
+  transform: rotateY(-90deg) translateZ(18rem);
+}
+
+/******************************************************************************/
+
+div > ul {
+  margin: 0 0 0 0.625rem;
+  /*-webkit-transform: rotateY(45deg);
+  -moz-transform: rotateY(45deg);
+  -o-transform: rotateY(45deg);
+  transform: rotateY(45deg);*/
+  /*-webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;*/
+}
+
+div > ul > li {
 	width: 5rem;
 	height: 4rem;
 	margin: 0 0.625rem 0.625rem 0;
@@ -161,7 +188,7 @@ ul > li {
   opacity: 0.75;
 }
 
-ul > li > p {
+div > ul > li > p {
 	font-size: 0.75rem;
 	color: #ffffff;
   padding: 5px;
@@ -169,12 +196,12 @@ ul > li > p {
 
 /******************************************************************************/
 
-ul:nth-child(1) > li {
+/*div > ul:nth-child(1) > li {
   background-color: #333333;
   filter: blur(8px);
 }
 
-ul:nth-child(2) > li {
+div > ul:nth-child(2) > li {
   -webkit-transform: translateZ(30px);
   -moz-transform: translateZ(30px);
   -o-transform: translateZ(30px);
@@ -183,11 +210,10 @@ ul:nth-child(2) > li {
   filter: blur(4px);
 }
 
-ul:nth-child(3) > li {
+div > ul:nth-child(3) > li {
   -webkit-transform: translateZ(70px);
   -moz-transform: translateZ(70px);
   -o-transform: translateZ(70px);
   transform: translateZ(70px);
   background-color: #777777;
-
-}
+}*/
