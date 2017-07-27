@@ -131,6 +131,9 @@ article {
   background: linear-gradient(0deg, #ffdd35 0%, #ffdd35 25%, #2880bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdd35', endColorstr='#2880bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
@@ -138,7 +141,12 @@ article {
 
 ul {
   margin: 0 0 0 0.625rem;
+  -webkit-transform: translateZ(120px);
+  -moz-transform: translateZ(120px);
+  -o-transform: translateZ(120px);
+  transform: translateZ(120px);
 }
+
 ul > li {
 	width: 5rem;
 	height: 4rem;
@@ -146,6 +154,7 @@ ul > li {
 	padding: 0;
 	text-align: left;
 	background-color: #666666;
+  opacity: 0.75;
 }
 
 ul > li > p {
