@@ -87,7 +87,7 @@ main {
   user-select: none;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 article {
   display: flex;
@@ -134,20 +134,11 @@ article {
   transform-style: preserve-3d;
 }
 
-/**************************************************************************************************/
+/******************************************************************************/
 
 ul {
   margin: 0 0 0 0.625rem;
 }
-
-ul:nth-child(1) > li { background-color: #333333; }
-ul:nth-child(2) > li { background-color: #555555; }
-ul:nth-child(3) > li { background-color: #777777; }
-ul:nth-child(4) > li { background-color: #999999; }
-ul:nth-child(5) > li { background-color: #bbbbbb; }
-
-/**************************************************************************************************/
-
 ul > li {
 	min-width: 5rem;
 	min-height: 4rem;
@@ -161,4 +152,30 @@ ul > li > p {
 	font-size: 0.75rem;
 	color: #ffffff;
   padding: 5px;
+}
+
+/******************************************************************************/
+
+ul:nth-child(1) > li {
+  filter: blur(10px);
+  background-color: #333333;
+}
+
+ul:nth-child(2) > li {
+  filter: blur(6px);
+  background-color: #555555;
+}
+
+ul:nth-child(3) > li {
+  filter: blur(3px);
+  background-color: #777777;
+}
+
+ul:nth-child(4) > li {
+  filter: blur(1px);
+  background-color: #999999;
+}
+
+ul:nth-child(5) > li {
+  background-color: #bbbbbb;
 }
