@@ -234,10 +234,6 @@ input[type="radio"].side_4:checked ~ div.cube div.face:nth-child(4) h1 {
 div.cube {
   width: 30rem;
   height: 30rem;
-  -webkit-transform: rotateY(0);
-  -moz-transform: rotateY(0);
-  -o-transform: rotateY(0);
-  transform: rotateY(0);
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
@@ -272,8 +268,8 @@ div.face {
 	align-content: center;
   text-align: left;
   overflow: hidden;
-  background: #ffffff;
-  opacity: 0.75;
+  /*background: #ffffff;*/
+  /*opacity: 0.75;*/
   /*backface-visibility: hidden;*/
 }
 
