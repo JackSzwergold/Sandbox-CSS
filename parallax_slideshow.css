@@ -115,6 +115,106 @@ article {
 
 /******************************************************************************/
 
+div.cube {
+  width: 30rem;
+  height: 30rem;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 600ms ease;
+  /*background-color: #000000;*/
+  /*opacity: 0.75;*/
+}
+
+/******************************************************************************/
+
+div.face {
+  position: absolute;
+  display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+  text-align: left;
+  overflow: hidden;
+  width: 30rem;
+  height: 30rem;
+  /*background: #ffffff;*/
+  /*opacity: 0.75;*/
+  /*backface-visibility: hidden;*/
+}
+
+/******************************************************************************/
+
+div.face > h1 {
+	font-size: 1rem;
+  color: #ffffff;
+  background-color: #000000;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  padding: 0.625rem;
+  margin: 0 0 1rem 0;
+  border-radius: 50%;
+}
+
+/******************************************************************************/
+
+div.face:nth-child(1) {
+  -webkit-transform: translateZ(15rem);
+  -moz-transform: translateZ(15rem);
+  -o-transform: translateZ(15rem);
+  transform: translateZ(15rem);
+}
+
+div.face:nth-child(2) {
+  -webkit-transform: translateX(30rem) translateZ(7.5rem);
+  -moz-transform: translateX(30rem) translateZ(7.5rem);
+  -o-transform: translateX(30rem) translateZ(7.5rem);
+  transform: translateX(30rem) translateZ(7.5rem);
+}
+
+div.face:nth-child(3) {
+  -webkit-transform: translateX(60rem) translateZ(15rem);
+  -moz-transform: translateX(60rem) translateZ(15rem);
+  -o-transform: translateX(60rem) translateZ(15rem);
+  transform: translateX(60rem) translateZ(15rem);
+}
+
+div.face:nth-child(4) {
+  -webkit-transform: translateX(90rem) translateZ(7.5rem);
+  -moz-transform: translateX(90rem) translateZ(7.5rem);
+  -o-transform: translateX(90rem) translateZ(7.5rem);
+  transform: translateX(90rem) translateZ(7.5rem);
+}
+
+/******************************************************************************/
+
+div.face > ul {
+  margin: 0 0 0 0.625rem;
+}
+
+div.face > ul > li {
+	width: 8rem;
+	height: 7rem;
+	margin: 0 0.625rem 0.625rem 0;
+	padding: 0;
+	text-align: left;
+	background-color: #666666;
+  opacity: 0.75;
+}
+
+div.face > ul > li > p {
+	font-size: 0.75rem;
+	color: #ffffff;
+  padding: 5px;
+}
+
+/******************************************************************************/
+
 nav {
   position: absolute;
   top: 0.625rem;
@@ -168,10 +268,10 @@ nav label:active em {
 /******************************************************************************/
 
 input[type="radio"].side_1:checked ~ div.cube {
-  -webkit-transform: rotateY(0deg);
+  /*-webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
-  transform: rotateY(0deg);
+  transform: rotateY(0deg);*/
 }
 
 input[type="radio"].side_2:checked ~ div.cube {
@@ -183,6 +283,7 @@ input[type="radio"].side_2:checked ~ div.cube {
   -moz-transform: translateX(-30rem);
   -o-transform: translateX(-30rem);
   transform: translateX(-30rem);
+
 }
 
 input[type="radio"].side_3:checked ~ div.cube {
@@ -194,6 +295,7 @@ input[type="radio"].side_3:checked ~ div.cube {
   -moz-transform: translateX(-60rem);
   -o-transform: translateX(-60rem);
   transform: translateX(-60rem);
+
 }
 
 input[type="radio"].side_4:checked ~ div.cube {
@@ -205,6 +307,7 @@ input[type="radio"].side_4:checked ~ div.cube {
   -moz-transform: translateX(-90rem);
   -o-transform: translateX(-90rem);
   transform: translateX(-90rem);
+
 }
 
 /******************************************************************************/
@@ -227,100 +330,4 @@ input[type="radio"].side_3:checked ~ div.cube div.face:nth-child(3) h1 {
 input[type="radio"].side_4:checked ~ div.cube div.face:nth-child(4) h1 {
   color: #000000;
   background-color: #ffffff;
-}
-
-/******************************************************************************/
-
-div.cube {
-  width: 30rem;
-  height: 30rem;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: all 600ms ease;
-}
-
-/******************************************************************************/
-
-div.face > h1 {
-	font-size: 1rem;
-  color: #ffffff;
-  background-color: #000000;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-  padding: 0.625rem;
-  margin: 0 0 1rem 0;
-  border-radius: 50%;
-}
-
-/******************************************************************************/
-
-div.face {
-  position: absolute;
-  display: flex;
-	overflow: hidden;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
-	align-content: center;
-  text-align: left;
-  overflow: hidden;
-  /*background: #ffffff;*/
-  /*opacity: 0.75;*/
-  /*backface-visibility: hidden;*/
-}
-
-/******************************************************************************/
-
-div.face:nth-child(1) {
-  -webkit-transform: translateZ(15rem);
-  -moz-transform: translateZ(15rem);
-  -o-transform: translateZ(15rem);
-  transform: translateZ(15rem);
-}
-
-div.face:nth-child(2) {
-  -webkit-transform: translateX(30rem) translateZ(7.5rem);
-  -moz-transform: translateX(30rem) translateZ(7.5rem);
-  -o-transform: translateX(30rem) translateZ(7.5rem);
-  transform: translateX(30rem) translateZ(7.5rem);
-}
-
-div.face:nth-child(3) {
-  -webkit-transform: translateX(60rem) translateZ(15rem);
-  -moz-transform: translateX(60rem) translateZ(15rem);
-  -o-transform: translateX(60rem) translateZ(15rem);
-  transform: translateX(60rem) translateZ(15rem);
-}
-
-div.face:nth-child(4) {
-  -webkit-transform: translateX(90rem) translateZ(7.5rem);
-  -moz-transform: translateX(90rem) translateZ(7.5rem);
-  -o-transform: translateX(90rem) translateZ(7.5rem);
-  transform: translateX(90rem) translateZ(7.5rem);
-}
-
-/******************************************************************************/
-
-div.face > ul {
-  margin: 0 0 0 0.625rem;
-}
-
-div.face > ul > li {
-	width: 8rem;
-	height: 7rem;
-	margin: 0 0.625rem 0.625rem 0;
-	padding: 0;
-	text-align: left;
-	background-color: #666666;
-  opacity: 0.75;
-}
-
-div.face > ul > li > p {
-	font-size: 0.75rem;
-	color: #ffffff;
-  padding: 5px;
 }
