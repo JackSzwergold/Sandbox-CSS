@@ -136,8 +136,8 @@ div.face {
   text-align: left;
   overflow: hidden;
   transition: all 600ms ease;
-  background: #ffffff;
-  opacity: 0.75;
+  /*background: #ffffff;*/
+  /*opacity: 0.75;*/
   /*backface-visibility: hidden;*/
 }
 
