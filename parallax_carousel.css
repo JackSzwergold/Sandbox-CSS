@@ -109,12 +109,16 @@ article {
 
 /******************************************************************************/
 
+div.cube,
+div.face {
+  width: 26rem;
+  height: 26rem;
+}
+
 div.cube {
-  width: 30rem;
-  height: 30rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
-  /*background-color: #000000;*/
+  background-color: #000000;
   /*opacity: 0.75;*/
 }
 
@@ -125,23 +129,25 @@ div.face {
   display: flex;
 	overflow: hidden;
 	flex-direction: column;
-	flex-wrap: wrap;
+	flex-wrap: no-wrap;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
   text-align: left;
   overflow: hidden;
-  width: 30rem;
-  height: 30rem;
   transition: all 600ms ease;
-  /*background: #ffffff;*/
-  /*opacity: 0.75;*/
+  background: #ffffff;
+  opacity: 0.75;
   /*backface-visibility: hidden;*/
 }
 
 /******************************************************************************/
 
 div.face > h1 {
+  display: none;
+  position: absolute;
+  top: 3.45rem;
+  left: 3.45rem;
 	font-size: 1rem;
   color: #ffffff;
   background-color: #000000;
@@ -151,6 +157,7 @@ div.face > h1 {
   padding: 0.625rem;
   margin: 0 0 1rem 0;
   border-radius: 50%;
+  z-index: 10;
 }
 
 /******************************************************************************/
@@ -174,17 +181,29 @@ div.face:nth-child(4) {
 /******************************************************************************/
 
 div.face > ul {
-  margin: 0 0 0 0.625rem;
+  margin: 0;
 }
 
 div.face > ul > li {
 	width: 8rem;
-	height: 7rem;
+	height: 8rem;
 	margin: 0 0.625rem 0.625rem 0;
 	padding: 0;
 	text-align: left;
 	background-color: #222222;
   opacity: 0.85;
+}
+
+
+div.face > ul:last-child > li {
+  margin: 0 0.625rem 0 0;
+}
+div.face > ul > li:last-child {
+  margin: 0 0 0.625rem 0;
+}
+
+div.face > ul:last-child > li:last-child {
+  margin: 0;
 }
 
 div.face > ul > li > p {
