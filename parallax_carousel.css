@@ -143,25 +143,6 @@ div.face {
 
 /******************************************************************************/
 
-div.face > h1 {
-  display: none;
-  position: absolute;
-  top: 3.45rem;
-  left: 3.45rem;
-	font-size: 1rem;
-  color: #ffffff;
-  background-color: #000000;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-  padding: 0.625rem;
-  margin: 0 0 1rem 0;
-  border-radius: 50%;
-  z-index: 10;
-}
-
-/******************************************************************************/
-
 div.face:nth-child(1) {
   transform: translateX(0) translateZ(15rem);
 }
@@ -178,6 +159,10 @@ div.face:nth-child(4) {
   transform: translateX(75rem) translateZ(7.5rem);
 }
 
+div.face:nth-child(5) {
+  transform: translateX(100rem) translateZ(15rem);
+}
+
 /******************************************************************************/
 
 div.face > ul {
@@ -187,13 +172,12 @@ div.face > ul {
 div.face > ul > li {
 	width: 8rem;
 	height: 8rem;
-	margin: 0 0.625rem 0.625rem 0;
+	margin: 0 0.625rem 0 0;
 	padding: 0;
 	text-align: left;
 	background-color: #222222;
   opacity: 0.85;
 }
-
 
 div.face > ul:last-child > li {
   margin: 0 0.625rem 0 0;
@@ -283,24 +267,6 @@ input[type="radio"].side_4:checked ~ div.cube {
   transform: translateX(-75rem);
 }
 
-/******************************************************************************/
-
-input[type="radio"].side_1:checked ~ div.cube div.face:nth-child(1) h1 {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-input[type="radio"].side_2:checked ~ div.cube div.face:nth-child(2) h1 {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-input[type="radio"].side_3:checked ~ div.cube div.face:nth-child(3) h1 {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-input[type="radio"].side_4:checked ~ div.cube div.face:nth-child(4) h1 {
-  color: #000000;
-  background-color: #ffffff;
+input[type="radio"].side_5:checked ~ div.cube {
+  transform: translateX(-100rem);
 }
