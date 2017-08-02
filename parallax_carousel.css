@@ -118,7 +118,7 @@ div.face {
 div.cube {
   transform-style: preserve-3d;
   transition: all 600ms ease;
-  background-color: #000000;
+  /*background-color: #000000;*/
   /*opacity: 0.75;*/
 }
 
