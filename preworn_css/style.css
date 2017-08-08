@@ -85,8 +85,8 @@ hr {
 
 @font-face {
   font-family: 'ChunkFiveRoman';
-  src: url('../fonts/chunkfive-webfont.eot');
-  src: url('../fonts/chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/chunkfive-webfont.woff2') format('woff2'), url('../fonts/chunkfive-webfont.woff') format('woff'), url('../fonts/chunkfive-webfont.ttf') format('truetype'), url('../fonts/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
+  src: url('../fonts/ChunkFive/chunkfive-webfont.eot');
+  src: url('../fonts/ChunkFive/chunkfive-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/ChunkFive/chunkfive-webfont.woff2') format('woff2'), url('../fonts/ChunkFive/chunkfive-webfont.woff') format('woff'), url('../fonts/ChunkFive/chunkfive-webfont.ttf') format('truetype'), url('../fonts/ChunkFive/chunkfive-webfont.svg#ChunkFiveRoman') format('svg');
   font-weight: normal;
   font-style: normal;
 }
