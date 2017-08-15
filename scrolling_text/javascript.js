@@ -18,8 +18,8 @@ $(document).ready(function() {
 
     // Pick a random duration.
     var minDuration = 8;
-    var maxDuration = (20 - minDuration);
-    var randomDuration = (Math.floor(Math.random() * maxDuration) + minDuration);
+    var maxDuration = 18;
+    var randomDuration = (Math.floor(Math.random() * (maxDuration - minDuration)) + minDuration);
     console.log(randomDuration);
     $(this).css('animation-duration', randomDuration + 's');
 
