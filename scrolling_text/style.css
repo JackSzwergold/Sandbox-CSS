@@ -171,32 +171,38 @@ div:nth-child(6) {
 
 div:nth-child(1) {
   top: 10%;
-  animation: moveLeftRight 19.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 19s;
 }
 
 div:nth-child(2) {
   top: 20%;
-  animation: moveLeftRight 13.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 13s;
 }
 
 div:nth-child(3) {
   top: 40%;
-  animation: moveLeftRight 15.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 15s;
 }
 
 div:nth-child(4) {
   top: 60%;
-  animation: moveLeftRight 10.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 10s;
 }
 
 div:nth-child(5) {
   top: 80%;
-  animation: moveLeftRight 17.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 17s;
 }
 
 div:nth-child(6) {
   top: 90%;
-  animation: moveLeftRight 21.05s linear 0s infinite normal;
+  animation: moveLeftRight linear 0s infinite normal;
+  animation-duration: 21s;
 }
 
 /**************************************************************************************************/

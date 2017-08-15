@@ -11,13 +11,15 @@ $(document).ready(function() {
 
   $( "article > div" ).each(function(index) {
 
-    // Method 1: Basic random number. Sloppy and introduces duplicates.
-    // var randomNumber = (Math.floor(Math.random() * 9) + 1) * 10;
-    // Method 2: Now pick a random number. The 'randomRange' with splice allows non-duplicated random values.
+    // Pick a random number. The 'randomRange' with splice allows non-duplicated random values.
     var randomPosition = Math.floor(Math.random() * randomRange.length);
     var randomNumber = randomRange.splice(randomPosition, 1);
-
     $(this).css('top', randomNumber + '%');
+
+    // Method 1: Basic random number. Sloppy and introduces duplicates.
+    var randomDuration = (Math.floor(Math.random() * 19) + 1);
+
+    $(this).css('animation-duration', randomDuration + 's');
 
   });
 
