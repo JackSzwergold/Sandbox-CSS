@@ -143,84 +143,12 @@ div:nth-child(odd) > h1 {
 
 /**************************************************************************************************/
 
-/*div:nth-child(1) {
-  animation: moveLeftRight 19.05s linear 0s infinite normal, moveTopBottom 18.05s linear 0s infinite normal;
-}
-
-div:nth-child(2) {
-  animation: moveLeftRight 13.05s linear 0s infinite normal, moveTopBottom 6.05s linear 0s infinite normal;
-}
-
-div:nth-child(3) {
-  animation: moveLeftRight 15.05s linear 0s infinite normal, moveTopBottom 8.05s linear 0s infinite normal;
-}
-
-div:nth-child(4) {
-  animation: moveLeftRight 10.05s linear 0s infinite normal, moveTopBottom 7.05s linear 0s infinite normal;
-}
-
-div:nth-child(5) {
-  animation: moveLeftRight 17.05s linear 0s infinite normal, moveTopBottom 5.05s linear 0s infinite normal;
-}
-
-div:nth-child(6) {
-  animation: moveLeftRight 21.05s linear 0s infinite normal, moveTopBottom 9.05s linear 0s infinite normal;
-}
-
-/**************************************************************************************************/
-
-div:nth-child(1) {
-  animation-direction: normal;
+div {
   animation-name: moveLeftRight;
-  animation-iteration-count: infinite;
+  animation-direction: normal;
   animation-timing-function: linear;
   animation-delay: 0s;
-  animation-duration: 19s;
-}
-
-div:nth-child(2) {
-  animation-direction: normal;
-  animation-name: moveLeftRight;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-duration: 13s;
-}
-
-div:nth-child(3) {
-  animation-direction: normal;
-  animation-name: moveLeftRight;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-duration: 15s;
-}
-
-div:nth-child(4) {
-  animation-direction: normal;
-  animation-name: moveLeftRight;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-duration: 10s;
-}
-
-div:nth-child(5) {
-  animation-direction: normal;
-  animation-name: moveLeftRight;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-duration: 17s;
-}
-
-div:nth-child(6) {
-  animation-direction: normal;
-  animation-name: moveLeftRight;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-duration: 21s;
 }
 
 /**************************************************************************************************/
