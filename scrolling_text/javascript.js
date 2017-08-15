@@ -11,14 +11,16 @@ $(document).ready(function() {
 
   $( "article > div" ).each(function(index) {
 
-    // Pick a random number. The 'randomPositionRange' with splice allows non-duplicated random values.
+    // Pick a random position.
     var randomPosition = Math.floor(Math.random() * randomPositionRange.length);
     var randomNumber = randomPositionRange.splice(randomPosition, 1);
     $(this).css('top', randomNumber + '%');
 
-    // Method 1: Basic random number. Sloppy and introduces duplicates.
-    var randomDuration = (Math.floor(Math.random() * 19) + 1);
-
+    // Pick a random duration.
+    var minDuration = 8;
+    var maxDuration = (20 - minDuration);
+    var randomDuration = (Math.floor(Math.random() * maxDuration) + minDuration);
+    console.log(randomDuration);
     $(this).css('animation-duration', randomDuration + 's');
 
   });
