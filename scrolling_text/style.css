@@ -145,7 +145,7 @@ div {
   animation-direction: normal;
   animation-timing-function: linear;
   animation-delay: 0s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 /**************************************************************************************************/
