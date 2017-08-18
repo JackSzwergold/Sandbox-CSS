@@ -96,11 +96,8 @@ article {
   height: 100%;
   overflow: hidden;
   perspective: 1500px;
-  background: #b42121; /* Old browsers */
-  background: -moz-linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e68c28', endColorstr='#b42121',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  background: #b42121;
+  background: linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   transform-style: preserve-3d;
 }

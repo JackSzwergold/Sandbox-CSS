@@ -118,7 +118,6 @@ div.face {
 div.cube {
   transform-style: preserve-3d;
   transition: all 600ms ease;
-  background-color: #000000;
   border-radius: 50%;
   background-color: #ffffff;
   box-shadow: inset -40px -40px 40px rgba(0, 0, 0, 0.4), 50px 50px 8px rgba(0, 0, 0, .04);
