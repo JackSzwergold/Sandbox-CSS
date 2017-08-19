@@ -17,27 +17,27 @@ $(document).ready(function() {
   } //randomPosition
 
   // A function to calculate a random duration value.
-  function randomDuration() {
+  function randomizedValue() {
 
-    var min = 8;
-    var max = 18;
+    // Set the min and max values.
+    var min = 1;
+    var max = 7;
 
+    // Return the randome values.
     return (Math.floor(Math.random() * (max - min)) + min);
 
-  } // randomDuration
+  } // randomizedValue
 
   // Set random values for each element.
   $("article > div.animate").each(function(index) {
-    var element = $(this);
-    element.css('top', randomPosition() + '%');
-    element.css('animation-duration', randomDuration() + 's');
+    $(this).css({'top': randomPosition() + '%', 'animation-duration': randomizedValue() + 's'});
   });
 
   // Detect when the animation ends and then restart it.
   $("article > div.animate").bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
     var element = $(this);
-    element.replaceWith(element.clone(true));
-    element.css('animation-duration', randomDuration() + 's');
+    var new_values = {'top': randomPosition() + '%', 'animation-duration': randomizedValue() + 's'}
+    element.replaceWith(element.clone(true).css(new_values));
   });
 
 });
