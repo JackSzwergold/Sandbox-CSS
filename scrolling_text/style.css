@@ -150,6 +150,15 @@ div {
   animation-iteration-count: 1;
 }
 
+div:hover {
+  -webkit-cursor: pointer;
+  -khtml-cursor: pointer;
+  -moz-cursor: pointer;
+  -ms-cursor: pointer;
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
 /**************************************************************************************************/
 
 @keyframes moveLeftRight {
