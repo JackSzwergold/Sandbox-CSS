@@ -17,7 +17,7 @@ $(document).ready(function() {
   } //randomPosition
 
   // A function to calculate a random duration value.
-  function randomizedValue() {
+  function randomValue() {
 
     // Set the min and max values.
     var min = 1;
@@ -26,17 +26,17 @@ $(document).ready(function() {
     // Return the randome values.
     return (Math.floor(Math.random() * (max - min)) + min);
 
-  } // randomizedValue
+  } // randomValue
 
   // Set random values for each element.
   $("article > div.animate").each(function(index) {
-    $(this).css({'top': randomPosition() + '%', 'animation-duration': randomizedValue() + 's'});
+    $(this).css({'top': randomPosition() + '%', 'animation-duration': randomValue() + 's'});
   });
 
   // Detect when the animation ends and then restart it.
   $("article > div.animate").bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
     var element = $(this);
-    var new_values = {'top': randomPosition() + '%', 'animation-duration': randomizedValue() + 's'}
+    var new_values = {'top': randomPosition() + '%', 'animation-duration': randomValue() + 's'}
     element.replaceWith(element.clone(true).css(new_values));
   });
 
