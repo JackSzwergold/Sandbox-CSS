@@ -37,6 +37,7 @@ $(document).ready(function() {
   $("article > div.animate").bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
     var element = $(this);
     element.replaceWith(element.clone(true));
+    element.css('animation-duration', randomDuration() + 's');
   });
 
 });
