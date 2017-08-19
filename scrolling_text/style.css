@@ -141,6 +141,8 @@ div:nth-child(odd) > h1 {
 /**************************************************************************************************/
 
 div {
+  position: absolute;
+  left: -100%;
   animation-name: moveLeftRight;
   animation-direction: normal;
   animation-timing-function: linear;
@@ -152,7 +154,7 @@ div {
 
 @keyframes moveLeftRight {
   0% {
-    left: -11rem;
+    left: -50%;
     opacity: 0;
     transform: rotate3d(0, 1, 0, -18deg);
   }
@@ -170,7 +172,7 @@ div {
 
 @keyframes moveRightLeft {
   0% {
-    right: -11rem;
+    right: -50%;
     opacity: 0;
     transform: rotate3d(0, 1, 0, -18deg);
   }
@@ -188,7 +190,7 @@ div {
 
 @keyframes moveTopBottom {
   0% {
-    top: -11rem;
+    top: -50%;
     opacity: 0;
   }
   75% {
@@ -204,7 +206,7 @@ div {
 
 @keyframes moveBottomTop {
   0% {
-    bottom: -11rem;
+    bottom: -50%;
     opacity: 0;
   }
   75% {
