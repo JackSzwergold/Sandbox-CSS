@@ -29,12 +29,12 @@ $(document).ready(function() {
   } // randomValue
 
   // Set random values for each element.
-  $("article > div.animate").each(function(index) {
+  $("article > div").each(function(index) {
     $(this).css({'top': randomPosition() + '%', 'animation-duration': randomValue() + 's', 'animation-delay': randomValue(0.25,1) + 's'});
   });
 
   // Detect when the animation ends and then restart it.
-  $("article > div.animate").bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
+  $("article > div").bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
     var element = $(this);
     var new_values = {'top': randomPosition() + '%', 'animation-duration': randomValue() + 's', 'animation-delay': randomValue(0.25,1) + 's'}
     element.replaceWith(element.clone(true).css(new_values));
