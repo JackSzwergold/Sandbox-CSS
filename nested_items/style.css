@@ -194,9 +194,10 @@ div.face > ul > li > p {
 /******************************************************************************/
 
 nav {
-  position: absolute;
+  display: flex;
+  /*position: absolute;
   top: 0.625rem;
-  left: 0.625rem;
+  left: 0.625rem;*/
   background-color: #222222;
 }
 
@@ -207,6 +208,7 @@ input[type="radio"] {
 }
 
 nav label {
+  background-color: #000;
   margin: 0 0 0.125rem 0;
 }
 
@@ -262,5 +264,21 @@ input[type="radio"].space_4:checked ~ div.cube {
 }
 
 input[type="radio"].space_5:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_6:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_7:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_8:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_9:checked ~ div.cube {
   transform: rotateY(0deg);
 }
