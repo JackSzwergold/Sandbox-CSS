@@ -245,6 +245,22 @@ nav label:active em {
 
 /******************************************************************************/
 
-input[type="radio"].side_1:checked ~ div.cube {
+input[type="radio"].space_1:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_2:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_3:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_4:checked ~ div.cube {
+  transform: rotateY(0deg);
+}
+
+input[type="radio"].space_5:checked ~ div.cube {
   transform: rotateY(0deg);
 }
