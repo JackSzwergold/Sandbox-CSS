@@ -6,29 +6,30 @@ $(document).ready(function() {
 
   /****************************************************************************/
   // Create an initial Y range.
-  var randomRangeY = generateRangeY(items.length);
+  var rangeY = generateRangeY(100, items.length);
 
   /****************************************************************************/
   // Create an initial duration range.
-  var randomRangeDuration = generateRangeDuration();
+  var rangeDuration = generateRangeTime(50, 0.75);
 
   /****************************************************************************/
   // Generate an array of Y position values.
-  function generateRangeY(item_count) {
+  function generateRangeY(max, step) {
 
     // Set default values.
-    var item_count = (typeof item_count !== 'undefined') ? item_count : 10;
+    var max = ((typeof max !== 'undefined') ? max : 100);
+    var step = ((typeof step !== 'undefined') ? step : 10);
 
-    // We multiply the count by 3 to give the positioning range more values.
-    item_count = item_count * 3;
+    // We multiply the step value by 3 to give the positioning range more values.
+    step *= 3;
 
-    // Set an item value based on the count divided by 100%.
-    var iteration_value = Math.round(100 / item_count);
+    // Set an item value based on the step value divided by 100%.
+    var item_value = Math.round(max / step);
 
     // Generate a random range.
-    return $.map(Array(item_count), function(value, index) {
+    return $.map(Array(step), function(value, index) {
       if (index > 0) {
-        return index * iteration_value;
+        return index * item_value;
       }
     });
 
@@ -36,47 +37,47 @@ $(document).ready(function() {
 
   /****************************************************************************/
   // Generate an array of duration values.
-  function generateRangeDuration() {
+  function generateRangeTime(max, step) {
 
-    return $.map(Array(70), function(value, index) {
+    // Set default values.
+    var max = ((typeof max !== 'undefined') ? max : 70);
+    var step = ((typeof step !== 'undefined') ? step : 0.75);
+
+    return $.map(Array(max), function(value, index) {
       if (index > 0) {
-        return index * 0.75;
+        return index * step;
       }
     });
 
-  } // generateRangeDuration
+  } // generateRangeTime
 
   /****************************************************************************/
   // A function to calculate a random position value.
-  function randomPositionValue(item_count) {
+  function positionY(max, step) {
 
-    if (randomRangeY.length <= 3) {
-      randomRangeY = generateRangeY(item_count);
+    // If the length of the Y range is less than or equal to 3, reset it.
+    if (rangeY.length <= 3) {
+      rangeY = generateRangeY(max, step);
     }
 
-    // Pic a random value out of a random range.
-    var key = Math.floor(Math.random() * randomRangeY.length);
-
     // Return a random range value.
-    return randomRangeY.splice(key, 1)[0];
+    return rangeY.splice(Math.floor(Math.random() * rangeY.length), 1)[0];
 
-  } // randomPositionValue
+  } // positionY
 
   /****************************************************************************/
   // A function to calculate a random position value.
-  function randomDurationValue() {
+  function durationValue(max, step) {
 
-    if (randomRangeDuration.length <= 3) {
-      randomRangeDuration = generateRangeDuration();
+    // If the length of the duration range is less than or equal to 3, reset it.
+    if (rangeDuration.length <= 3) {
+      rangeDuration = generateRangeTime(max, step);
     }
 
-    // Pic a random value out of a random range.
-    var key = Math.floor(Math.random() * randomRangeDuration.length);
-
     // Return a random range value.
-    return randomRangeDuration.splice(key, 1)[0];
+    return rangeDuration.splice(Math.floor(Math.random() * rangeDuration.length), 1)[0];
 
-  } // randomDurationValue
+  } // durationValue
 
   /****************************************************************************/
   // A function to calculate a random duration value.
@@ -102,13 +103,13 @@ $(document).ready(function() {
     var element = $(this);
 
     // Set initial values to the animation.
-    element.css({'top': randomPositionValue(items.length) + '%', 'animation-duration': randomDurationValue() + 's', 'animation-delay': randomValue(0.5, 3) + 's'});
+    element.css({'top': positionY(100, items.length) + '%', 'animation-duration': durationValue(75, 0.75) + 's', 'animation-delay': randomValue(0.25, 3) + 's'});
 
     // Detect when the animation ends and then restart it.
     element.bind('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function() {
 
       // Set new values.
-      var new_values = {'top': randomPositionValue(items.length) + '%', 'animation-duration': randomDurationValue() + 's', 'animation-delay': randomValue(0.5, 3) + 's'}
+      var new_values = {'top': positionY(100, items.length) + '%', 'animation-duration': durationValue(75, 0.75) + 's', 'animation-delay': randomValue(0.25, 3) + 's'}
 
       // Clone and replace the element to restart the WebKit animation.
       $(this).replaceWith($(this).clone(true).css(new_values));
