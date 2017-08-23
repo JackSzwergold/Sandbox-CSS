@@ -246,7 +246,7 @@ input[type="radio"].space_1:checked ~ div.cube {
 }
 
 input[type="radio"].space_1:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
-  transform: translateX(5rem) translateY(5rem) translateZ(1rem);
+  transform: translateX(2.5rem) translateY(2.5rem) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -256,7 +256,7 @@ input[type="radio"].space_2:checked ~ div.cube {
 }
 
 input[type="radio"].space_2:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
-  transform: translateX(0) translateY(5rem) translateZ(1rem);
+  transform: translateX(0) translateY(2.5rem) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -266,7 +266,7 @@ input[type="radio"].space_3:checked ~ div.cube {
 }
 
 input[type="radio"].space_3:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
-  transform: translateX(-5rem) translateY(5rem) translateZ(1rem);
+  transform: translateX(-2.5rem) translateY(2.5rem) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -278,7 +278,7 @@ input[type="radio"].space_4:checked ~ div.cube {
 }
 
 input[type="radio"].space_4:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
-  transform: translateX(5rem) translateY(0) translateZ(1rem);
+  transform: translateX(2.5rem) translateY(0) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -288,7 +288,7 @@ input[type="radio"].space_5:checked ~ div.cube {
 }
 
 input[type="radio"].space_5:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
-  transform: translateX(0) translateY(0) translateZ(1rem);
+  transform: translateX(0) translateY(0) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -298,7 +298,7 @@ input[type="radio"].space_6:checked ~ div.cube {
 }
 
 input[type="radio"].space_6:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
-  transform: translateX(-5rem) translateY(0) translateZ(1rem);
+  transform: translateX(-2.5rem) translateY(0) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -310,7 +310,7 @@ input[type="radio"].space_7:checked ~ div.cube {
 }
 
 input[type="radio"].space_7:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
-  transform: translateX(5rem) translateY(-5rem) translateZ(1rem);
+  transform: translateX(2.5rem) translateY(-2.5rem) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -320,7 +320,7 @@ input[type="radio"].space_8:checked ~ div.cube {
 }
 
 input[type="radio"].space_8:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
-  transform: translateX(0) translateY(-5rem) translateZ(1rem);
+  transform: translateX(0) translateY(-2.5rem) translateZ(0.75rem);
 }
 
 /******************************************************************************/
@@ -330,5 +330,5 @@ input[type="radio"].space_9:checked ~ div.cube {
 }
 
 input[type="radio"].space_9:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
-  transform: translateX(-5rem) translateY(-5rem) translateZ(1rem);
+  transform: translateX(-2.5rem) translateY(-2.5rem) translateZ(0.75rem);
 }
