@@ -164,6 +164,7 @@ div.face:nth-child(1) {
 
 div.face > ul {
   margin: 0 0 0 0.625rem;
+  transform-style: preserve-3d;
 }
 
 div.face > ul > li {
