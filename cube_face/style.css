@@ -238,6 +238,8 @@ nav label:active em {
 }
 
 /******************************************************************************/
+/* First Row */
+/******************************************************************************/
 
 input[type="radio"].space_1:checked ~ div.cube {
   transform: rotateY(-25deg) rotateX(25deg);
@@ -268,6 +270,8 @@ input[type="radio"].space_3:checked ~ div.cube > div.face > ul:nth-child(1) > li
 }
 
 /******************************************************************************/
+/* Second Row */
+/******************************************************************************/
 
 input[type="radio"].space_4:checked ~ div.cube {
   transform: rotateY(-25deg) rotateX(0);
@@ -297,6 +301,8 @@ input[type="radio"].space_6:checked ~ div.cube > div.face > ul:nth-child(2) > li
   transform: translateX(-5rem) translateY(0) translateZ(1rem);
 }
 
+/******************************************************************************/
+/* Third Row */
 /******************************************************************************/
 
 input[type="radio"].space_7:checked ~ div.cube {
