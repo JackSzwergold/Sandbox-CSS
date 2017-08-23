@@ -75,10 +75,10 @@ main {
   align-items: center;
   justify-content: center;
   align-content: center;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
+  width: calc(100% - 1.250rem);
+  height: calc(100% - 1.250rem);
+  padding: 0.625rem;
   margin: 0;
-  padding: 10px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -92,17 +92,38 @@ main {
 article {
   display: flex;
 	overflow: hidden;
-	flex-direction: column;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-  text-align: left;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 1.250rem);
+  height: calc(100% - 1.250rem);
+  padding: 0.625rem;
   overflow: hidden;
   background-color: #b0a18e;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  perspective: 1800px;
-  perspective-origin: 50% 50%;
+}
+
+/******************************************************************************/
+
+article > section {
+  width: 20rem;
+  margin: 0 0.625rem 0 0;
+  text-align: left;
+  background-color: #ffffdd;
+  padding: 0.625rem;
+}
+
+article > section:last-child {
+  margin: 0;
+}
+
+/******************************************************************************/
+
+article > section h1 {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+}
+
+article > section p {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
 }
