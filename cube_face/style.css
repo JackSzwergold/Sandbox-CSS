@@ -284,7 +284,7 @@ input[type="radio"].space_4:checked ~ div.cube > div.face > ul:nth-child(2) > li
 /******************************************************************************/
 
 input[type="radio"].space_5:checked ~ div.cube {
-  transform: rotateY(0deg) rotateX(0);
+  transform: rotateY(0) rotateX(0);
 }
 
 input[type="radio"].space_5:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {

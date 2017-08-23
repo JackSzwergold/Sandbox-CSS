@@ -1,9 +1,10 @@
 $(document).ready(function() {
 
-  if($('#checkMeOut').prop('checked')) {
-      // something when checked
-  } else {
-      // something else when not
-  }
+  $('input').change(function(){
+    $(this).delay(1000).queue(function() {
+      // if ($(this).is(':checked')) {}
+      $(this).prop('checked', false).dequeue();
+    });
+  });
 
 });
