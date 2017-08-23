@@ -94,7 +94,7 @@ article {
 	overflow: hidden;
 	flex-direction: row;
 	flex-wrap: nowrap;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	align-content: center;
   width: calc(100% - 0.625rem);
@@ -107,6 +107,7 @@ article {
 /******************************************************************************/
 
 article > section {
+  /*min-width: 25%;*/
 }
 
 article > section > div.toggle {
@@ -136,7 +137,6 @@ article > section:nth-child(3) > div.toggle {
 /******************************************************************************/
 
 article > section > div.content {
-  width: 10rem;
   margin: 0 0.625rem 0 0;
   text-align: left;
   background-color: #ffffdd;
@@ -169,6 +169,8 @@ article > section h1 {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 1.5rem;
   line-height: 1.5rem;
+  /*word-wrap: break-word;
+  white-space: nowrap;*/
 }
 
 article > section p {
