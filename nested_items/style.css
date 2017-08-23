@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  z-index: 0;
+  position: relative;
+  font-family: Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1em;
+  text-align: center;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/******************************************************************************/
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #000000;
+  transition: all 600ms ease;
+}
+
+ul, li {
+  list-style: none;
+  position: relative;
+  float: left;
+  display: inline;
+}
+
+:focus {
+  -moz-outline-style: none;
+}
+
+a {
+  outline: none;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  margin: 1.25em 0 1.25em 0;
+  background-color: #000000;
+  clear: both;
+}
+
+/******************************************************************************/
+/*  __  __       _
+/* |  \/  | __ _(_)_ __
+/* | |\/| |/ _` | | '_ \
+/* | |  | | (_| | | | | |
+/* |_|  |_|\__,_|_|_| |_|
+/*
+/******************************************************************************/
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  margin: 0;
+  padding: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/******************************************************************************/
+
+article {
+  display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #b0a18e;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  perspective: 1800px;
+  perspective-origin: 50% 50%;
+}
