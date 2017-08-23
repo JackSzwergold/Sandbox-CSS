@@ -127,3 +127,10 @@ article > section h1 {
 article > section p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
 }
+
+article > section ul,
+article > section li {
+  list-style: circle ;
+  margin: inherit;
+  padding: inherit;
+}
