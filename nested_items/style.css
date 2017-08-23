@@ -36,12 +36,12 @@ a:active {
   transition: all 600ms ease;
 }
 
-ul, li {
+/*ul, li {
   list-style: none;
   position: relative;
   float: left;
   display: inline;
-}
+}*/
 
 :focus {
   -moz-outline-style: none;
@@ -97,9 +97,9 @@ article {
 	align-items: center;
 	justify-content: center;
 	align-content: center;
-  width: calc(100% - 1.250rem);
+  width: calc(100% - 0.625rem);
   height: calc(100% - 1.250rem);
-  padding: 0.625rem;
+  padding: 0.625rem 0 0.625rem 0.625rem;
   overflow: hidden;
   background-color: #b0a18e;
 }
@@ -114,23 +114,34 @@ article > section {
   padding: 0.625rem;
 }
 
-article > section:last-child {
+/*article > section:last-child {
   margin: 0;
-}
+}*/
 
 /******************************************************************************/
 
 article > section h1 {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 article > section p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
 }
 
-article > section ul,
-article > section li {
-  list-style: circle ;
-  margin: inherit;
+/******************************************************************************/
+
+article > section ul {
+  list-style: disc outside;
+  margin: 0.3125rem 0 0 0;
   padding: inherit;
+}
+
+article > section li {
+  margin: 0 0 0.625rem 0.625rem;
+}
+
+article > section li:last-child {
+  margin-bottom: 0;
 }
