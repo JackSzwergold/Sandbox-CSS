@@ -80,10 +80,33 @@ main {
 main > article {
   display: flex;
 	overflow: hidden;
+	/* flex-direction: column; */
+	/* flex-direction: column-reverse; */
+	/* flex-direction: row; */
+	/* flex-direction: row-reverse; */
 	flex-direction: row;
+	/* flex-wrap: nowrap; */
+	/* flex-wrap: wrap; */
+	/* flex-wrap: wrap-reverse; */
 	flex-wrap: nowrap;
+	/* align-items: flex-start; */
+	/* align-items: flex-end; */
+	/* align-items: center; */
+	/* align-items: baseline; */
+	/* align-items: stretch; */
 	align-items: flex-start;
+	/* justify-content: flex-start; */
+	/* justify-content: flex-end; */
+	/* justify-content: center; */
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
 	justify-content: center;
+	/* align-content: flex-start; */
+	/* align-content: flex-end; */
+	/* align-content: center; */
+	/* align-content: stretch; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
 	align-content: center;
   width: calc(100% - 2.5rem);
   height: calc(100% - 2.5rem);
@@ -108,7 +131,6 @@ main > article > section {
   -ms-cursor: pointer;
   cursor: pointer;
   background-color: #444444;
-
   padding: 0.625rem;
   margin-right: 0.625rem;
 }
@@ -149,6 +171,7 @@ main > article > section div.content {
   visibility: hidden;
   opacity: 0;
   height: 0;
+  background-color: #444444;
   transition: all 600ms ease;
 }
 
