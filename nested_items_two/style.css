@@ -133,6 +133,7 @@ main > article > section div.content {
   transition: all 600ms ease;
 }
 
+main > article > section div.content:hover,
 main > article > section h1:hover ~ div.content {
   /*display: block;*/
   visibility: visible;
