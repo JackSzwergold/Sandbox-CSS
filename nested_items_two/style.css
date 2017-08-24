@@ -112,7 +112,8 @@ main > article {
   height: calc(100% - 2.5rem);
   padding: 1.250rem;
   overflow: hidden;
-  background-color: #b0a18e;
+  background-color: #26232f;
+  background: radial-gradient(circle at top left, #88282f 0%, #88282f 25%,#26232f 100%);
 }
 
 /******************************************************************************/
@@ -152,7 +153,7 @@ main > article > section h1 {
   line-height: 1.5rem;
   color: #ff8600;
   /*word-wrap: break-word;*/
-  white-space: nowrap;
+  /*white-space: nowrap;*/
 }
 
 main > article > section p {
