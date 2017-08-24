@@ -87,11 +87,11 @@ article {
 
 /******************************************************************************/
 
-input[type="radio"] {
+main > article input[type="radio"] {
   display: none;
 }
 
-article nav label {
+main > article nav label {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 1.5rem;
   line-height: 1.5rem;
