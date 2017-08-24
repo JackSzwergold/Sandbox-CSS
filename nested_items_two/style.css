@@ -79,35 +79,35 @@ main {
 
 main > article {
   display: flex;
-	overflow: hidden;
-	/* flex-direction: column; */
-	/* flex-direction: column-reverse; */
-	/* flex-direction: row; */
-	/* flex-direction: row-reverse; */
-	flex-direction: row;
-	/* flex-wrap: nowrap; */
-	/* flex-wrap: wrap; */
-	/* flex-wrap: wrap-reverse; */
-	flex-wrap: nowrap;
-	/* align-items: flex-start; */
-	/* align-items: flex-end; */
-	/* align-items: center; */
-	/* align-items: baseline; */
-	/* align-items: stretch; */
-	align-items: flex-start;
-	/* justify-content: flex-start; */
-	/* justify-content: flex-end; */
-	/* justify-content: center; */
-	/* justify-content: space-between; */
-	/* justify-content: space-around; */
-	justify-content: center;
-	/* align-content: flex-start; */
-	/* align-content: flex-end; */
-	/* align-content: center; */
-	/* align-content: stretch; */
-	/* align-content: space-between; */
-	/* align-content: space-around; */
-	align-content: center;
+  overflow: visible;
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+  /* align-items: stretch; */
+  align-items: flex-start;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: space-around;
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: stretch; */
+  /* align-content: space-between; */
+  /* align-content: space-around; */
+  align-content: center;
   width: calc(100% - 2.5rem);
   height: calc(100% - 2.5rem);
   padding: 1.250rem;
@@ -119,6 +119,9 @@ main > article {
 /******************************************************************************/
 
 main > article > section {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 15rem;
   text-align: left;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -131,14 +134,11 @@ main > article > section {
   -moz-cursor: pointer;
   -ms-cursor: pointer;
   cursor: pointer;
-  background-color: #26232f;
+  background-color: #222222;
+  min-width: 20rem;
   padding: 1.250rem;
-  margin-right: 0.625rem;
+  margin: 0 0.625rem 0.625rem 0.625rem;
   border-radius: 1.250rem;
-}
-
-main > article > section:last-child {
-  margin-right: 0;
 }
 
 /******************************************************************************/
@@ -151,7 +151,8 @@ main > article > section p {
 main > article > section h1 {
   font-size: 1.625rem;
   line-height: 1.5rem;
-  color: #ff8600;
+  color: #ffffff;
+  /*color: #ff8600;*/
   /*word-wrap: break-word;*/
   /*white-space: nowrap;*/
 }
