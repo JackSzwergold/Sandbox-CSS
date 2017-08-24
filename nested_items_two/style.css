@@ -78,6 +78,13 @@ main {
 /******************************************************************************/
 
 main > article {
+  display: flex;
+	overflow: hidden;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	justify-content: center;
+	align-content: center;
   width: calc(100% - 2.5rem);
   height: calc(100% - 2.5rem);
   padding: 1.25rem;
@@ -89,7 +96,6 @@ main > article {
 
 main > article > section {
   text-align: left;
-  margin-bottom: 2.5rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -101,6 +107,14 @@ main > article > section {
   -moz-cursor: pointer;
   -ms-cursor: pointer;
   cursor: pointer;
+  background-color: #444444;
+
+  padding: 0.625rem;
+  margin-right: 0.625rem;
+}
+
+main > article > section:last-child {
+  margin-right: 0;
 }
 
 /******************************************************************************/
@@ -114,12 +128,18 @@ main > article > section h1 {
   font-size: 1.625rem;
   line-height: 1.5rem;
   color: #ffffff;
+  /*word-wrap: break-word;*/
+  white-space: nowrap;
 }
 
 main > article > section p {
   font-size: 1rem;
   line-height: 1.25rem;
   color: #ffffff;
+}
+
+main > article > section p:first-child {
+  padding-top: 0.625rem;
 }
 
 /******************************************************************************/
@@ -129,12 +149,11 @@ main > article > section div.content {
   visibility: hidden;
   opacity: 0;
   height: 0;
-  margin-top: 0.625rem;
   transition: all 600ms ease;
 }
 
 main > article > section div.content:hover,
-main > article > section h1:hover ~ div.content {
+main > article > section div.heading:hover ~ div.content {
   /*display: block;*/
   visibility: visible;
   opacity: 1;
