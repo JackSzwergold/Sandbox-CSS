@@ -91,10 +91,8 @@ main > article input[type="radio"] {
   display: none;
 }
 
-main > article nav label {
+main > article nav ul li p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
   margin: 0 0 0.125rem 0;
 }
 
