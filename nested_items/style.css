@@ -107,7 +107,7 @@ main > article nav ul li p {
 
 /******************************************************************************/
 
-main > article section > div.content {
+main > article > div.section_items > section > div.content {
   margin: 0;
   text-align: left;
   background-color: #ffffdd;
@@ -121,12 +121,12 @@ main > article section > div.content {
 
 /******************************************************************************/
 
-main > article section h1,
-main > article section p {
+main > article > div.section_items > section h1,
+main > article > div.section_items > section p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
 }
 
-main > article section h1 {
+main > article > div.section_items > section h1 {
   font-size: 1.5rem;
   line-height: 1.5rem;
   /*word-wrap: break-word;*/
@@ -135,17 +135,17 @@ main > article section h1 {
 
 /******************************************************************************/
 
-main > article section ul {
+main > article > div.section_items > section ul {
   list-style: disc outside;
   margin: 0.3125rem 0 0 0;
   padding: inherit;
 }
 
-main > article section li {
+main > article > div.section_items > section li {
   margin: 0 0 0.625rem 0.625rem;
 }
 
-main > article section li:last-child {
+main > article > div.section_items > section li:last-child {
   margin-bottom: 0;
 }
 
@@ -155,9 +155,9 @@ main > article div.section_items {
   background-color: #bbb;
 }
 
-main > article input[type="radio"].section_1:checked ~ div.section_items section:nth-child(1) div.content,
-main > article input[type="radio"].section_2:checked ~ div.section_items section:nth-child(2) div.content,
-main > article input[type="radio"].section_3:checked ~ div.section_items section:nth-child(3) div.content {
+main > article input[type="radio"].section_1:checked ~ div.section_items > section:nth-child(1) div.content,
+main > article input[type="radio"].section_2:checked ~ div.section_items > section:nth-child(2) div.content,
+main > article input[type="radio"].section_3:checked ~ div.section_items > section:nth-child(3) div.content {
   /*display: block;*/
   visibility: visible;
   opacity: 1;
