@@ -91,6 +91,15 @@ main > article input[type="radio"] {
   display: none;
 }
 
+main > article nav {
+  text-align: left;
+  margin: 0 0 0.625rem 0;
+}
+
+main > article nav ul {
+  list-style: none;
+}
+
 main > article nav ul li p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   margin: 0 0 0.125rem 0;
