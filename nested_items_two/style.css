@@ -78,9 +78,9 @@ main {
 /******************************************************************************/
 
 main > article {
-  width: calc(100% - 1.250rem);
-  height: calc(100% - 1.250rem);
-  padding: 0.625rem;
+  width: calc(100% - 2.5rem);
+  height: calc(100% - 2.5rem);
+  padding: 1.25rem;
   overflow: hidden;
   background-color: #b0a18e;
 }
@@ -89,7 +89,9 @@ main > article {
 
 main > article > section {
   text-align: left;
-  margin-bottom: 1.250rem;
+  margin-bottom: 2.5rem;
+  padding-left: 1.250rem;
+  border-left: 1px solid #ffffff;
 }
 
 /******************************************************************************/
@@ -100,9 +102,9 @@ main > article > section p {
 }
 
 main > article > section h1 {
-  font-size: 1.5rem;
+  font-size: 1.625rem;
   line-height: 1.5rem;
-  margin-bottom: 0.3125rem;
+  margin-bottom: 0.625rem;
   color: #ffffff;
 }
 
