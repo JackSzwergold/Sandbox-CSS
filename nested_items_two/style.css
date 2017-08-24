@@ -110,7 +110,7 @@ main > article {
 	align-content: center;
   width: calc(100% - 2.5rem);
   height: calc(100% - 2.5rem);
-  padding: 1.25rem;
+  padding: 1.250rem;
   overflow: hidden;
   background-color: #b0a18e;
 }
@@ -130,9 +130,10 @@ main > article > section {
   -moz-cursor: pointer;
   -ms-cursor: pointer;
   cursor: pointer;
-  background-color: #444444;
-  padding: 0.625rem;
+  background-color: #26232f;
+  padding: 1.250rem;
   margin-right: 0.625rem;
+  border-radius: 1.250rem;
 }
 
 main > article > section:last-child {
@@ -149,14 +150,14 @@ main > article > section p {
 main > article > section h1 {
   font-size: 1.625rem;
   line-height: 1.5rem;
-  color: #ffffff;
+  color: #ff8600;
   /*word-wrap: break-word;*/
   white-space: nowrap;
 }
 
 main > article > section p {
   font-size: 1rem;
-  line-height: 1.25rem;
+  line-height: 1.250rem;
   color: #ffffff;
 }
 
@@ -171,8 +172,7 @@ main > article > section div.content {
   visibility: hidden;
   opacity: 0;
   height: 0;
-  background-color: #444444;
-  transition: all 600ms ease;
+  transition: all 300ms ease;
 }
 
 main > article > section div.content:hover,
