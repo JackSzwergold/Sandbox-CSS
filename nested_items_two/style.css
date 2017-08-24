@@ -170,17 +170,17 @@ main > article > section p:first-child {
 /******************************************************************************/
 
 main > article > section div.content {
-  /*display: none;*/
-  visibility: hidden;
+  display: none;
+  /*visibility: hidden;
   opacity: 0;
-  height: 0;
+  height: 0;*/
   transition: all 300ms ease;
 }
 
 main > article > section div.content:hover,
 main > article > section div.heading:hover ~ div.content {
-  /*display: block;*/
-  visibility: visible;
+  display: block;
+  /*visibility: visible;
   opacity: 1;
-  height: auto;
+  height: auto;*/
 }
