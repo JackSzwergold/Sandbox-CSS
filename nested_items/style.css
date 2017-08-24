@@ -36,12 +36,12 @@ a:active {
   transition: all 600ms ease;
 }
 
-/*ul, li {
+ul, li {
   list-style: none;
-  position: relative;
-  float: left;
-  display: inline;
-}*/
+  /* position: relative; */
+  /* float: left; */
+  /* display: inline; */
+}
 
 :focus {
   -moz-outline-style: none;
@@ -91,26 +91,44 @@ main > article input[type="radio"] {
   display: none;
 }
 
-main > article nav {
+/******************************************************************************/
+
+main > article > nav {
   text-align: left;
   margin: 0 0 0.625rem 0;
+  padding: 0.625rem;
+  background-color: #eeeeee;
 }
 
-main > article nav ul {
+main > article > nav ul {
   list-style: none;
 }
 
-main > article nav ul li p {
+main > article > nav ul li {
+  margin-bottom: 0.625rem;
+}
+
+main > article > nav ul li:last-child {
+  margin-bottom: 0;
+}
+
+main > article > nav ul li p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  margin: 0 0 0.125rem 0;
 }
 
 /******************************************************************************/
 
+main > article > div.section_items {
+  position: absolute;
+  bottom: 0.625rem;
+  left: 0.625rem;
+  width: calc(100% - 1.250rem);
+}
+
 main > article > div.section_items > section > div.content {
   margin: 0;
   text-align: left;
-  background-color: #ffffdd;
+  background-color: #26232f;
   padding: 0.625rem;
   /*display: none;*/
   visibility: hidden;
@@ -124,6 +142,7 @@ main > article > div.section_items > section > div.content {
 main > article > div.section_items > section h1,
 main > article > div.section_items > section p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  color: #ffffff;
 }
 
 main > article > div.section_items > section h1 {
@@ -136,13 +155,11 @@ main > article > div.section_items > section h1 {
 /******************************************************************************/
 
 main > article > div.section_items > section ul {
-  list-style: disc outside;
   margin: 0.3125rem 0 0 0;
-  padding: inherit;
 }
 
 main > article > div.section_items > section li {
-  margin: 0 0 0.625rem 0.625rem;
+  margin: 0 0 0.625rem 0;
 }
 
 main > article > div.section_items > section li:last-child {
@@ -151,9 +168,9 @@ main > article > div.section_items > section li:last-child {
 
 /******************************************************************************/
 
-main > article div.section_items {
-  background-color: #bbb;
-}
+/*main > article div.section_items {
+  background-color: #26232f;
+}*/
 
 main > article input[type="radio"].section_1:checked ~ div.section_items > section:nth-child(1) div.content,
 main > article input[type="radio"].section_2:checked ~ div.section_items > section:nth-child(2) div.content,
