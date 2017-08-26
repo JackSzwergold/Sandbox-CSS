@@ -23,10 +23,7 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
-  /*background-color: #bdd6d9;*/
-  background-color: #ede3d2;
-  /*background-color: #fca311;*/
-  /*background: linear-gradient(25deg, #ede3d2 0%, #ede3d2 25%, #ffdd35 100%);*/
+  background-color: #ffffff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -86,7 +83,7 @@ hr {
 /******************************************************************************/
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-Bold.eot');
 	src: url('../fonts/Arvo/Arvo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Bold.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Bold.woff') format('woff'), url('../fonts/Arvo/Arvo-Bold.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Bold.svg#Arvo-Bold') format('svg');
 	font-weight: bold;
@@ -94,7 +91,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-BoldItalic.eot');
 	src: url('../fonts/Arvo/Arvo-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-BoldItalic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-BoldItalic.woff') format('woff'), url('../fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-BoldItalic.svg#Arvo-BoldItalic') format('svg');
 	font-weight: bold;
@@ -102,7 +99,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo-Italic.eot');
 	src: url('../fonts/Arvo/Arvo-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Italic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Italic.woff') format('woff'), url('../fonts/Arvo/Arvo-Italic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Italic.svg#Arvo-Italic') format('svg');
 	font-weight: normal;
@@ -110,7 +107,7 @@ hr {
 }
 
 @font-face {
-	font-family: 'Arvo';
+	font-family: "Arvo";
 	src: url('../fonts/Arvo/Arvo.eot');
 	src: url('../fonts/Arvo/Arvo.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo.woff2') format('woff2'), url('../fonts/Arvo/Arvo.woff') format('woff'), url('../fonts/Arvo/Arvo.ttf') format('truetype'), url('../fonts/Arvo/Arvo.svg#Arvo') format('svg');
 	font-weight: normal;
@@ -300,6 +297,11 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  perspective: 1800px;
+  perspective-origin: 50% 50%;
 }
 
 /******************************************************************************/
@@ -314,8 +316,6 @@ div.container {
 
 div.panel {
   position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /******************************************************************************/
@@ -363,20 +363,19 @@ input[type="radio"].panel_3:checked ~ div.container {
 /******************************************************************************/
 
 article {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 36rem;
+  position: relative;
+  float: left;
+  display: block;
   text-align: left;
-  margin: 2.50rem;
-  padding: 1.250rem;
+  margin: 2.5rem;
+  padding: 1.25rem;
   background-color: #ffffff;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
 }
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: 'Arvo', Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: bold;
   font-style: normal;
   clear: both;
