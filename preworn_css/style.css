@@ -366,14 +366,13 @@ article {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 36rem;
+  width: 36rem;
   text-align: left;
   margin: 2.50rem;
   padding: 1.250rem;
   background-color: #ffffff;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
 }
-
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
@@ -541,11 +540,11 @@ article p code:hover {
 /******************************************************************************/
 
 article section {
-  padding: 0 0 1rem 0;
+  padding-bottom: 1rem;
 }
 
 article section:last-child {
-  padding: 0;
+  padding-bottom: 0;
 }
 
 /******************************************************************************/
