@@ -293,7 +293,6 @@ main {
   overflow-x: hidden;
   width: calc(100% - 1.250rem);
   height: calc(100% - 1.250rem);
-  margin: 0;
   padding: 0.625rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -309,21 +308,21 @@ main > input[type="radio"] {
   display: none;
 }
 
-input[type="radio"].panel_1:checked ~ div.cube {
+input[type="radio"].panel_1:checked ~ div.container {
   transform: translateX(180rem);
 }
 
-input[type="radio"].panel_2:checked ~ div.cube {
+input[type="radio"].panel_2:checked ~ div.container {
   transform: translateX(0);
 }
 
-input[type="radio"].panel_3:checked ~ div.cube {
+input[type="radio"].panel_3:checked ~ div.container {
   transform: translateX(-180rem);
 }
 
 /******************************************************************************/
 
-div.cube {
+div.container {
   width: 46rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
@@ -331,23 +330,23 @@ div.cube {
 
 /******************************************************************************/
 
-div.face {
+div.panel {
   position: absolute;
-  text-align: left;
-  transition: all 600ms ease;
+  top: 0;
+  left: 0;
 }
 
 /******************************************************************************/
 
-div.face:nth-child(1) {
+div.panel:nth-child(1) {
   transform: translateX(-180rem);
 }
 
-div.face:nth-child(2) {
+div.panel:nth-child(2) {
   transform: translateX(0rem);
 }
 
-div.face:nth-child(3) {
+div.panel:nth-child(3) {
   transform: translateX(180rem);
 }
 
@@ -363,6 +362,8 @@ div.face:nth-child(3) {
 
 article {
   position: absolute;
+  top: 0;
+  left: 0;
   min-width: 36rem;
   text-align: left;
   margin: 2.50rem;
