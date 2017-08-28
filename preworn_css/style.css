@@ -319,31 +319,21 @@ main {
   transition: all 600ms ease;
 }
 
-/******************************************************************************/
-
 .panel:nth-child(1) {
   transform: translateX(0rem);
 }
-
-/******************************************************************************/
 
 .panel:nth-child(2) {
   transform: translateX(180rem);
 }
 
-/******************************************************************************/
-
 .panel:nth-child(3) {
   transform: translateX(360rem);
 }
 
-/******************************************************************************/
-
 .panel:nth-child(4) {
   transform: translateX(540rem);
 }
-
-/******************************************************************************/
 
 .panel:nth-child(5) {
   transform: translateX(720rem);
@@ -355,31 +345,21 @@ main input[type="radio"] {
   display: none;
 }
 
-/******************************************************************************/
-
 input[type="radio"].panel_1:checked ~ .container {
   transform: translateX(0rem);
 }
-
-/******************************************************************************/
 
 input[type="radio"].panel_2:checked ~ .container {
   transform: translateX(-180rem);
 }
 
-/******************************************************************************/
-
 input[type="radio"].panel_3:checked ~ .container {
   transform: translateX(-360rem);
 }
 
-/******************************************************************************/
-
 input[type="radio"].panel_4:checked ~ .container {
   transform: translateX(-540rem);
 }
-
-/******************************************************************************/
 
 input[type="radio"].panel_5:checked ~ .container {
   transform: translateX(-720rem);
