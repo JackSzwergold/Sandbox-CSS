@@ -517,9 +517,21 @@ article section:last-child {
     margin-top: 5rem;
   }
 
+  .panel.home article {
+    width: 16rem;
+    height: 16rem;
+  }
+
 }
 
-@media (min-width: 480px) {}
+@media (min-width: 480px) {
+
+  .panel.home article {
+    width: 26rem;
+    height: 26rem;
+  }
+
+}
 
 @media (min-width: 640px) {
 
@@ -529,6 +541,11 @@ article section:last-child {
 
   article {
     margin-top: 5rem;
+  }
+
+  .panel.home article {
+    width: 36rem;
+    height: 36rem;
   }
 
 }
@@ -545,4 +562,11 @@ article section:last-child {
 
 }
 
-@media (min-width: 960px) {}
+@media (min-width: 960px) {
+
+  .panel.home article {
+    width: 46rem;
+    height: 46rem;
+  }
+
+}
