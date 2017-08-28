@@ -210,56 +210,6 @@ body > nav ul li label {
 }
 
 /******************************************************************************/
-/*  _____           _
-/* |  ___|__   ___ | |_ ___ _ __
-/* | |_ / _ \ / _ \| __/ _ \ '__|
-/* |  _| (_) | (_) | ||  __/ |
-/* |_|  \___/ \___/ \__\___|_|
-/*
-/******************************************************************************/
-
-/*main + footer {
-  position: fixed;
-  bottom: -1.25rem;
-  right: 1.25rem;
-  padding: 0.9375rem 3.125rem 0.9375rem 3.125rem;
-  width: calc(100% - 6.25rem);
-  min-height: 3rem;
-  transform: rotate(-0.10deg);
-  background-color: #000000;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  transition: all 600ms ease;
-}*/
-
-/******************************************************************************/
-
-/*main + footer p {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: normal;
-  font-size: 0.75rem;
-  line-height: 1.35em;
-  letter-spacing: 0.025em;
-  clear: both;
-  text-align: left;
-  color: #ffffff;
-}*/
-
-/*main + footer p a,
-main + footer p a:link,
-main + footer p a:visited,
-main + footer p a:hover,
-main + footer p a:active {
- font-weight: bold;
- color: #ffffff;
-}*/
-
-/******************************************************************************/
 
 main + footer:hover,
 main + footer:active {
@@ -563,6 +513,10 @@ article section:last-child {
     width: 25rem;
   }
 
+  article {
+    margin-top: 5rem;
+  }
+
 }
 
 @media (min-width: 480px) {}
@@ -573,12 +527,20 @@ article section:last-child {
     width: 42rem;
   }
 
+  article {
+    margin-top: 5rem;
+  }
+
 }
 
 @media (min-width: 768px) {
 
   .container {
     width: 56rem;
+  }
+
+  article {
+    margin-top: 2.5rem;
   }
 
 }
