@@ -563,38 +563,6 @@ article ol li {
 
 /******************************************************************************/
 
-article pre {
-  white-space: pre-wrap;
-  word-break: break-all;
-  font-size: 0.8rem;
-  line-height: 1.4em;
-  font-weight: normal;
-  border-radius: 0.5rem;
-  padding: 1.250rem 1.250rem 1.250rem 30px;
-  margin: 0 0 10px 0;
-  color: #00dd00;
-  background-color: #333333;
-}
-
-article p code {
-  display: inline-block;
-  font-size: 0.8rem;
-  line-height: 1.5rem;
-  font-weight: normal;
-  padding: 0 0.5rem 0 0.5rem;
-  border-radius: 0.25rem;
-  background-color: #ddd;
-  transition: all 600ms ease;
-}
-
-article p code:active,
-article p code:hover {
-  color: #00dd00;
-  background-color: #333333;
-}
-
-/******************************************************************************/
-
 article section {
   padding-bottom: 1rem;
 }
