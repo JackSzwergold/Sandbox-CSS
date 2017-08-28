@@ -209,10 +209,6 @@ body > nav ul li label {
   cursor: pointer;
 }
 
-/*body > nav ul li:last-child label {
-  padding-bottom: 0;
-}*/
-
 /******************************************************************************/
 /*  _____           _
 /* |  ___|__   ___ | |_ ___ _ __
@@ -222,7 +218,7 @@ body > nav ul li label {
 /*
 /******************************************************************************/
 
-main + footer {
+/*main + footer {
   position: fixed;
   bottom: -1.25rem;
   right: 1.25rem;
@@ -239,11 +235,11 @@ main + footer {
   -ms-user-select: none;
   user-select: none;
   transition: all 600ms ease;
-}
+}*/
 
 /******************************************************************************/
 
-main + footer p {
+/*main + footer p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-size: 0.75rem;
@@ -252,16 +248,16 @@ main + footer p {
   clear: both;
   text-align: left;
   color: #ffffff;
-}
+}*/
 
-main + footer p a,
+/*main + footer p a,
 main + footer p a:link,
 main + footer p a:visited,
 main + footer p a:hover,
 main + footer p a:active {
  font-weight: bold;
  color: #ffffff;
-}
+}*/
 
 /******************************************************************************/
 
