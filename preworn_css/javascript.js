@@ -1,10 +1,13 @@
 $(document).ready(function() {
 
-  $('input').change(function(){
-    // $(this).delay(300).queue(function() {
-    //   // if ($(this).is(':checked')) {}
-    //   // $(this).prop('checked', false).dequeue();
-    // });
+  $("input").change(function(){
+    $(this).delay(300).queue(function() {
+      $("div.container")[0].scrollIntoView({
+        behavior: "instant",
+        block: "start",
+        inline: "start"
+      });
+    });
   });
 
 });
