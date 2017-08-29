@@ -149,7 +149,6 @@ div.face {
   height: 100%;
   overflow: hidden;
   /*background: #ffffff;*/
-  opacity: 0.75;
   /*backface-visibility: hidden;*/
 }
 
@@ -184,7 +183,7 @@ div.face > ul > li {
 	padding: 0;
 	text-align: left;
   background-color: #222222;
-  opacity: 0.85;
+  opacity: 0.6;
 }
 
 div.face > ul > li > p {
