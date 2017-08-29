@@ -105,7 +105,7 @@ article {
   /*background: linear-gradient(45deg, #062f4f 0%, #813772 50%, #b82601 100%);*/
   background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  perspective: 1500px;
+  perspective: 1800px;
   perspective-origin: 50% 50%;
 }
 
@@ -137,7 +137,7 @@ div.face {
   overflow: hidden;
   transition: all 600ms ease;
   /*background: #ffffff;*/
-  /*opacity: 0.75;*/
+  opacity: 0.75;
   /*backface-visibility: hidden;*/
 }
 
