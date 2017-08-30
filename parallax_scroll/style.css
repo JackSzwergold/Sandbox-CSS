@@ -120,13 +120,11 @@ hr {
 
 main {
   text-align: left;
+  perspective: 300px;
+  perspective-origin: 50% 50%;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective: 300px;
-  perspective: 300px;
-  /*overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;*/
+  -webkit-overflow-scrolling: touch;
 }
 
 article {
