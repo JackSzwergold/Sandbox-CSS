@@ -117,7 +117,7 @@ hr {
 
 main {
   text-align: left;
-  perspective: 400px;
+  perspective: 360px;
   perspective-origin: 50% 50%;
   overflow-x: hidden;
   overflow-y: auto;
