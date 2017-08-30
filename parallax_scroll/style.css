@@ -136,15 +136,12 @@ article {
   opacity: 0.95;*/
 }
 
+/******************************************************************************/
+
 article section {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-/******************************************************************************/
-
-article section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
