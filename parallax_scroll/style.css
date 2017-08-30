@@ -122,6 +122,8 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  /*background: #f00;
+  opacity: 0.95;*/
 }
 
 article {
@@ -130,6 +132,8 @@ article {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   /*transform: rotateY(2deg) scale(1.75);*/
+  /*background: #0f0;
+  opacity: 0.95;*/
 }
 
 article section {
@@ -149,6 +153,7 @@ section {
   align-content: center;
   width: 100%;
   opacity: 0.75;
+  transition: all 600ms ease;
 }
 
 section div.content {
@@ -162,8 +167,8 @@ section div.content h1 {
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
-  /*word-break: keep-all;
-  white-space: nowrap;*/
+  /*word-break: keep-all;*/
+  /*white-space: nowrap;*/
 }
 
 section div.content p {
