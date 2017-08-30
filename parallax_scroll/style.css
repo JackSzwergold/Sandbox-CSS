@@ -144,7 +144,7 @@ article section {
 
 /******************************************************************************/
 
-section {
+article section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -156,14 +156,14 @@ section {
   transition: all 600ms ease;
 }
 
-section div.content {
+article section div.content {
   padding: 2rem;
   margin: 2rem;
   width: 36rem;
   transition: all 600ms ease;
 }
 
-section div.content h1 {
+article section div.content h1 {
   font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
@@ -172,34 +172,34 @@ section div.content h1 {
   /*white-space: nowrap;*/
 }
 
-section div.content p {
+article section div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
 
-section.first {
+article section.first {
   /*-webkit-transform: translateZ(0px) scale(1);
   transform: translateZ(0px) scale(1);*/
 }
 
-section.second {
+article section.second {
   -webkit-transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
   transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
-section.third {
+article section.third {
   -webkit-transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
   transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
-section.fourth {
+article section.fourth {
   -webkit-transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
   transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
-section.fifth {
+article section.fifth {
   -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   z-index: 5;
@@ -207,38 +207,38 @@ section.fifth {
 
 /******************************************************************************/
 
-section.first div.content {
+article section.first div.content {
   background: #ffffcc;
 }
 
 /******************************************************************************/
 
-section.second div.content {
+article section.second div.content {
   background: #ffccff;
 }
 
 /******************************************************************************/
 
-section.third div.content {
+article section.third div.content {
   text-align: right;
   background: #ccccff;
 }
 
 /******************************************************************************/
 
-section.fourth div.content {
+article section.fourth div.content {
   background: #ccffcc;
 }
 
 /******************************************************************************/
 
-section.fifth div.content {
+article section.fifth div.content {
   text-align: right;
   background: #ffcccc;
 }
 
 /******************************************************************************/
 
-/*section div.content:hover {
+/*article section div.content:hover {
   background-color: #f00;
 }*/
