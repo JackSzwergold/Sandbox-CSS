@@ -137,18 +137,18 @@ article {
 article section {
   position: relative;
   height: 500px;
-  height: 75vh;
+  height: 100%;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/*section div.layer {
+section div.layer {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-}*/
+}
 
 /******************************************************************************/
 
