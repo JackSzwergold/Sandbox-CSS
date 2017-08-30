@@ -119,35 +119,32 @@ hr {
 /******************************************************************************/
 
 main {
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-article {
   text-align: left;
-  height: 500px;
+
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-perspective: 300px;
   perspective: 300px;
+  /*overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;*/
 }
 
-article section {
+article {
   position: relative;
-  height: 500px;
   height: 100vh;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-section div.layer {
+article section {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+}
+
+section div.layer {
 }
 
 /******************************************************************************/
@@ -184,7 +181,7 @@ section div.content p {
 
 /******************************************************************************/
 
-section div.first {
+section.first {
   background: #687A8f;
   opacity: 0.75;
   -webkit-transform: translateZ(90px) scale(0.7);
@@ -192,19 +189,19 @@ section div.first {
   z-index: 1;
 }
 
-section div.second {
+section.second {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   z-index: 4;
 }
 
-section div.third {
+section.third {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
   z-index: 3;
 }
 
-section div.fourth {
+section.fourth {
   -webkit-transform: translateZ(-600px) scale(3);
   transform: translateZ(-600px) scale(3);
   z-index: 2;
@@ -212,22 +209,22 @@ section div.fourth {
 
 /******************************************************************************/
 
-section div.first h1 {
+section.first h1 {
   font-size: 6rem;
   opacity: 1;
 }
 
-section div.second h1 {
+section.second h1 {
   font-size: 5rem;
   opacity: 0.75;
 }
 
-section div.third h1 {
+section.third h1 {
   font-size: 4rem;
   opacity: 0.5;
 }
 
-section div.fourth h1 {
+section.fourth h1 {
   font-size: 3rem;
   opacity: 0.25;
 }
