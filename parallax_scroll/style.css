@@ -227,70 +227,70 @@ section div.fourth {
 
 /******************************************************************************/
 
-section:nth-child(1) {
+section.one {
   z-index: 5;
 }
 
-section:nth-child(1) div.second {
+section.one div.second {
   background: #687A8f;
 }
 
 /******************************************************************************/
 
-section:nth-child(2) {
+section.two {
   z-index: 3;
 }
 
-section:nth-child(2) div.third {
+section.two div.third {
   background: #f7882f;
 }
 
 /******************************************************************************/
 
-section:nth-child(3) {
+section.three {
   z-index: 4;
 }
 
-section:nth-child(3) div.second {
+section.three div.second {
   background: #f7c331;
 }
 
 /******************************************************************************/
 
-section:nth-child(4) {
+section.four {
   z-index: 2;
 }
 
-section:nth-child(4) div.fourth {
+section.four div.fourth {
   background: #687A8f;
 }
 
 /******************************************************************************/
 
-section:nth-child(5) {
+section.five {
   z-index: 3;
 }
 
-section:nth-child(5) div.second {
+section.five div.second {
   background: #f7882f;
 }
 
 /******************************************************************************/
 
-section:nth-child(6) {
+section.six {
   z-index: 2;
 }
 
-section:nth-child(6) div.third {
+section.six div.third {
   background: #f7c331;
 }
 
 /******************************************************************************/
 
-section:nth-child(7) {
+section.seven {
   z-index: 3;
 }
 
-section:nth-child(7) div.second {
+section.seven div.second {
   background: #687A8f;
 }
