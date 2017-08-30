@@ -181,47 +181,47 @@ section div.first h1 {
 section div.second h1 {
   font-size: 5rem;
   opacity: 0.75;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
 }
 
 section div.third h1 {
   font-size: 4rem;
   opacity: 0.5;
-  -webkit-filter: blur(3px);
-  filter: blur(3px);
 }
 
 section div.fourth h1 {
   font-size: 3rem;
   opacity: 0.25;
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
 }
 
 /******************************************************************************/
 
 section div.first {
-  -webkit-transform: translateZ(90px) scale(.7);
-  transform: translateZ(90px) scale(.7);
+  -webkit-transform: translateZ(90px) scale(0.7);
+  transform: translateZ(90px) scale(0.7);
   z-index: 1;
 }
 
 section div.second {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
   z-index: 4;
 }
 
 section div.third {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
   z-index: 3;
 }
 
 section div.fourth {
   -webkit-transform: translateZ(-600px) scale(3);
   transform: translateZ(-600px) scale(3);
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
   z-index: 2;
 }
 
