@@ -125,7 +125,7 @@ main {
 }
 
 article {
-  /*height: 500px;*/
+  height: 500px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -135,8 +135,8 @@ article {
 
 article section {
   position: relative;
-  /*height: 500px;*/
-  height: 100vh;
+  height: 500px;
+  height: 75vh;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -157,21 +157,28 @@ section {
   z-index: 2;
 }
 
-section h1 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-style: normal;
-  text-transform: normal;
-  font-size: 6rem;
-  color: #3333333;
+section div.content {
   text-align: center;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+section div.content h1 {
+  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: normal;
+  font-size: 6rem;
+  color: #3333333;
   word-break: keep-all;
   white-space: nowrap;
+}
+
+section div.content p {
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
 }
 
 /******************************************************************************/
