@@ -160,6 +160,7 @@ section div.content {
   padding: 2rem;
   margin: 2rem;
   width: 36rem;
+  transition: all 600ms ease;
 }
 
 section div.content h1 {
@@ -238,4 +239,10 @@ section.fourth div.content {
 section.fifth div.content {
   text-align: right;
   background: #ffcccc;
+}
+
+/******************************************************************************/
+
+section div.content:hover {
+  background-color: #f00;
 }
