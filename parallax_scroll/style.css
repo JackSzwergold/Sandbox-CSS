@@ -185,6 +185,8 @@ section div.content p {
 /******************************************************************************/
 
 section div.first {
+  background: #687A8f;
+  opacity: 0.75;
   -webkit-transform: translateZ(90px) scale(0.7);
   transform: translateZ(90px) scale(0.7);
   z-index: 1;
@@ -203,7 +205,6 @@ section div.third {
 }
 
 section div.fourth {
-  background: #687A8f;
   -webkit-transform: translateZ(-600px) scale(3);
   transform: translateZ(-600px) scale(3);
   z-index: 2;
