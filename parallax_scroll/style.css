@@ -179,6 +179,7 @@ section div.content h1 {
 
 section div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
