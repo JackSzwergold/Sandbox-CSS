@@ -140,19 +140,22 @@ article section {
 /******************************************************************************/
 
 section {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+
 }
 
 section div.content {
   /*text-align: left;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);*/
+  position: absolute;*/
   padding: 1rem;
+  width: 30rem;
 }
 
 section div.content h1 {
@@ -172,46 +175,33 @@ section div.content p {
 /******************************************************************************/
 
 section.first {
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+  -webkit-transform: translateZ(0px) scale(1);
+  transform: translateZ(0px) scale(1);
   background: #ffffcc;
   opacity: 0.75;
   z-index: 1;
 }
 
 section.second {
-  -webkit-transform: translateZ(-75px) scale(1);
-  transform: translateZ(-75px) scale(1);
+  -webkit-transform: translateZ(-50px) scale(1.25);
+  transform: translateZ(-50px) scale(1.25);
 }
 
 section.third {
-  -webkit-transform: translateZ(-150px) scale(2);
-  transform: translateZ(-150px) scale(2);
-}
-
-section.fourth {
-  -webkit-transform: translateZ(-300px) scale(3);
-  transform: translateZ(-300px) scale(3);
+  -webkit-transform: translateZ(-75px) scale(1.5);
+  transform: translateZ(-75px) scale(1.5);
 }
 
 /******************************************************************************/
 
 section.first h1 {
-  font-size: 6rem;
   opacity: 1;
 }
 
 section.second h1 {
-  font-size: 5rem;
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
 section.third h1 {
-  font-size: 4rem;
-  opacity: 0.8;
-}
-
-section.fourth h1 {
-  font-size: 3rem;
-  opacity: 0.7;
+  opacity: 0.5;
 }
