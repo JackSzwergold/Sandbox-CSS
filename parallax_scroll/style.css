@@ -133,7 +133,7 @@ article {
   perspective: 300px;
 }
 
-section {
+article section {
   position: relative;
   height: 500px;
   height: 75vh;
@@ -141,7 +141,7 @@ section {
   transform-style: preserve-3d;
 }
 
-.layer {
+section div.layer {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,26 +173,26 @@ section h1 {
   white-space: nowrap;
 }
 
-section .first h1 {
+section div.first h1 {
   font-size: 6rem;
   opacity: 1;
 }
 
-section .second h1 {
+section div.second h1 {
   font-size: 5rem;
   opacity: 0.75;
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
-section .third h1 {
+section div.third h1 {
   font-size: 4rem;
   opacity: 0.5;
   -webkit-filter: blur(3px);
   filter: blur(3px);
 }
 
-section .fourth h1 {
+section div.fourth h1 {
   font-size: 3rem;
   opacity: 0.25;
   -webkit-filter: blur(4px);
@@ -201,25 +201,25 @@ section .fourth h1 {
 
 /******************************************************************************/
 
-section .first {
+section div.first {
   -webkit-transform: translateZ(90px) scale(.7);
   transform: translateZ(90px) scale(.7);
   z-index: 1;
 }
 
-section .second {
+section div.second {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   z-index: 4;
 }
 
-section .third {
+section div.third {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
   z-index: 3;
 }
 
-section .fourth {
+section div.fourth {
   -webkit-transform: translateZ(-600px) scale(3);
   transform: translateZ(-600px) scale(3);
   z-index: 2;
@@ -231,7 +231,7 @@ section:nth-child(1) {
   z-index: 5;
 }
 
-section:nth-child(1) .second {
+section:nth-child(1) div.second {
   background: #687A8f;
 }
 
@@ -241,7 +241,7 @@ section:nth-child(2) {
   z-index: 3;
 }
 
-section:nth-child(2) .third {
+section:nth-child(2) div.third {
   background: #f7882f;
 }
 
@@ -251,7 +251,7 @@ section:nth-child(3) {
   z-index: 4;
 }
 
-section:nth-child(3) .second {
+section:nth-child(3) div.second {
   background: #f7c331;
 }
 
@@ -261,7 +261,7 @@ section:nth-child(4) {
   z-index: 2;
 }
 
-section:nth-child(4) .fourth {
+section:nth-child(4) div.fourth {
   background: #687A8f;
 }
 
@@ -271,7 +271,7 @@ section:nth-child(5) {
   z-index: 3;
 }
 
-section:nth-child(5) .second {
+section:nth-child(5) div.second {
   background: #f7882f;
 }
 
@@ -281,7 +281,7 @@ section:nth-child(6) {
   z-index: 2;
 }
 
-section:nth-child(6) .third {
+section:nth-child(6) div.third {
   background: #f7c331;
 }
 
@@ -291,6 +291,6 @@ section:nth-child(7) {
   z-index: 3;
 }
 
-section:nth-child(7) .second {
+section:nth-child(7) div.second {
   background: #687A8f;
 }
