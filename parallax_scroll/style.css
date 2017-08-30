@@ -125,7 +125,7 @@ main {
 }
 
 article {
-  height: 500px;
+  /*height: 500px;*/
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -135,7 +135,7 @@ article {
 
 article section {
   position: relative;
-  height: 500px;
+  /*height: 500px;*/
   height: 75vh;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
