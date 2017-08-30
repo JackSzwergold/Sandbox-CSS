@@ -117,7 +117,7 @@ hr {
 
 main {
   text-align: left;
-  perspective: 300px;
+  perspective: 400px;
   perspective-origin: 50% 50%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -204,18 +204,10 @@ section.first div.content {
   background: #ffffcc;
 }
 
-section.first div.content h1 {
-  opacity: 1;
-}
-
 /******************************************************************************/
 
 section.second div.content {
   background: #ffccff;
-}
-
-section.second div.content h1 {
-  opacity: 0.75;
 }
 
 /******************************************************************************/
@@ -225,18 +217,10 @@ section.third div.content {
   background: #ccccff;
 }
 
-section.third div.content h1 {
-  opacity: 0.5;
-}
-
 /******************************************************************************/
 
 section.fourth div.content {
   background: #ccffcc;
-}
-
-section.fourth div.content h1 {
-  opacity: 0.5;
 }
 
 /******************************************************************************/
@@ -244,8 +228,4 @@ section.fourth div.content h1 {
 section.fifth div.content {
   text-align: right;
   background: #ffcccc;
-}
-
-section.fifth div.content h1 {
-  opacity: 0.5;
 }
