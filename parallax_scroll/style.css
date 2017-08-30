@@ -158,7 +158,7 @@ section {
 }
 
 section div.content {
-  text-align: center;
+  text-align: left;
   position: absolute;
   left: 50%;
   top: 50%;
