@@ -125,7 +125,6 @@ main {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  /*background: linear-gradient(45deg, #062f4f 0%, #813772 50%, #b82601 100%);*/
   background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   perspective: 360px;
@@ -197,18 +196,6 @@ article section.fourth {
 article section.fifth {
   -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
-}
-
-/******************************************************************************/
-
-article section.third div.content {
-  text-align: right;
-}
-
-/******************************************************************************/
-
-article section.fifth div.content {
-  text-align: right;
 }
 
 /******************************************************************************/
