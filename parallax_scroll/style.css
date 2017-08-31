@@ -143,14 +143,14 @@ main article {
 
 /******************************************************************************/
 
-main article section {
+main article div.element {
   position: absolute;
   top: 0;
   left: 0;
   transition: all 600ms ease;
 }
 
-main article section div.element {
+main article div.element div.content {
   padding: 2rem;
   margin: 2rem;
   background-color: #ffffff;
@@ -159,41 +159,41 @@ main article section div.element {
   transition: all 600ms ease;
 }
 
-main article section div.element h1 {
+main article div.element div.content h1 {
   font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
 }
 
-main article section div.element p {
+main article div.element div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
 
-main article section.first {
+main article div.element.first {
   -webkit-transform: translateZ(0) scale(1);
   transform: translateZ(0) scale(1);
 }
 
-main article section.second {
+main article div.element.second {
   -webkit-transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
   transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
-main article section.third {
+main article div.element.third {
   -webkit-transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
   transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
-main article section.fourth {
+main article div.element.fourth {
   -webkit-transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
   transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
-main article section.fifth {
+main article div.element.fifth {
   -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
 }
@@ -202,19 +202,19 @@ main article section.fifth {
 /* Some hover tests. */
 /******************************************************************************/
 
-main article:hover section:hover {
+main article:hover div.element:hover {
   /*background-color: #f00;*/
   /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
 }
 
-main article:hover section div.element {
+main article:hover div.element div.content {
   /*background-color: #0f0;*/
   opacity: 0.025;
 }
 
-main article section div.element:hover,
-main article:hover section:hover div.element {
+main article div.element div.content:hover,
+main article:hover div.element:hover div.content {
   background-color: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
