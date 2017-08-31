@@ -143,14 +143,14 @@ main article {
 
 /******************************************************************************/
 
-article section {
+main article section {
   position: absolute;
   top: 0;
   left: 0;
   transition: all 600ms ease;
 }
 
-article section div.content {
+main article section div.content {
   padding: 2rem;
   margin: 2rem;
   background-color: #f4d5bb;
@@ -159,41 +159,41 @@ article section div.content {
   transition: all 600ms ease;
 }
 
-article section div.content h1 {
+main article section div.content h1 {
   font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
 }
 
-article section div.content p {
+main article section div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
 
-article section.first {
+main article section.first {
   -webkit-transform: translateZ(0) scale(1);
   transform: translateZ(0) scale(1);
 }
 
-article section.second {
+main article section.second {
   -webkit-transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
   transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
-article section.third {
+main article section.third {
   -webkit-transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
   transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
-article section.fourth {
+main article section.fourth {
   -webkit-transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
   transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
-article section.fifth {
+main article section.fifth {
   -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
 }
@@ -202,13 +202,13 @@ article section.fifth {
 /* Some hover tests. */
 /******************************************************************************/
 
-article section:hover {
+main article section:hover {
   background-color: #f00;
   -webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);
 }
 
-article section div.content:hover {
+main article section div.content:hover {
   background-color: #0f0;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
