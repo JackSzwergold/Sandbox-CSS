@@ -57,7 +57,7 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.25em 0 1.25em 0;
-  background-color: #000000;
+  background: #000000;
   clear: both;
 }
 
@@ -139,6 +139,7 @@ div.wrapper {
   text-align: left;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -153,7 +154,7 @@ div.wrapper div.element {
 div.wrapper div.element div.content {
   padding: 2rem;
   margin: 2rem;
-  background-color: #ffffff;
+  background: #ffffff;
   opacity: 0.85;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   transition: all 600ms ease;
@@ -203,18 +204,19 @@ div.wrapper div.element.fifth {
 /******************************************************************************/
 
 div.wrapper:hover div.element:hover {
-  /*background-color: #f00;*/
+  /*background: #f00;*/
   /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
 }
 
 div.wrapper:hover div.element div.content {
-  /*background-color: #0f0;*/
+  /*background: #0f0;*/
   opacity: 0.025;
 }
 
-div.wrapper div.element div.content:hover {
-  background-color: #ffffff;
+div.wrapper div.element div.content:hover,
+div.wrapper div.element:hover div.content {
+  background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
   cursor: pointer;
