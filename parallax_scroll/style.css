@@ -153,8 +153,8 @@ main article section {
 main article section div.element {
   padding: 2rem;
   margin: 2rem;
-  background-color: #f4d5bb;
-  opacity: 0.75;
+  background-color: #ffffff;
+  opacity: 0.85;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   transition: all 600ms ease;
 }
