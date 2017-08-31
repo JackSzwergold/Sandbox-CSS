@@ -285,7 +285,10 @@ nav label em:after {
 
 nav label:active em {
   border-color: #ffdd35;
+  background-color: #000000;
 }
+
+
 
 /******************************************************************************/
 
