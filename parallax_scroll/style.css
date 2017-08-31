@@ -202,7 +202,7 @@ main article section.fifth {
 /* Some hover tests. */
 /******************************************************************************/
 
-main article:hover div.content {
+main article:hover section div.content {
   /*background-color: #f00;*/
   /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
@@ -210,7 +210,7 @@ main article:hover div.content {
 }
 
 main article section:hover {
-  /*background-color: #0f0;*/
+  background-color: #0f0;
   /*-webkit-transform: translateZ(5px) scale(1);
   transform: translateZ(5px) scale(1);*/
 }
