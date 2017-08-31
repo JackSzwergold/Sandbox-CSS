@@ -233,6 +233,61 @@ div.element:hover div.content {
 /* Some selection input checks. */
 /******************************************************************************/
 
+/******************************************************************************/
+
+nav {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  background-color: #222222;
+  z-index: 10;
+}
+
+/******************************************************************************/
+
+input[type="radio"] {
+  display: none;
+}
+
+nav label {
+  margin: 0 0 0.125rem 0;
+}
+
+nav label em {
+  display: inline-flex;
+	/*overflow: hidden;
+	flex-direction: row;
+	flex-wrap: wrap;*/
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.75rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 0.125rem #666666 solid;
+  transition: background-color 300ms ease;
+}
+
+nav label em:after {
+  content: '';
+  display: inline-block;
+  flex-grow: 0;
+	flex-shrink: 0;
+	flex-basis: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 0.125rem #ffffff solid;
+}
+
+nav label:active em {
+  border-color: #ffdd35;
+}
+
+/******************************************************************************/
+
 input[type="radio"]:checked ~ div.wrapper div.element div.content {
   opacity: 0.125;
 }
