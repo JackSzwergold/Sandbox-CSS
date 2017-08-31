@@ -156,7 +156,7 @@ div.content {
   padding: 2rem;
   margin: 2rem;
   background: #ffffff;
-  /*opacity: 0.85;*/
+  opacity: 0.5;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);
   transition: all 600ms ease;
 }
@@ -181,27 +181,24 @@ div.element:nth-child(1) {
 }
 
 div.element:nth-child(2) {
-  top: 50%;
-  -webkit-transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
-  transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
+  -webkit-transform: rotate(3deg) translateY(50%) translateX(-540px) translateZ(-180px) scale(1.25);
+  transform: rotate(3deg) translateY(50%) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
 div.element:nth-child(3) {
-  top: 50%;
-  -webkit-transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
-  transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
+  -webkit-transform: rotate(-3deg) translateY(50%) translateX(540px) translateZ(-360px) scale(1.5);
+  transform: rotate(-3deg) translateY(50%) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
 div.element:nth-child(4) {
-  top: 50%;
-  -webkit-transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
-  transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
+  -webkit-transform: rotate(-3deg) translateY(50%) translateX(-540px) translateZ(-540px) scale(1.75);
+  transform: rotate(-3deg) translateY(50%) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
 div.element:nth-child(5) {
-  top: 50%;
-  -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
-  transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
+
+  -webkit-transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
+  transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
 }
 
 /******************************************************************************/
@@ -227,6 +224,11 @@ div.element:hover div.content {
   cursor: pointer;
 }
 
+/*div.wrapper div.element:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}*/
+
 /******************************************************************************/
 /* Some selection input checks. */
 /******************************************************************************/
@@ -238,9 +240,8 @@ input[type="radio"]:checked ~ div.wrapper div.element div.content {
 /******************************************************************************/
 
 input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) {
-  top: 0;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
 }
 
 input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) div.content {
@@ -252,9 +253,8 @@ input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) div
 /******************************************************************************/
 
 input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) {
-  top: 0;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
 }
 
 input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) div.content {
@@ -266,9 +266,8 @@ input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) div
 /******************************************************************************/
 
 input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) {
-  top: 0;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
 }
 
 input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) div.content {
@@ -280,9 +279,9 @@ input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) div
 /******************************************************************************/
 
 input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) {
-  top: 0;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
 }
 
 input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) div.content {
@@ -294,9 +293,9 @@ input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) div
 /******************************************************************************/
 
 input[type="radio"].element_5:checked ~ div.wrapper div.element:nth-child(5) {
-  top: 0;
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
+
+  -webkit-transform: translateY(0) translateZ(0) scale(1);
+  transform: translateY(0) translateZ(0) scale(1);
 }
 
 input[type="radio"].element_5:checked ~ div.wrapper div.element:nth-child(5) div.content {
