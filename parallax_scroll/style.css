@@ -139,19 +139,19 @@ div.wrapper {
   text-align: left;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: all 600ms ease;
 }
 
 /******************************************************************************/
 
-div.wrapper div.element {
+div.element {
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 600ms ease;
 }
 
-div.wrapper div.element div.content {
+/******************************************************************************/
+
+div.content {
   padding: 2rem;
   margin: 2rem;
   background: #ffffff;
@@ -160,41 +160,45 @@ div.wrapper div.element div.content {
   transition: all 600ms ease;
 }
 
-div.wrapper div.element div.content h1 {
+div.content h1 {
   font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
 }
 
-div.wrapper div.element div.content p {
+div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
 
-div.wrapper div.element.first {
+div.element.first {
   -webkit-transform: translateZ(0) scale(1);
   transform: translateZ(0) scale(1);
 }
 
-div.wrapper div.element.second {
+div.element.second {
+  top: 50%;
   -webkit-transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
   transform: rotate(3deg) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
-div.wrapper div.element.third {
+div.element.third {
+  top: 50%;
   -webkit-transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
   transform: rotate(-3deg) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
-div.wrapper div.element.fourth {
+div.element.fourth {
+  top: 50%;
   -webkit-transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
   transform: rotate(-3deg) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
-div.wrapper div.element.fifth {
+div.element.fifth {
+  top: 50%;
   -webkit-transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateX(540px) translateZ(-720px) scale(2.5);
 }
@@ -209,13 +213,13 @@ div.wrapper:hover div.element:hover {
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
 }
 
-div.wrapper:hover div.element div.content {
+div.wrapper:hover div.content {
   /*background: #0f0;*/
   opacity: 0.025;
 }
 
-div.wrapper div.element div.content:hover,
-div.wrapper div.element:hover div.content {
+div.content:hover,
+div.element:hover div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
