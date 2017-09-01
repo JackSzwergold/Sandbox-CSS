@@ -60,41 +60,19 @@ hr {
 }
 
 /******************************************************************************/
-/*  __  __       _
-/* |  \/  | __ _(_)_ __
-/* | |\/| |/ _` | | '_ \
-/* | |  | | (_| | | | | |
-/* |_|  |_|\__,_|_|_| |_|
-/*
-/******************************************************************************/
 
-main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  margin: 0;
-  padding: 10px;
+div.wrapper {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/**************************************************************************************************/
-
-article {
-  position: relative;
-  text-align: left;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
   perspective: 1500px;
   background: #b42121;
   background: linear-gradient(-25deg, #e68c28 0%, #e68c28 25%, #b42121 100%);
@@ -104,7 +82,7 @@ article {
 
 /**************************************************************************************************/
 
-div {
+div.element {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -118,7 +96,7 @@ div {
 
 /**************************************************************************************************/
 
-div > h1 {
+div.element > h1 {
   font-weight: normal;
   text-transform: uppercase;
   line-height: 100%;
@@ -127,20 +105,20 @@ div > h1 {
 
 /**************************************************************************************************/
 
-div:nth-child(even) > h1 {
+div.element:nth-child(even) > h1 {
   font-size: 5rem;
   filter: blur(5px);
   z-index: 100;
 }
 
-div:nth-child(odd) > h1 {
+div.element:nth-child(odd) > h1 {
   font-size: 7rem;
   z-index: 0;
 }
 
 /**************************************************************************************************/
 
-div {
+div.element {
   position: absolute;
   left: -100%;
   animation-name: moveLeftRight;
@@ -150,7 +128,7 @@ div {
   animation-iteration-count: 1;
 }
 
-div:hover {
+div.element:hover {
   -webkit-cursor: pointer;
   -khtml-cursor: pointer;
   -moz-cursor: pointer;
