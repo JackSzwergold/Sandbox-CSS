@@ -305,12 +305,12 @@ input[type="radio"]:checked ~ div.wrapper div.element div.content {
 
 /******************************************************************************/
 
-input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) {
+input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) div.content {
+input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -318,12 +318,12 @@ input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) div
 
 /******************************************************************************/
 
-input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) {
+input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) div.content {
+input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -331,12 +331,12 @@ input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) div
 
 /******************************************************************************/
 
-input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) {
+input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) div.content {
+input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -344,12 +344,12 @@ input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) div
 
 /******************************************************************************/
 
-input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) {
+input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) div.content {
+input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -357,12 +357,12 @@ input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) div
 
 /******************************************************************************/
 
-input[type="radio"].element_5:checked ~ div.wrapper div.element:nth-child(5) {
+input[type="radio"].item_5:checked ~ div.wrapper div.element:nth-child(5) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].element_5:checked ~ div.wrapper div.element:nth-child(5) div.content {
+input[type="radio"].item_5:checked ~ div.wrapper div.element:nth-child(5) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
