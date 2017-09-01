@@ -3,8 +3,14 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 html {
   font-size: 16px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -14,6 +20,7 @@ body {
   font-size: 1rem;
   line-height: 1em;
   text-align: center;
+  background: #ffffff;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -21,7 +28,7 @@ html, body {
   width: 100%;
   height: 100%;
   color: #000000;
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 /******************************************************************************/
@@ -55,8 +62,18 @@ hr {
   border: 0;
   height: 1px;
   margin: 1.25em 0 1.25em 0;
-  background-color: #000000;
+  background: #000000;
   clear: both;
+}
+
+/******************************************************************************/
+
+*::selection {
+  background: #888888;
+}
+
+*::-moz-selection {
+  background: #888888;
 }
 
 /******************************************************************************/
@@ -185,7 +202,7 @@ div.wrapper div.container > div.element > ul > li > p {
 }
 
 /******************************************************************************/
-/* Some selection input checks. */
+/* Some selection input stuff. */
 /******************************************************************************/
 
 div.wrapper input[type="radio"] {

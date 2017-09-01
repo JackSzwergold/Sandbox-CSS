@@ -21,9 +21,14 @@ body {
   line-height: 1em;
   text-align: center;
   background: #ffffff;
-  /*background: #f7882f;*/
-  /*background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);*/
   -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background: #ffffff;
 }
 
 /******************************************************************************/
@@ -91,7 +96,7 @@ div.wrapper {
 
 /******************************************************************************/
 
-div.container {
+div.wrapper div.container {
   width: 36rem;
   min-height: 100vh;
   text-align: left;
@@ -102,7 +107,7 @@ div.container {
 
 /******************************************************************************/
 
-div.element {
+div.wrapper div.container > div.element {
   position: absolute;
   top: 0;
   left: 0;
@@ -111,7 +116,7 @@ div.element {
 
 /******************************************************************************/
 
-div.content {
+div.wrapper div.container > div.element > div.content {
   padding: 2rem;
   margin: 2rem;
   background: #ffffff;
@@ -120,41 +125,41 @@ div.content {
   transition: all 600ms ease;
 }
 
-div.content h1 {
+div.wrapper div.container > div.element > div.content h1 {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
 }
 
-div.content p {
+div.wrapper div.container > div.element > div.content p {
   font-family: Georgia, "New York", "Times New Roman", Times, serif;
   padding: 0 0 1rem 0;
 }
 
 /******************************************************************************/
 
-div.element:nth-child(1) {
+div.wrapper div.container > div.element:nth-child(1) {
   -webkit-transform: translateZ(0) scale(0.95);
   transform: translateZ(0) scale(0.95);
 }
 
-div.element:nth-child(2) {
+div.wrapper div.container > div.element:nth-child(2) {
   -webkit-transform: rotate(3deg) translateY(50%) translateX(-540px) translateZ(-180px) scale(1.25);
   transform: rotate(3deg) translateY(50%) translateX(-540px) translateZ(-180px) scale(1.25);
 }
 
-div.element:nth-child(3) {
+div.wrapper div.container > div.element:nth-child(3) {
   -webkit-transform: rotate(-3deg) translateY(50%) translateX(540px) translateZ(-360px) scale(1.5);
   transform: rotate(-3deg) translateY(50%) translateX(540px) translateZ(-360px) scale(1.5);
 }
 
-div.element:nth-child(4) {
+div.wrapper div.container > div.element:nth-child(4) {
   -webkit-transform: rotate(-3deg) translateY(50%) translateX(-540px) translateZ(-540px) scale(1.75);
   transform: rotate(-3deg) translateY(50%) translateX(-540px) translateZ(-540px) scale(1.75);
 }
 
-div.element:nth-child(5) {
+div.wrapper div.container > div.element:nth-child(5) {
   -webkit-transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
 }
@@ -163,26 +168,26 @@ div.element:nth-child(5) {
 /* Some hover tests. */
 /******************************************************************************/
 
-div.container:hover div.element:hover {
+div.wrapper div.container:hover > div.element:hover {
   /*background: #f00;*/
   /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
 }
 
-div.container:hover div.content {
+div.wrapper div.container:hover > div.element > div.content {
   /*background: #0f0;*/
   opacity: 0.025;
 }
 
-div.content:hover,
-div.element:hover div.content {
+div.wrapper div.container > div.element > div.content:hover,
+div.wrapper div.container > div.element:hover  > div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
   cursor: pointer;
 }
 
-/*div.container div.element:hover {
+/*div.wrapper div.container div.wrapper div.container > div.element:hover {
   -webkit-transform: scale(1);
   transform: scale(1);
 }*/
@@ -191,13 +196,13 @@ div.element:hover div.content {
 /* Some selection input stuff. */
 /******************************************************************************/
 
-input[type="radio"] {
+div.wrapper input[type="radio"] {
   display: none;
 }
 
 /******************************************************************************/
 
-nav {
+div.wrapper nav {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
@@ -206,20 +211,15 @@ nav {
   z-index: 999;
 }
 
-/******************************************************************************/
-
-nav label {
+div.wrapper nav label {
   margin: 0 0 0.125rem 0;
 }
 
-nav label em {
+div.wrapper nav label em {
   display: inline-flex;
-	/*overflow: hidden;
-	flex-direction: row;
-	flex-wrap: wrap;*/
-	align-items: center;
-	justify-content: center;
-	align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   width: 0.75rem;
   height: 0.75rem;
   margin: 0.5rem 0.25rem 0.5rem 0.25rem;
@@ -230,45 +230,45 @@ nav label em {
   cursor: pointer;
 }
 
-nav label:first-child em {
+div.wrapper nav label:first-child em {
   margin-left: 0.5rem;
 }
 
-nav label:last-child em {
+div.wrapper nav label:last-child em {
   margin-right: 0.5rem;
 }
 
-nav label em:after {
-  content: " ";
+div.wrapper nav label em:after {
+  content: "";
   display: inline-block;
   flex-grow: 0;
-	flex-shrink: 0;
-	flex-basis: auto;
+  flex-shrink: 0;
+  flex-basis: auto;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   border: 0.125rem #ffffff solid;
 }
 
-nav label:active em {
+div.wrapper nav label:active em {
   border-color: #ffdd35;
   background-color: #000000;
 }
 
 /******************************************************************************/
 
-input[type="radio"]:checked ~ div.container div.element div.content {
+div.wrapper input[type="radio"]:checked ~ div.container > div.element div.wrapper div.container > div.element > div.content {
   opacity: 0.125;
 }
 
 /******************************************************************************/
 
-input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) {
+div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) div.content {
+div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -276,12 +276,12 @@ input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) div.
 
 /******************************************************************************/
 
-input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) {
+div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) div.content {
+div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -289,12 +289,12 @@ input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) div.
 
 /******************************************************************************/
 
-input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) {
+div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) div.content {
+div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -302,12 +302,12 @@ input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) div.
 
 /******************************************************************************/
 
-input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) {
+div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) div.content {
+div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -315,12 +315,12 @@ input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) div.
 
 /******************************************************************************/
 
-input[type="radio"].item_5:checked ~ div.container div.element:nth-child(5) {
+div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth-child(5) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_5:checked ~ div.container div.element:nth-child(5) div.content {
+div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth-child(5) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
