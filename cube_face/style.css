@@ -116,7 +116,7 @@ article > input[type="radio"] {
 
 /******************************************************************************/
 
-div.cube {
+div.wrapper {
   width: 30rem;
   height: 30rem;
   transform-style: preserve-3d;
@@ -125,7 +125,7 @@ div.cube {
 
 /******************************************************************************/
 
-div.face > h1 {
+div.element > h1 {
 	font-size: 1rem;
   color: #ffffff;
   background: #000000;
@@ -140,7 +140,7 @@ div.face > h1 {
 
 /******************************************************************************/
 
-div.face {
+div.element {
   position: absolute;
   display: flex;
 	overflow: hidden;
@@ -162,18 +162,18 @@ div.face {
 
 /******************************************************************************/
 
-div.face:nth-child(1) {
+div.element:nth-child(1) {
   transform: translateZ(1rem);
 }
 
 /******************************************************************************/
 
-div.face > ul {
+div.element > ul {
   margin: 0 0 0 0.625rem;
   transform-style: preserve-3d;
 }
 
-div.face > ul > li {
+div.element > ul > li {
   position: relative;
   float: left;
   display: block;
@@ -186,7 +186,7 @@ div.face > ul > li {
   /*box-shadow: 0.4rem 0.4rem 0 0 rgba(18, 18, 18, 0.5);*/
 }
 
-div.face > ul > li label {
+div.element > ul > li label {
   position: relative;
   float: left;
   display: block;
@@ -200,49 +200,49 @@ div.face > ul > li label {
 /* First Row */
 /******************************************************************************/
 
-input[type="radio"].space_1 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
+input[type="radio"].facet_1 ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(1) {
   box-shadow: 0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_1:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
+input[type="radio"].facet_1:checked ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(1) {
   border-radius: 50%;
   transform: translateX(2.5rem) translateY(2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_1:checked ~ div.cube {
+input[type="radio"].facet_1:checked ~ div.wrapper {
   transform: rotateY(-18deg) rotateX(18deg);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_2 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
+input[type="radio"].facet_2 ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(2) {
   box-shadow: 0 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_2:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
+input[type="radio"].facet_2:checked ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(2) {
   border-radius: 50%;
   transform: translateX(0) translateY(2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_2:checked ~ div.cube {
+input[type="radio"].facet_2:checked ~ div.wrapper {
   transform: rotateY(0) rotateX(18deg);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_3 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
+input[type="radio"].facet_3 ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(3) {
   box-shadow: -0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_3:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
+input[type="radio"].facet_3:checked ~ div.wrapper > div.element > ul:nth-child(1) > li:nth-child(3) {
   border-radius: 50%;
   transform: translateX(-2.5rem) translateY(2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_3:checked ~ div.cube {
+input[type="radio"].facet_3:checked ~ div.wrapper {
   transform: rotateY(18deg) rotateX(18deg);
 }
 
@@ -250,49 +250,49 @@ input[type="radio"].space_3:checked ~ div.cube {
 /* Second Row */
 /******************************************************************************/
 
-input[type="radio"].space_4 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
+input[type="radio"].facet_4 ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(1) {
   box-shadow: 0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_4:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
+input[type="radio"].facet_4:checked ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(1) {
   border-radius: 50%;
   transform: translateX(2.5rem) translateY(0) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_4:checked ~ div.cube {
+input[type="radio"].facet_4:checked ~ div.wrapper {
   transform: rotateY(-18deg) rotateX(0);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_5 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
+input[type="radio"].facet_5 ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(2) {
   box-shadow: 0 0 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_5:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
+input[type="radio"].facet_5:checked ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(2) {
   border-radius: 50%;
   transform: translateX(0) translateY(0) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_5:checked ~ div.cube {
+input[type="radio"].facet_5:checked ~ div.wrapper {
   transform: rotateY(0) rotateX(0);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_6 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
+input[type="radio"].facet_6 ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(3) {
   box-shadow: -0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_6:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
+input[type="radio"].facet_6:checked ~ div.wrapper > div.element > ul:nth-child(2) > li:nth-child(3) {
   border-radius: 50%;
   transform: translateX(-2.5rem) translateY(0) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_6:checked ~ div.cube {
+input[type="radio"].facet_6:checked ~ div.wrapper {
   transform: rotateY(18deg) rotateX(0);
 }
 
@@ -300,48 +300,48 @@ input[type="radio"].space_6:checked ~ div.cube {
 /* Third Row */
 /******************************************************************************/
 
-input[type="radio"].space_7 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
+input[type="radio"].facet_7 ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(1) {
   box-shadow: 0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_7:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
+input[type="radio"].facet_7:checked ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(1) {
   border-radius: 50%;
   transform: translateX(2.5rem) translateY(-2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_7:checked ~ div.cube {
+input[type="radio"].facet_7:checked ~ div.wrapper {
   transform: rotateY(-18deg) rotateX(-18deg);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_8 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
+input[type="radio"].facet_8 ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(2) {
   box-shadow: 0 -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_8:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
+input[type="radio"].facet_8:checked ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(2) {
   border-radius: 50%;
   transform: translateX(0) translateY(-2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_8:checked ~ div.cube {
+input[type="radio"].facet_8:checked ~ div.wrapper {
   transform: rotateY(0deg) rotateX(-18deg);
 }
 
 /******************************************************************************/
 
-input[type="radio"].space_9 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
+input[type="radio"].facet_9 ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(3) {
   box-shadow: -0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
 }
 
-input[type="radio"].space_9:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
+input[type="radio"].facet_9:checked ~ div.wrapper > div.element > ul:nth-child(3) > li:nth-child(3) {
   border-radius: 50%;
   transform: translateX(-2.5rem) translateY(-2.5rem) translateZ(0.5rem);
   opacity: 1;
 }
 
-input[type="radio"].space_9:checked ~ div.cube {
+input[type="radio"].facet_9:checked ~ div.wrapper {
   transform: rotateY(18deg) rotateX(-18deg);
 }
