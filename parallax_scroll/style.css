@@ -237,6 +237,8 @@ input[type="radio"] {
   display: none;
 }
 
+/******************************************************************************/
+
 nav {
   position: absolute;
   top: 0.625rem;
@@ -277,8 +279,6 @@ nav label:first-child em {
 nav label:last-child em {
   margin-right: 0.5rem;
 }
-
-/******************************************************************************/
 
 nav label em:after {
   content: " ";
