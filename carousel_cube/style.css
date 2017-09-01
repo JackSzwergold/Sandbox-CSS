@@ -193,18 +193,22 @@ div.face > ul > li > p {
 }
 
 /******************************************************************************/
+/* Some selection input checks. */
+/******************************************************************************/
+
+input[type="radio"] {
+  display: none;
+}
+
+/******************************************************************************/
 
 nav {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
   background-color: #222222;
-}
-
-/******************************************************************************/
-
-input[type="radio"] {
-  display: none;
+  border-radius: 0.625rem;
+  z-index: 10;
 }
 
 nav label {
@@ -221,11 +225,20 @@ nav label em {
 	align-content: center;
   width: 0.75rem;
   height: 0.75rem;
-  margin: 0.75rem;
+  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
   border-radius: 50%;
   background-color: #ffffff;
   border: 0.125rem #666666 solid;
   transition: background-color 300ms ease;
+  cursor: pointer;
+}
+
+nav label:first-child em {
+  margin-left: 0.5rem;
+}
+
+nav label:last-child em {
+  margin-right: 0.5rem;
 }
 
 nav label em:after {
@@ -237,11 +250,12 @@ nav label em:after {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  border: 0.125rem #fff solid;
+  border: 0.125rem #ffffff solid;
 }
 
 nav label:active em {
   border-color: #ffdd35;
+  background-color: #000000;
 }
 
 /******************************************************************************/
