@@ -116,7 +116,7 @@ div.wrapper div.container {
 div.wrapper div.container > div.element > h1 {
   font-size: 1rem;
   color: #ffffff;
-  background-color: #000000;
+  background: #000000;
   width: 1rem;
   height: 1rem;
   text-align: center;
@@ -180,7 +180,7 @@ div.wrapper div.container > div.element > ul > li {
   margin: 0 0.625rem 0.625rem 0;
   padding: 0;
   text-align: left;
-  background-color: #222222;
+  background: #222222;
   opacity: 0.6;
 }
 
@@ -204,7 +204,7 @@ div.wrapper nav {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
-  background-color: #222222;
+  background: #222222;
   border-radius: 0.625rem;
   z-index: 999;
 }
@@ -222,9 +222,9 @@ div.wrapper nav label em {
   height: 0.75rem;
   margin: 0.5rem 0.25rem 0.5rem 0.25rem;
   border-radius: 50%;
-  background-color: #ffffff;
+  background: #ffffff;
   border: 0.125rem #666666 solid;
-  transition: background-color 300ms ease;
+  transition: background 300ms ease;
   cursor: pointer;
 }
 
@@ -250,7 +250,7 @@ div.wrapper nav label em:after {
 
 div.wrapper nav label:active em {
   border-color: #ffdd35;
-  background-color: #000000;
+  background: #000000;
 }
 
 /******************************************************************************/
@@ -283,5 +283,5 @@ div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth
 div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) h1,
 div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth-child(5) h1 {
   color: #000000;
-  background-color: #ffffff;
+  background: #ffffff;
 }

@@ -206,7 +206,7 @@ div.wrapper nav {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
-  background-color: #222222;
+  background: #222222;
   border-radius: 0.625rem;
   z-index: 999;
 }
@@ -224,7 +224,7 @@ div.wrapper nav label em {
   height: 0.75rem;
   margin: 0.5rem 0.25rem 0.5rem 0.25rem;
   border-radius: 50%;
-  background-color: #ffffff;
+  background: #ffffff;
   border: 0.125rem #666666 solid;
   transition: background-color 300ms ease;
   cursor: pointer;
@@ -252,13 +252,13 @@ div.wrapper nav label em:after {
 
 div.wrapper nav label:active em {
   border-color: #ffdd35;
-  background-color: #000000;
+  background: #000000;
 }
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"]:checked ~ div.container > div.element div.wrapper div.container > div.element > div.content {
-  opacity: 0.125;
+div.wrapper input[type="radio"]:checked ~ div.container > div.element > div.content {
+  opacity: 0.025;
 }
 
 /******************************************************************************/
