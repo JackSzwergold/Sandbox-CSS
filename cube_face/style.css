@@ -200,15 +200,13 @@ div.face > ul > li label {
 /* First Row */
 /******************************************************************************/
 
-/*input[type="radio"].space_1 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
+input[type="radio"].space_1 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
   box-shadow: 0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_1:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(1) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(2.5rem) translateY(2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -218,15 +216,13 @@ input[type="radio"].space_1:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_2 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
+input[type="radio"].space_2 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
   box-shadow: 0 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_2:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(2) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(0) translateY(2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -236,15 +232,13 @@ input[type="radio"].space_2:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_3 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
+input[type="radio"].space_3 ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
   box-shadow: -0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_3:checked ~ div.cube > div.face > ul:nth-child(1) > li:nth-child(3) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(-2.5rem) translateY(2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -256,15 +250,13 @@ input[type="radio"].space_3:checked ~ div.cube {
 /* Second Row */
 /******************************************************************************/
 
-/*input[type="radio"].space_4 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
+input[type="radio"].space_4 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
   box-shadow: 0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_4:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(1) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(2.5rem) translateY(0) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -274,15 +266,13 @@ input[type="radio"].space_4:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_5 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
+input[type="radio"].space_5 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
   box-shadow: 0 0 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_5:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(2) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(0) translateY(0) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -292,15 +282,13 @@ input[type="radio"].space_5:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_6 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
+input[type="radio"].space_6 ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
   box-shadow: -0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_6:checked ~ div.cube > div.face > ul:nth-child(2) > li:nth-child(3) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(-2.5rem) translateY(0) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -312,15 +300,13 @@ input[type="radio"].space_6:checked ~ div.cube {
 /* Third Row */
 /******************************************************************************/
 
-/*input[type="radio"].space_7 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
+input[type="radio"].space_7 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
   box-shadow: 0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_7:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(1) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(2.5rem) translateY(-2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -330,15 +316,13 @@ input[type="radio"].space_7:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_8 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
+input[type="radio"].space_8 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
   box-shadow: 0 -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_8:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(2) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(0) translateY(-2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
@@ -348,15 +332,13 @@ input[type="radio"].space_8:checked ~ div.cube {
 
 /******************************************************************************/
 
-/*input[type="radio"].space_9 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
+input[type="radio"].space_9 ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
   box-shadow: -0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
-}*/
+}
 
 input[type="radio"].space_9:checked ~ div.cube > div.face > ul:nth-child(3) > li:nth-child(3) {
   border-radius: 50%;
-  box-shadow: 0 0 0 0.25rem rgba(18, 18, 18, 0.75), inset -0.75rem -0.75rem 0.75rem rgba(18, 18, 18, 0.75);
   transform: translateX(-2.5rem) translateY(-2.5rem) translateZ(0.5rem);
-  background: #062f4f;
   opacity: 1;
 }
 
