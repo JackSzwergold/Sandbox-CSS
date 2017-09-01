@@ -75,32 +75,17 @@ main {
   align-items: center;
   justify-content: center;
   align-content: center;
-  width: calc(100% - 20px);
-  height: calc(100% - 20px);
-  margin: 0;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-/******************************************************************************/
-
-article {
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: left;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   /*background: linear-gradient(0deg, #097054 0%, #ffde00 50%, #ff9900 100%);*/
   /*background: linear-gradient(45deg, #062f4f 0%, #813772 50%, #b82601 100%);*/
   background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
@@ -111,7 +96,7 @@ article {
 
 /******************************************************************************/
 
-div.cube {
+div.wrapper {
   width: 30rem;
   height: 30rem;
   transform-style: preserve-3d;
@@ -120,7 +105,7 @@ div.cube {
 
 /******************************************************************************/
 
-div.face > h1 {
+div.element > h1 {
   font-size: 1rem;
   color: #ffffff;
   background-color: #000000;
@@ -134,7 +119,7 @@ div.face > h1 {
 }
 /******************************************************************************/
 
-div.face {
+div.element {
   position: absolute;
   display: flex;
   overflow: hidden;
@@ -154,33 +139,33 @@ div.face {
 
 /******************************************************************************/
 
-div.face:nth-child(1) {
+div.element:nth-child(1) {
   transform: translateX(-50rem) translateZ(15rem);
 }
 
-div.face:nth-child(2) {
+div.element:nth-child(2) {
   transform: translateX(-25rem) translateZ(7.5rem);
 }
 
-div.face:nth-child(3) {
+div.element:nth-child(3) {
   transform: translateX(0rem) translateZ(15rem);
 }
 
-div.face:nth-child(4) {
+div.element:nth-child(4) {
   transform: translateX(25rem) translateZ(7.5rem);
 }
 
-div.face:nth-child(5) {
+div.element:nth-child(5) {
   transform: translateX(50rem) translateZ(15rem);
 }
 
 /******************************************************************************/
 
-div.face > ul {
+div.element > ul {
   margin: 0;
 }
 
-div.face > ul > li {
+div.element > ul > li {
   width: 8rem;
   height: 8rem;
   margin: 0 0.625rem 0 0;
@@ -190,18 +175,18 @@ div.face > ul > li {
   opacity: 0.6;
 }
 
-div.face > ul:last-child > li {
+div.element > ul:last-child > li {
   margin: 0 0.625rem 0 0;
 }
-div.face > ul > li:last-child {
+div.element > ul > li:last-child {
   margin: 0 0 0.625rem 0;
 }
 
-div.face > ul:last-child > li:last-child {
+div.element > ul:last-child > li:last-child {
   margin: 0;
 }
 
-div.face > ul > li > p {
+div.element > ul > li > p {
 	font-size: 0.75rem;
 	color: #ffffff;
   padding: 5px;
@@ -275,33 +260,33 @@ nav label:active em {
 
 /******************************************************************************/
 
-input[type="radio"].side_1:checked ~ div.cube {
+input[type="radio"].element_1:checked ~ div.wrapper {
   transform: translateX(50rem);
 }
 
-input[type="radio"].side_2:checked ~ div.cube {
+input[type="radio"].element_2:checked ~ div.wrapper {
   transform: translateX(25rem);
 }
 
-input[type="radio"].side_3:checked ~ div.cube {
+input[type="radio"].element_3:checked ~ div.wrapper {
   transform: translateX(0rem);
 }
 
-input[type="radio"].side_4:checked ~ div.cube {
+input[type="radio"].element_4:checked ~ div.wrapper {
   transform: translateX(-25rem);
 }
 
-input[type="radio"].side_5:checked ~ div.cube {
+input[type="radio"].element_5:checked ~ div.wrapper {
   transform: translateX(-50rem);
 }
 
 /******************************************************************************/
 
-input[type="radio"].side_1:checked ~ div.cube div.face:nth-child(1) h1,
-input[type="radio"].side_2:checked ~ div.cube div.face:nth-child(2) h1,
-input[type="radio"].side_3:checked ~ div.cube div.face:nth-child(3) h1,
-input[type="radio"].side_4:checked ~ div.cube div.face:nth-child(4) h1 ,
-input[type="radio"].side_5:checked ~ div.cube div.face:nth-child(5) h1 {
+input[type="radio"].element_1:checked ~ div.wrapper div.element:nth-child(1) h1,
+input[type="radio"].element_2:checked ~ div.wrapper div.element:nth-child(2) h1,
+input[type="radio"].element_3:checked ~ div.wrapper div.element:nth-child(3) h1,
+input[type="radio"].element_4:checked ~ div.wrapper div.element:nth-child(4) h1 ,
+input[type="radio"].element_5:checked ~ div.wrapper div.element:nth-child(5) h1 {
   color: #000000;
   background-color: #ffffff;
 }
