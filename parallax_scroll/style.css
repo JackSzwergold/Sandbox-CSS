@@ -288,8 +288,6 @@ nav label:active em {
   background-color: #000000;
 }
 
-
-
 /******************************************************************************/
 
 input[type="radio"]:checked ~ div.wrapper div.element div.content {
