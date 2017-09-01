@@ -230,24 +230,23 @@ div.element:hover div.content {
 }*/
 
 /******************************************************************************/
-/* Some selection input checks. */
+/* Some selection input stuff. */
 /******************************************************************************/
 
-/******************************************************************************/
+input[type="radio"] {
+  display: none;
+}
 
 nav {
   position: absolute;
   top: 0.625rem;
   left: 0.625rem;
   background-color: #222222;
+  border-radius: 0.625rem;
   z-index: 999;
 }
 
 /******************************************************************************/
-
-input[type="radio"] {
-  display: none;
-}
 
 nav label {
   margin: 0 0 0.125rem 0;
