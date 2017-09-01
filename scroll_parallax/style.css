@@ -139,6 +139,7 @@ div.wrapper {
   text-align: left;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  transition: all 300ms ease;
 }
 
 /******************************************************************************/
@@ -196,7 +197,6 @@ div.element:nth-child(4) {
 }
 
 div.element:nth-child(5) {
-
   -webkit-transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
 }
