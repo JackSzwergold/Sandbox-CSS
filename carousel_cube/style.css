@@ -96,7 +96,7 @@ main {
 
 /******************************************************************************/
 
-div.wrapper {
+div.container {
   width: 30rem;
   height: 30rem;
   transform-style: preserve-3d;
@@ -245,40 +245,40 @@ nav label:active em {
 
 /******************************************************************************/
 
-input[type="radio"].item_1:checked ~ div.wrapper {
+input[type="radio"].item_1:checked ~ div.container {
   transform: rotateY(0deg);
 }
 
-input[type="radio"].item_2:checked ~ div.wrapper {
+input[type="radio"].item_2:checked ~ div.container {
   transform: rotateY(90deg);
 }
 
-input[type="radio"].item_3:checked ~ div.wrapper {
+input[type="radio"].item_3:checked ~ div.container {
   transform: rotateY(180deg);
 }
 
-input[type="radio"].item_4:checked ~ div.wrapper {
+input[type="radio"].item_4:checked ~ div.container {
   transform: rotateY(270deg);
 }
 
 /******************************************************************************/
 
-input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) h1 {
+input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) h1 {
   color: #000000;
   background-color: #ffffff;
 }
 
-input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) h1 {
+input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) h1 {
   color: #000000;
   background-color: #ffffff;
 }
 
-input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) h1 {
+input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) h1 {
   color: #000000;
   background-color: #ffffff;
 }
 
-input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) h1 {
+input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) h1 {
   color: #000000;
   background-color: #ffffff;
 }

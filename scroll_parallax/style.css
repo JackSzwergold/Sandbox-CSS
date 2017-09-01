@@ -72,48 +72,6 @@ hr {
 }
 
 /******************************************************************************/
-/*
-/*  _____           _
-/* |  ___|__  _ __ | |_ ___
-/* | |_ / _ \| '_ \| __/ __|
-/* |  _| (_) | | | | |_\__ \
-/* |_|  \___/|_| |_|\__|___/
-/*
-/******************************************************************************/
-
-@font-face {
-	font-family: "Arvo";
-	src: url('../fonts/Arvo/Arvo-Bold.eot');
-	src: url('../fonts/Arvo/Arvo-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Bold.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Bold.woff') format('woff'), url('../fonts/Arvo/Arvo-Bold.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Bold.svg#Arvo-Bold') format('svg');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: "Arvo";
-	src: url('../fonts/Arvo/Arvo-BoldItalic.eot');
-	src: url('../fonts/Arvo/Arvo-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-BoldItalic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-BoldItalic.woff') format('woff'), url('../fonts/Arvo/Arvo-BoldItalic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-BoldItalic.svg#Arvo-BoldItalic') format('svg');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Arvo";
-	src: url('../fonts/Arvo/Arvo-Italic.eot');
-	src: url('../fonts/Arvo/Arvo-Italic.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo-Italic.woff2') format('woff2'), url('../fonts/Arvo/Arvo-Italic.woff') format('woff'), url('../fonts/Arvo/Arvo-Italic.ttf') format('truetype'), url('../fonts/Arvo/Arvo-Italic.svg#Arvo-Italic') format('svg');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "Arvo";
-	src: url('../fonts/Arvo/Arvo.eot');
-	src: url('../fonts/Arvo/Arvo.eot?#iefix') format('embedded-opentype'), url('../fonts/Arvo/Arvo.woff2') format('woff2'), url('../fonts/Arvo/Arvo.woff') format('woff'), url('../fonts/Arvo/Arvo.ttf') format('truetype'), url('../fonts/Arvo/Arvo.svg#Arvo') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-/******************************************************************************/
 
 main {
   display: flex;
@@ -133,7 +91,7 @@ main {
 
 /******************************************************************************/
 
-div.wrapper {
+div.container {
   width: 36rem;
   min-height: 100vh;
   text-align: left;
@@ -163,7 +121,7 @@ div.content {
 }
 
 div.content h1 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: Georgia, "New York", "Times New Roman", Times, serif;
   font-size: 6rem;
   line-height: 1em;
   color: #3333333;
@@ -205,13 +163,13 @@ div.element:nth-child(5) {
 /* Some hover tests. */
 /******************************************************************************/
 
-div.wrapper:hover div.element:hover {
+div.container:hover div.element:hover {
   /*background: #f00;*/
   /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
   transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
 }
 
-div.wrapper:hover div.content {
+div.container:hover div.content {
   /*background: #0f0;*/
   opacity: 0.025;
 }
@@ -224,7 +182,7 @@ div.element:hover div.content {
   cursor: pointer;
 }
 
-/*div.wrapper div.element:hover {
+/*div.container div.element:hover {
   -webkit-transform: scale(1);
   transform: scale(1);
 }*/
@@ -299,18 +257,18 @@ nav label:active em {
 
 /******************************************************************************/
 
-input[type="radio"]:checked ~ div.wrapper div.element div.content {
+input[type="radio"]:checked ~ div.container div.element div.content {
   opacity: 0.125;
 }
 
 /******************************************************************************/
 
-input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) {
+input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) div.content {
+input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -318,12 +276,12 @@ input[type="radio"].item_1:checked ~ div.wrapper div.element:nth-child(1) div.co
 
 /******************************************************************************/
 
-input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) {
+input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) div.content {
+input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -331,12 +289,12 @@ input[type="radio"].item_2:checked ~ div.wrapper div.element:nth-child(2) div.co
 
 /******************************************************************************/
 
-input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) {
+input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) div.content {
+input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -344,12 +302,12 @@ input[type="radio"].item_3:checked ~ div.wrapper div.element:nth-child(3) div.co
 
 /******************************************************************************/
 
-input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) {
+input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) div.content {
+input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
@@ -357,12 +315,12 @@ input[type="radio"].item_4:checked ~ div.wrapper div.element:nth-child(4) div.co
 
 /******************************************************************************/
 
-input[type="radio"].item_5:checked ~ div.wrapper div.element:nth-child(5) {
+input[type="radio"].item_5:checked ~ div.container div.element:nth-child(5) {
   -webkit-transform: translateY(0) translateZ(0) scale(1);
   transform: translateY(0) translateZ(0) scale(1);
 }
 
-input[type="radio"].item_5:checked ~ div.wrapper div.element:nth-child(5) div.content {
+input[type="radio"].item_5:checked ~ div.container div.element:nth-child(5) div.content {
   background: #ffffff;
   opacity: 1;
   box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
