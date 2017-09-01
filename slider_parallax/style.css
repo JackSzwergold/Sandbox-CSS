@@ -187,7 +187,7 @@ div.wrapper div.container > div.element > ul > li > p {
 /* Some selection input checks. */
 /******************************************************************************/
 
-input[type="radio"] {
+div.wrapper input[type="radio"] {
   display: none;
 }
 
