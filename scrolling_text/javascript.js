@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   /****************************************************************************/
   // Assign the values of the searched for elements to a variable.
-  var items = $("div.wrapper > div.element");
+  var items = $("div.wrapper div.container > div.element");
 
   /****************************************************************************/
   // Create an initial Y range.
