@@ -167,17 +167,28 @@ div.wrapper div.container > div.element:nth-child(4) {
 /******************************************************************************/
 
 div.wrapper div.container > div.element > ul {
-  margin: 0 0 0 0.625rem;
+  margin: 0;
 }
 
 div.wrapper div.container > div.element > ul > li {
   width: 8rem;
   height: 7rem;
-  margin: 0 0.625rem 0.625rem 0;
+  margin: 0 0.625rem 0 0;
   padding: 0;
   text-align: left;
   background: #222222;
   opacity: 0.6;
+}
+
+div.wrapper div.container > div.element > ul:last-child > li {
+  margin: 0 0.625rem 0 0;
+}
+div.wrapper div.container > div.element > ul > li:last-child {
+  margin: 0 0 0.625rem 0;
+}
+
+div.wrapper div.container > div.element > ul:last-child > li:last-child {
+  margin: 0;
 }
 
 div.wrapper div.container > div.element > ul > li > p {
@@ -220,7 +231,7 @@ div.wrapper nav label em {
   border-radius: 50%;
   background: #ffffff;
   border: 0.125rem #666666 solid;
-  transition: background-color 300ms ease;
+  transition: background 300ms ease;
   cursor: pointer;
 }
 
@@ -269,21 +280,9 @@ div.wrapper input[type="radio"].item_4:checked ~ div.container {
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) h1 {
-  color: #000000;
-  background: #ffffff;
-}
-
-div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) h1 {
-  color: #000000;
-  background: #ffffff;
-}
-
-div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) h1 {
-  color: #000000;
-  background: #ffffff;
-}
-
+div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) h1,
+div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) h1,
+div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) h1,
 div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) h1 {
   color: #000000;
   background: #ffffff;
