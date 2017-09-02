@@ -96,6 +96,67 @@ div.wrapper {
 
 /******************************************************************************/
 
+div.wrapper input[type="radio"] {
+  display: none;
+}
+
+/******************************************************************************/
+
+div.wrapper nav {
+  position: absolute;
+  top: 0.625rem;
+  left: 0.625rem;
+  background: #222222;
+  border-radius: 0.625rem;
+  z-index: 999;
+}
+
+div.wrapper nav label {
+  margin: 0 0 0.125rem 0;
+}
+
+div.wrapper nav label em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 0.125rem #666666 solid;
+  transition: background 300ms ease;
+  cursor: pointer;
+}
+
+div.wrapper nav label:first-child em {
+  margin-left: 0.5rem;
+}
+
+div.wrapper nav label:last-child em {
+  margin-right: 0.5rem;
+}
+
+div.wrapper nav label em:after {
+  content: "";
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: 0.125rem #ffffff solid;
+}
+
+div.wrapper nav label:active em {
+  border-color: #ffdd35;
+  background: #000000;
+}
+
+/******************************************************************************/
+
 div.wrapper div.container {
   width: 36rem;
   min-height: 100vh;
@@ -139,6 +200,26 @@ div.wrapper div.container > div.element > div.content p {
 
 /******************************************************************************/
 
+div.wrapper div.container:hover > div.element:hover {
+  /*background: #f00;*/
+  /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
+  transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
+}
+
+div.wrapper div.container:hover > div.element > div.content {
+  opacity: 0.025;
+}
+
+div.wrapper div.container > div.element > div.content:hover,
+div.wrapper div.container > div.element:hover  > div.content {
+  background: #ffffff;
+  opacity: 1;
+  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
+  cursor: pointer;
+}
+
+/******************************************************************************/
+
 div.wrapper div.container > div.element:nth-child(1) {
   -webkit-transform: translateZ(0) scale(0.95);
   transform: translateZ(0) scale(0.95);
@@ -162,97 +243,6 @@ div.wrapper div.container > div.element:nth-child(4) {
 div.wrapper div.container > div.element:nth-child(5) {
   -webkit-transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
   transform: rotate(3deg) translateY(50%) translateX(540px) translateZ(-720px) scale(2.5);
-}
-
-/******************************************************************************/
-/* Some hover tests. */
-/******************************************************************************/
-
-div.wrapper div.container:hover > div.element:hover {
-  /*background: #f00;*/
-  /*-webkit-transform: rotate(0g) translateX(0) translateZ(10px) scale(1);
-  transform: rotate(0) translateX(0) translateZ(10px) scale(1);*/
-}
-
-div.wrapper div.container:hover > div.element > div.content {
-  /*background: #0f0;*/
-  opacity: 0.025;
-}
-
-div.wrapper div.container > div.element > div.content:hover,
-div.wrapper div.container > div.element:hover  > div.content {
-  background: #ffffff;
-  opacity: 1;
-  box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.75);
-  cursor: pointer;
-}
-
-/*div.wrapper div.container div.wrapper div.container > div.element:hover {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}*/
-
-/******************************************************************************/
-/* Some selection input stuff. */
-/******************************************************************************/
-
-div.wrapper input[type="radio"] {
-  display: none;
-}
-
-/******************************************************************************/
-
-div.wrapper nav {
-  position: absolute;
-  top: 0.625rem;
-  left: 0.625rem;
-  background: #222222;
-  border-radius: 0.625rem;
-  z-index: 999;
-}
-
-div.wrapper nav label {
-  margin: 0 0 0.125rem 0;
-}
-
-div.wrapper nav label em {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  width: 0.75rem;
-  height: 0.75rem;
-  margin: 0.5rem 0.25rem 0.5rem 0.25rem;
-  border-radius: 50%;
-  background: #ffffff;
-  border: 0.125rem #666666 solid;
-  transition: background-color 300ms ease;
-  cursor: pointer;
-}
-
-div.wrapper nav label:first-child em {
-  margin-left: 0.5rem;
-}
-
-div.wrapper nav label:last-child em {
-  margin-right: 0.5rem;
-}
-
-div.wrapper nav label em:after {
-  content: "";
-  display: inline-block;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  border: 0.125rem #ffffff solid;
-}
-
-div.wrapper nav label:active em {
-  border-color: #ffdd35;
-  background: #000000;
 }
 
 /******************************************************************************/
