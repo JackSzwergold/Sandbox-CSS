@@ -134,7 +134,7 @@ div.wrapper nav label em {
   border-radius: 50%;
   background: #ffffff;
   border: 0.125rem #666666 solid;
-  transition: background 300ms ease;
+  transition: all 300ms ease;
   cursor: pointer;
 }
 
@@ -252,45 +252,93 @@ div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth
 }
 
 /******************************************************************************/
+/* Parallax */
+/******************************************************************************/
 
-div.wrapper div.container > div.element:nth-child(1) {
+div.wrapper.parallax div.container > div.element:nth-child(1) {
   transform: translateX(-50rem) translateZ(15rem);
 }
 
-div.wrapper div.container > div.element:nth-child(2) {
+div.wrapper.parallax div.container > div.element:nth-child(2) {
   transform: translateX(-25rem) translateZ(7.5rem);
 }
 
-div.wrapper div.container > div.element:nth-child(3) {
+div.wrapper.parallax div.container > div.element:nth-child(3) {
   transform: translateX(0rem) translateZ(15rem);
 }
 
-div.wrapper div.container > div.element:nth-child(4) {
+div.wrapper.parallax div.container > div.element:nth-child(4) {
   transform: translateX(25rem) translateZ(7.5rem);
 }
 
-div.wrapper div.container > div.element:nth-child(5) {
+div.wrapper.parallax div.container > div.element:nth-child(5) {
   transform: translateX(50rem) translateZ(15rem);
 }
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"].item_1:checked ~ div.container {
+div.wrapper.parallax input[type="radio"].item_1:checked ~ div.container {
   transform: translateX(50rem);
 }
 
-div.wrapper input[type="radio"].item_2:checked ~ div.container {
+div.wrapper.parallax input[type="radio"].item_2:checked ~ div.container {
   transform: translateX(25rem);
 }
 
-div.wrapper input[type="radio"].item_3:checked ~ div.container {
+div.wrapper.parallax input[type="radio"].item_3:checked ~ div.container {
   transform: translateX(0rem);
 }
 
-div.wrapper input[type="radio"].item_4:checked ~ div.container {
+div.wrapper.parallax input[type="radio"].item_4:checked ~ div.container {
   transform: translateX(-25rem);
 }
 
-div.wrapper input[type="radio"].item_5:checked ~ div.container {
+div.wrapper.parallax input[type="radio"].item_5:checked ~ div.container {
   transform: translateX(-50rem);
+}
+
+/******************************************************************************/
+/* Pentagon */
+/******************************************************************************/
+
+div.wrapper.pentagon div.container > div.element:nth-child(1) {
+  transform: translateZ(18rem);
+}
+
+div.wrapper.pentagon div.container > div.element:nth-child(2) {
+  transform: rotateY(-72deg) translateZ(18rem);
+}
+
+div.wrapper.pentagon div.container > div.element:nth-child(3) {
+  transform: rotateY(-144deg) translateZ(18rem);
+}
+
+div.wrapper.pentagon div.container > div.element:nth-child(4) {
+  transform: rotateY(144deg) translateZ(18rem);
+}
+
+div.wrapper.pentagon div.container > div.element:nth-child(5) {
+  transform: rotateY(72deg) translateZ(18rem);
+}
+
+/******************************************************************************/
+
+div.wrapper.pentagon input[type="radio"].item_1:checked ~ div.container {
+  transform: rotateY(0deg);
+}
+
+div.wrapper.pentagon input[type="radio"].item_2:checked ~ div.container {
+  transform: rotateY(72deg);
+}
+
+div.wrapper.pentagon input[type="radio"].item_3:checked ~ div.container {
+  transform: rotateY(144deg);
+}
+
+div.wrapper.pentagon input[type="radio"].item_4:checked ~ div.container {
+  transform: rotateY(216deg);
+}
+
+div.wrapper.pentagon input[type="radio"].item_5:checked ~ div.container {
+  transform: rotateY(288deg);
 }

@@ -134,7 +134,7 @@ div.wrapper nav label em {
   border-radius: 50%;
   background: #ffffff;
   border: 0.125rem #666666 solid;
-  transition: background 300ms ease;
+  transition: all 300ms ease;
   cursor: pointer;
 }
 
