@@ -242,6 +242,17 @@ div.wrapper div.container > div.element > ul > li > p {
 
 /******************************************************************************/
 
+div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) h1,
+div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) h1,
+div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) h1,
+div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) h1,
+div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth-child(5) h1 {
+  color: #000000;
+  background: #ffffff;
+}
+
+/******************************************************************************/
+
 div.wrapper div.container > div.element:nth-child(1) {
   transform: translateX(-50rem) translateZ(15rem);
 }
@@ -282,15 +293,4 @@ div.wrapper input[type="radio"].item_4:checked ~ div.container {
 
 div.wrapper input[type="radio"].item_5:checked ~ div.container {
   transform: translateX(-50rem);
-}
-
-/******************************************************************************/
-
-div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element:nth-child(1) h1,
-div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element:nth-child(2) h1,
-div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element:nth-child(3) h1,
-div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element:nth-child(4) h1,
-div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth-child(5) h1 {
-  color: #000000;
-  background: #ffffff;
 }
