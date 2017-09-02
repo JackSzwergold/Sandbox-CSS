@@ -104,7 +104,7 @@ div.wrapper {
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"] {
+input[type="radio"] {
   display: none;
 }
 
@@ -112,11 +112,20 @@ div.wrapper input[type="radio"] {
 
 div.wrapper nav {
   position: absolute;
-  top: 0.625rem;
-  left: 0.625rem;
   background: #222222;
   border-radius: 0.625rem;
   z-index: 999;
+}
+
+div.wrapper nav:nth-child(1) {
+  top: 0.625rem;
+  left: 0.625rem;
+}
+
+div.wrapper nav:nth-child(2) {
+  top: 0.625rem;
+  right: 0.625rem;
+  left: inherit;
 }
 
 div.wrapper nav label {
@@ -205,6 +214,7 @@ div.wrapper div.container > div.element {
   /*background: #ffffff;*/
   /*-webkit-backface-visibility: hidden;*/
   /*backface-visibility: hidden;*/
+  transition: all 600ms ease;
 }
 
 /******************************************************************************/
@@ -252,93 +262,93 @@ div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element:nth
 }
 
 /******************************************************************************/
-/* Parallax */
+/* Pentagon Stuff */
 /******************************************************************************/
 
-div.wrapper.parallax div.container > div.element:nth-child(1) {
-  transform: translateX(-50rem) translateZ(15rem);
-}
-
-div.wrapper.parallax div.container > div.element:nth-child(2) {
-  transform: translateX(-25rem) translateZ(7.5rem);
-}
-
-div.wrapper.parallax div.container > div.element:nth-child(3) {
-  transform: translateX(0rem) translateZ(15rem);
-}
-
-div.wrapper.parallax div.container > div.element:nth-child(4) {
-  transform: translateX(25rem) translateZ(7.5rem);
-}
-
-div.wrapper.parallax div.container > div.element:nth-child(5) {
-  transform: translateX(50rem) translateZ(15rem);
-}
-
-/******************************************************************************/
-
-div.wrapper.parallax input[type="radio"].item_1:checked ~ div.container {
-  transform: translateX(50rem);
-}
-
-div.wrapper.parallax input[type="radio"].item_2:checked ~ div.container {
-  transform: translateX(25rem);
-}
-
-div.wrapper.parallax input[type="radio"].item_3:checked ~ div.container {
-  transform: translateX(0rem);
-}
-
-div.wrapper.parallax input[type="radio"].item_4:checked ~ div.container {
-  transform: translateX(-25rem);
-}
-
-div.wrapper.parallax input[type="radio"].item_5:checked ~ div.container {
-  transform: translateX(-50rem);
-}
-
-/******************************************************************************/
-/* Pentagon */
-/******************************************************************************/
-
-div.wrapper.pentagon div.container > div.element:nth-child(1) {
+div.wrapper div.container > div.element:nth-child(1) {
   transform: translateZ(18rem);
 }
 
-div.wrapper.pentagon div.container > div.element:nth-child(2) {
+div.wrapper div.container > div.element:nth-child(2) {
   transform: rotateY(-72deg) translateZ(18rem);
 }
 
-div.wrapper.pentagon div.container > div.element:nth-child(3) {
+div.wrapper div.container > div.element:nth-child(3) {
   transform: rotateY(-144deg) translateZ(18rem);
 }
 
-div.wrapper.pentagon div.container > div.element:nth-child(4) {
+div.wrapper div.container > div.element:nth-child(4) {
   transform: rotateY(144deg) translateZ(18rem);
 }
 
-div.wrapper.pentagon div.container > div.element:nth-child(5) {
+div.wrapper div.container > div.element:nth-child(5) {
   transform: rotateY(72deg) translateZ(18rem);
 }
 
 /******************************************************************************/
 
-div.wrapper.pentagon input[type="radio"].item_1:checked ~ div.container {
+div.wrapper input[type="radio"].item_1:checked ~ div.container {
   transform: rotateY(0deg);
 }
 
-div.wrapper.pentagon input[type="radio"].item_2:checked ~ div.container {
+div.wrapper input[type="radio"].item_2:checked ~ div.container {
   transform: rotateY(72deg);
 }
 
-div.wrapper.pentagon input[type="radio"].item_3:checked ~ div.container {
+div.wrapper input[type="radio"].item_3:checked ~ div.container {
   transform: rotateY(144deg);
 }
 
-div.wrapper.pentagon input[type="radio"].item_4:checked ~ div.container {
+div.wrapper input[type="radio"].item_4:checked ~ div.container {
   transform: rotateY(216deg);
 }
 
-div.wrapper.pentagon input[type="radio"].item_5:checked ~ div.container {
+div.wrapper input[type="radio"].item_5:checked ~ div.container {
   transform: rotateY(288deg);
+}
+
+/******************************************************************************/
+/* Parallax Stuff */
+/******************************************************************************/
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(1) {
+  transform: translateX(-50rem) translateZ(15rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(2) {
+  transform: translateX(-25rem) translateZ(7.5rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(3) {
+  transform: translateX(0rem) translateZ(15rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(4) {
+  transform: translateX(25rem) translateZ(7.5rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(5) {
+  transform: translateX(50rem) translateZ(15rem);
+}
+
+/******************************************************************************/
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_1:checked ~ div.container {
+  transform: translateX(50rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_2:checked ~ div.container {
+  transform: translateX(25rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_3:checked ~ div.container {
+  transform: translateX(0rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_4:checked ~ div.container {
+  transform: translateX(-25rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_5:checked ~ div.container {
+  transform: translateX(-50rem);
 }
