@@ -314,43 +314,63 @@ div.wrapper input[type="radio"].item_5:checked ~ div.container {
 /******************************************************************************/
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(1) {
-  transform: translateX(-50rem) translateZ(15rem);
+  transform: translateX(-52rem) translateZ(0);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(2) {
-  transform: translateX(-25rem) translateZ(7.5rem);
+  transform: translateX(-26rem) translateZ(0);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(3) {
-  transform: translateX(0rem) translateZ(15rem);
+  transform: translateX(0rem) translateZ(0);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(4) {
-  transform: translateX(25rem) translateZ(7.5rem);
+  transform: translateX(26rem) translateZ(0);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(5) {
-  transform: translateX(50rem) translateZ(15rem);
+  transform: translateX(52rem) translateZ(0);
 }
 
 /******************************************************************************/
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_1:checked ~ div.container {
-  transform: translateX(50rem);
+  transform: translateX(52rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_1:checked ~ div.container div.element:nth-child(1) {
+  transform: translateX(-52rem) translateZ(18rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_2:checked ~ div.container {
-  transform: translateX(25rem);
+  transform: translateX(26rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_2:checked ~ div.container div.element:nth-child(2) {
+  transform: translateX(-26rem) translateZ(18rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_3:checked ~ div.container {
   transform: translateX(0rem);
 }
 
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_3:checked ~ div.container div.element:nth-child(3) {
+  transform: translateX(0) translateZ(18rem);
+}
+
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_4:checked ~ div.container {
-  transform: translateX(-25rem);
+  transform: translateX(-26rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_4:checked ~ div.container div.element:nth-child(4) {
+  transform: translateX(26rem) translateZ(18rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_5:checked ~ div.container {
-  transform: translateX(-50rem);
+  transform: translateX(-52rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].item_5:checked ~ div.container div.element:nth-child(5) {
+  transform: translateX(52rem) translateZ(18rem);
 }
