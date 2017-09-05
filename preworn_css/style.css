@@ -112,6 +112,18 @@ hr {
 	font-style: normal;
 }
 
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot');
+  src: url('../fonts/SinaNova/SinaNovaReg-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.woff2') format('woff2'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.woff') format('woff'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.ttf') format('truetype'),
+       url('../fonts/SinaNova/SinaNovaReg-webfont.svg#sinanova-regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /******************************************************************************/
 /*  _   _                _
 /* | | | | ___  __ _  __| | ___ _ __
@@ -140,7 +152,7 @@ body > header {
 }
 
 body > header h1 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
   font-weight: bold;
   font-style: normal;
   text-transform: normal;
@@ -197,7 +209,7 @@ body > nav ul li label {
 
 
 body > nav ul li label {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 0.80rem;
@@ -352,7 +364,7 @@ article {
 /******************************************************************************/
 
 article h1, article h2, article h3, article h4, article h5, article h6 {
-  font-family: "Arvo", Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "Arvo", Arial, "Arial Unicode MS", Helvetica, Verdana, sans-serif;
   font-weight: bold;
   font-style: normal;
   clear: both;
@@ -411,7 +423,7 @@ article h6 {
 /******************************************************************************/
 
 article p {
-  font-family: Georgia, "New York", "Times New Roman", Times, serif;
+  font-family: "SinaNovaReg", Georgia, "New York", "Times New Roman", Times, serif;
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
