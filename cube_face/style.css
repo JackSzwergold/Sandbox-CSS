@@ -197,9 +197,10 @@ div.wrapper input[type="radio"] {
 /* First Row */
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(1) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(1) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_1:checked ~ div.container > div.element > ul > li {
   box-shadow: 0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -211,9 +212,10 @@ div.wrapper input[type="radio"].item_1:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(2) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(2) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_2:checked ~ div.container > div.element > ul > li {
   box-shadow: 0 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -225,9 +227,10 @@ div.wrapper input[type="radio"].item_2:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(3) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element > ul:nth-child(1) > li:nth-child(3) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_3:checked ~ div.container > div.element > ul > li {
   box-shadow: -0.4rem 0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -241,9 +244,10 @@ div.wrapper input[type="radio"].item_3:checked ~ div.container {
 /* Second Row */
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(1) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(1) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_4:checked ~ div.container > div.element > ul > li {
   box-shadow: 0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -255,9 +259,10 @@ div.wrapper input[type="radio"].item_4:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(2) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(2) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_5:checked ~ div.container > div.element > ul > li {
   box-shadow: 0 0 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -269,9 +274,10 @@ div.wrapper input[type="radio"].item_5:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_6:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(3) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_6:checked ~ div.container > div.element > ul:nth-child(2) > li:nth-child(3) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_6:checked ~ div.container > div.element > ul > li {
   box-shadow: -0.4rem 0 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -285,9 +291,10 @@ div.wrapper input[type="radio"].item_6:checked ~ div.container {
 /* Third Row */
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_7:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(1) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_7:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(1) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_7:checked ~ div.container > div.element > ul > li {
   box-shadow: 0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -299,9 +306,10 @@ div.wrapper input[type="radio"].item_7:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_8:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(2) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_8:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(2) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_8:checked ~ div.container > div.element > ul > li {
   box-shadow: 0 -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
@@ -313,9 +321,10 @@ div.wrapper input[type="radio"].item_8:checked ~ div.container {
 
 /******************************************************************************/
 
-/*div.wrapper input[type="radio"].item_9:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(3) {
-  opacity: 1;
-}*/
+div.wrapper input[type="radio"].item_9:checked ~ div.container > div.element > ul:nth-child(3) > li:nth-child(3) {
+  background: #f7c331;
+  background: linear-gradient(-45deg, #687A8f 0%, #f7882f 50%, #f7c331 100%);
+}
 
 div.wrapper input[type="radio"].item_9:checked ~ div.container > div.element > ul > li {
   box-shadow: -0.4rem -0.4rem 0 -0.125rem rgba(18, 18, 18, 0.5);
