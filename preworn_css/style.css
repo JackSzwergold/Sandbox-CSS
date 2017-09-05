@@ -237,10 +237,10 @@ main {
   align-items: center;
   justify-content: flex-start;
   align-content: flex-start;
-  width: calc(100% - 1.250rem);
-  height: calc(100% - 1.250rem);
+  width: calc(100%);
+  height: calc(100%);
   margin: 0;
-  padding: 0.625rem;
+  padding: 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -276,6 +276,7 @@ main {
   justify-content: flex-start;
   align-content: center;
   transition: all 600ms ease;
+  background: #00f;
 }
 
 .panel.home {
@@ -515,7 +516,7 @@ article section:last-child {
 /*
 /******************************************************************************/
 
-@media (min-width: 319px) {
+/*@media (min-width: 319px) {
 
   .container {
     width: 25rem;
@@ -577,4 +578,4 @@ article section:last-child {
     height: 56vh;
   }
 
-}
+}*/
