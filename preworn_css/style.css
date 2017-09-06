@@ -107,7 +107,6 @@ body > header {
   margin: 2.375rem 1.75rem 0 0.5rem;
   padding: 0.5rem 1.25rem 0.625rem 1.25rem;
   background: #333333;
-  /*box-shadow: 0.25rem 0.25rem 0 0 rgba(0, 0, 0, 0.25);*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -151,9 +150,6 @@ body > nav {
   left: 0;
   margin: 0.75rem 0 0 0.5rem;
   padding: 0;
-  /*transform: rotate(-0.75deg);*/
-  /*background: #000000;*/
-  /*box-shadow: 0.625rem 0.625rem 0 0 rgba(18, 18, 18, 0.25);*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -246,7 +242,6 @@ main {
 .panel.home article {
   width: 72vw;
   height: 72vh;
-  /*border-radius: 50%;*/
   background: #f7882f;
   background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(0, 0, 0, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(0, 0, 0, 0.125);
