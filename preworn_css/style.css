@@ -204,10 +204,7 @@ main {
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #d00;
+  overflow: hidden;
 }
 
 /******************************************************************************/
@@ -216,7 +213,6 @@ main {
   width: 48rem;
   height: 100vh;
   transition: all 600ms ease;
-  background: #0d0;
 }
 
 /******************************************************************************/
@@ -230,9 +226,8 @@ main {
   justify-content: flex-start;
   align-content: flex-start;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   transition: all 600ms ease;
-  background: #00d;
 }
 
 .panel.home {
