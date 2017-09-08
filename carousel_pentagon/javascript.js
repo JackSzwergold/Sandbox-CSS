@@ -28,7 +28,7 @@ $(document).ready(function() {
 
   // Different ways to call the functions.
   // deselectElement('div.wrapper [id*="element_"]');
-  iterateElements('div.wrapper input[id*="element_"]');
+  // iterateElements('div.wrapper input[id*="element_"]');
   // iterateElements('body input[id*="wrapper_"]');
 
 });

@@ -263,7 +263,7 @@ div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:
 /******************************************************************************/
 
 div.wrapper div.container > div.element:nth-child(1) {
-  transform: translateZ(18rem);
+  transform: rotateY(0deg) translateZ(18rem);
 }
 
 div.wrapper div.container > div.element:nth-child(2) {
@@ -308,24 +308,24 @@ div.wrapper input[type="radio"].element_5:checked ~ div.container {
 /* Parallax Stuff */
 /******************************************************************************/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(1) {
-  transform: translateX(-52rem) translateZ(0);
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(1) {
+  transform: translateX(-52rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(2) {
-  transform: translateX(-26rem) translateZ(0);
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(2) {
+  transform: translateX(-26rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.element:nth-child(3) {
-  transform: translateX(0rem) translateZ(0);
+input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(3) {
+  transform: translateX(0rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(4) {
-  transform: translateX(26rem) translateZ(0);
+  transform: translateX(26rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(5) {
-  transform: translateX(52rem) translateZ(0);
+  transform: translateX(52rem) translateZ(0rem);
 }
 
 /******************************************************************************/
@@ -334,36 +334,38 @@ input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_
   transform: translateX(52rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container div.element:nth-child(1) {
-  transform: translateX(-52rem) translateZ(0rem);
-}
-
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container {
   transform: translateX(26rem);
-}
-
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container div.element:nth-child(2) {
-  transform: translateX(-26rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container {
   transform: translateX(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container div.element:nth-child(3) {
-  transform: translateX(0) translateZ(0rem);
-}
-
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container {
   transform: translateX(-26rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container div.element:nth-child(4) {
-  transform: translateX(26rem) translateZ(0rem);
-}
-
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container {
   transform: translateX(-52rem);
+}
+
+/******************************************************************************/
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container div.element:nth-child(1) {
+  transform: translateX(-52rem) translateZ(0rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container div.element:nth-child(2) {
+  transform: translateX(-26rem) translateZ(0rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container div.element:nth-child(3) {
+  transform: translateX(0) translateZ(0rem);
+}
+
+input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container div.element:nth-child(4) {
+  transform: translateX(26rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container div.element:nth-child(5) {
