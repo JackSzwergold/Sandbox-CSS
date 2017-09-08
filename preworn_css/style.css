@@ -274,10 +274,29 @@ div.container > div.panel.home > div.shape {
   box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   margin: 0;
   padding: 0;
-  transition: all 600ms ease;
-  animation: shapeBackgroundColorShift 9s ease-in-out 0s infinite alternate;
   border-radius: 1rem;
+  transition: all 600ms ease;
+  /*animation: shapeBackgroundColorShift 9s ease-in-out 0s infinite alternate;*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
+
+/**************************************************************************************************/
+
+/*@keyframes shapeBackgroundColorShift {
+  from {
+    background-color: transparent;
+    box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
+  }
+  to {
+    background-color: #c8102e;
+    box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
+  }
+}*/
 
 div.container > div.panel.home > div.shape > nav {
   display: flex;
@@ -317,58 +336,36 @@ div.container > div.panel.home > div.shape > nav > label {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 50%;
-  width: 10%;
-  height: 10%;
+  width: 50%;
+  height: 50%;
 }
 
-/**************************************************************************************************/
-
-div.container > div.panel.home > div.shape > nav > label:nth-child(1) {
-  background: #f00;
-}
-
-div.container > div.panel.home > div.shape > nav > label:nth-child(2) {
-  background: #0f0;
-}
-
-div.container > div.panel.home > div.shape > nav > label:nth-child(3) {
-  background: #00f;
-}
-
-div.container > div.panel.home > div.shape > nav > label:nth-child(4) {
-  background: #000;
+div.container > div.panel.home > div.shape > nav > label:hover {
+  cursor: pointer;
 }
 
 /**************************************************************************************************/
 
 div.container > div.panel.home input[type="radio"].shape_1:checked ~ div.shape {
   background-color: #f00;
+  background: linear-gradient(135deg, #913832 0%, #f7882f 50%, #f7c331 100%);
+  box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_2:checked ~ div.shape {
-  background-color: #0f0;
+  background: linear-gradient(-135deg, #314F40 0%, #f7882f 50%, #f7c331 100%);
+  box-shadow: inset -2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_3:checked ~ div.shape {
-  background-color: #00f;
+  background: linear-gradient(45deg, #2f408e 0%, #f7882f 50%, #f7c331 100%);
+  box-shadow: inset 2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
 
 div.container > div.panel.home input[type="radio"].shape_4:checked ~ div.shape {
-  background-color: #000;
+  background: linear-gradient(-45deg, transparent 0%, #f7882f 50%, #f7c331 100%);
+  box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
 }
-
-/**************************************************************************************************/
-
-/*@keyframes shapeBackgroundColorShift {
-  from {
-    background-color: transparent;
-    box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
-  }
-  to {
-    background-color: #c8102e;
-    box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
-  }
-}*/
 
 /******************************************************************************/
 /*
