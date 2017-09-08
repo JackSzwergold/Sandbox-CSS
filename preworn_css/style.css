@@ -317,9 +317,8 @@ div.container > div.panel.home > div.shape > nav > label {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 50%;
-  width: 20%;
-  height: 20%;
-  opacity: 0.075;
+  width: 10%;
+  height: 10%;
 }
 
 /**************************************************************************************************/
@@ -342,11 +341,25 @@ div.container > div.panel.home > div.shape > nav > label:nth-child(4) {
 
 /**************************************************************************************************/
 
+div.container > div.panel.home input[type="radio"].shape_1:checked ~ div.shape {
+  background-color: #f00;
+}
 
+div.container > div.panel.home input[type="radio"].shape_2:checked ~ div.shape {
+  background-color: #0f0;
+}
+
+div.container > div.panel.home input[type="radio"].shape_3:checked ~ div.shape {
+  background-color: #00f;
+}
+
+div.container > div.panel.home input[type="radio"].shape_4:checked ~ div.shape {
+  background-color: #000;
+}
 
 /**************************************************************************************************/
 
-@keyframes shapeBackgroundColorShift {
+/*@keyframes shapeBackgroundColorShift {
   from {
     background-color: transparent;
     box-shadow: inset -2.5rem -2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
@@ -355,7 +368,7 @@ div.container > div.panel.home > div.shape > nav > label:nth-child(4) {
     background-color: #c8102e;
     box-shadow: inset 2.5rem 2.5rem 2.5rem 0 rgba(68, 55, 49, 0.25), 1.25rem 1.25rem 0.75rem 0 rgba(68, 55, 49, 0.25);
   }
-}
+}*/
 
 /******************************************************************************/
 /*
