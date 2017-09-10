@@ -220,7 +220,7 @@ div.wrapper div.container > div.element > ul {
 }
 
 div.wrapper div.container > div.element > ul > li {
-  width: 8rem;
+  width: 7rem;
   height: 7rem;
   margin: 0 0.625rem 0 0;
   padding: 0;
@@ -264,53 +264,53 @@ div.wrapper input[type="radio"].element_6:checked ~ div.container > div.element:
 /******************************************************************************/
 
 div.wrapper div.container > div.element:nth-child(1) {
-  transform: rotateX(0deg) rotateY(0deg) translateZ(14rem);
+  transform: rotateX(0deg) rotateY(0deg) translateZ(12rem);
 }
 
 div.wrapper div.container > div.element:nth-child(2) {
-  transform: rotateX(0deg) rotateY(270deg) translateZ(14rem);
+  transform: rotateX(0deg) rotateY(270deg) translateZ(12rem);
 }
 
 div.wrapper div.container > div.element:nth-child(3) {
-  transform: rotateX(0deg) rotateY(180deg) translateZ(14rem);
+  transform: rotateX(0deg) rotateY(180deg) translateZ(12rem);
 }
 
 div.wrapper div.container > div.element:nth-child(4) {
-  transform: rotateX(0deg) rotateY(90deg) translateZ(14rem);
+  transform: rotateX(0deg) rotateY(90deg) translateZ(12rem);
 }
 
 div.wrapper div.container > div.element:nth-child(5) {
-  transform: rotateX(90deg) rotateY(0deg) translateZ(14rem);
+  transform: rotateX(90deg) rotateY(0deg) translateZ(12rem);
 }
 
 div.wrapper div.container > div.element:nth-child(6) {
-  transform: rotateX(-90deg) rotateY(0deg) translateZ(14rem);
+  transform: rotateX(-90deg) rotateY(0deg) translateZ(12rem);
 }
 
 /******************************************************************************/
 
 div.wrapper input[type="radio"].element_1:checked ~ div.container {
-  transform: rotateY(0deg);
+  transform: rotateX(0deg) rotateY(0deg);
 }
 
 div.wrapper input[type="radio"].element_2:checked ~ div.container {
-  transform: rotateY(90deg);
+  transform: rotateX(0deg) rotateY(90deg);
 }
 
 div.wrapper input[type="radio"].element_3:checked ~ div.container {
-  transform: rotateY(180deg);
+  transform: rotateX(0deg) rotateY(180deg);
 }
 
 div.wrapper input[type="radio"].element_4:checked ~ div.container {
-  transform: rotateY(270deg);
+  transform: rotateX(0deg) rotateY(270deg);
 }
 
 div.wrapper input[type="radio"].element_5:checked ~ div.container {
-  transform: rotateX(-90deg);
+  transform: rotateX(-90deg) rotateY(0deg);
 }
 
 div.wrapper input[type="radio"].element_6:checked ~ div.container {
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) rotateY(0deg);
 }
 
 /******************************************************************************/
@@ -348,23 +348,23 @@ input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(2) {
-  transform: translateX(26rem) translateZ(0rem);
+  transform: translateX(23rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(3) {
-  transform: translateX(52rem) translateZ(0rem);
+  transform: translateX(46rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(4) {
-  transform: translateX(78rem) translateZ(0rem);
+  transform: translateX(69rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(5) {
-  transform: translateX(104rem) translateZ(0rem);
+  transform: translateX(92rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(6) {
-  transform: translateX(130rem) translateZ(0rem);
+  transform: translateX(115rem) translateZ(0rem);
 }
 
 /******************************************************************************/
@@ -374,23 +374,23 @@ input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container {
-  transform: translateX(-26rem);
+  transform: translateX(-23rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container {
-  transform: translateX(-52rem);
+  transform: translateX(-46rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container {
-  transform: translateX(-78rem);
+  transform: translateX(-69rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container {
-  transform: translateX(-104rem);
+  transform: translateX(-92rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_6:checked ~ div.container {
-  transform: translateX(-130rem);
+  transform: translateX(-115rem);
 }
 
 /******************************************************************************/
@@ -400,21 +400,21 @@ input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container div.element:nth-child(2) {
-  transform: translateX(26rem) translateZ(0rem);
+  transform: translateX(23rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container div.element:nth-child(3) {
-  transform: translateX(52rem) translateZ(0rem);
+  transform: translateX(46rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container div.element:nth-child(4) {
-  transform: translateX(78rem) translateZ(0rem);
+  transform: translateX(69rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container div.element:nth-child(5) {
-  transform: translateX(104rem) translateZ(0rem);
+  transform: translateX(92rem) translateZ(0rem);
 }
 
 input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_6:checked ~ div.container div.element:nth-child(6) {
-  transform: translateX(130rem) translateZ(0rem);
+  transform: translateX(115rem) translateZ(0rem);
 }
