@@ -99,37 +99,38 @@ div.wrapper {
 
 /******************************************************************************/
 
-input[type="radio"] {
+input[type="radio"],
+input[type="checkbox"] {
   display: none;
 }
 
 /******************************************************************************/
 
-div.wrapper nav {
+nav.controls {
   position: absolute;
   background: #000000;
   border-radius: 0.625rem;
   z-index: 999;
 }
 
-div.wrapper nav:nth-child(1) {
+nav.controls:nth-of-type(1) {
   top: 0.625rem;
   left: 0.625rem;
 }
 
-div.wrapper nav:nth-child(2) {
+nav.controls:nth-of-type(2) {
   top: 0.625rem;
   right: 0.625rem;
   left: inherit;
 }
 
-div.wrapper nav label {
+nav.controls > label {
   margin: 0 0 0.125rem 0;
 }
 
 /******************************************************************************/
 
-div.wrapper nav label em {
+nav.controls > label > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -139,20 +140,19 @@ div.wrapper nav label em {
   margin: 0.5rem 0.25rem 0.5rem 0.25rem;
   border-radius: 50%;
   background: #ffffff;
-  /*border: 0.125rem #ffffff solid;*/
   transition: all 150ms ease;
   cursor: pointer;
 }
 
-div.wrapper nav label:first-child em {
+nav.controls > label:first-child > span {
   margin-left: 0.5rem;
 }
 
-div.wrapper nav label:last-child em {
+nav.controls > label:last-child > span {
   margin-right: 0.5rem;
 }
 
-div.wrapper nav label em:after {
+nav.controls > label span:after {
   content: "";
   display: inline-block;
   flex-grow: 0;
@@ -161,14 +161,46 @@ div.wrapper nav label em:after {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  /*border: 0.125rem #ffffff solid;*/
 }
 
-div.wrapper nav label:active em {
-  /*border-color: #ffdd35;*/
+nav.controls > label:active > span {
   background: #000000;
 }
 
+/******************************************************************************/
+/* Zoom Specific Controls */
+/******************************************************************************/
+
+nav.controls.zoom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  top: inherit;
+  right: inherit;
+  left: inherit;
+  margin: 0;
+  padding: 0.625rem;
+  background: transparent;
+  border-radius: 0;
+  z-index: 999;
+}
+
+nav.controls.zoom > label > span {
+  display: block;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #ffffff;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  padding: 0.625rem;
+  margin: 0;
+  border-radius: 50%;
+}
+
+/******************************************************************************/
+/* Defining Container and Elements */
 /******************************************************************************/
 
 div.wrapper div.container {
@@ -176,20 +208,6 @@ div.wrapper div.container {
   height: 30rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
-}
-
-/******************************************************************************/
-
-div.wrapper div.container > div.element h1 {
-  font-size: 1rem;
-  color: #ffffff;
-  width: 1rem;
-  height: 1rem;
-  text-align: center;
-  padding: 0.625rem;
-  margin: 1rem 0 0 1rem;
-  border-radius: 50%;
-  /*box-shadow: inset -0.3125rem -0.3125rem 0.3125rem rgba(0, 0, 0, 0.3);*/
 }
 
 /******************************************************************************/
@@ -249,39 +267,46 @@ div.wrapper div.container > div.element > ul > li > p {
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-child(1) h1,
-div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-child(2) h1,
-div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-child(3) h1,
-div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-child(4) h1,
-div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-child(5) h1 {
+div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-of-type(1) nav > label > span,
+div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-of-type(2) nav > label > span,
+div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-of-type(3) nav > label > span,
+div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-of-type(4) nav > label > span,
+div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-of-type(5) nav > label > span,
+div.wrapper div.container input[type="checkbox"].element_1_zoom:checked ~ div.element:nth-of-type(1) nav > label > span,
+div.wrapper div.container input[type="checkbox"].element_2_zoom:checked ~ div.element:nth-of-type(2) nav > label > span,
+div.wrapper div.container input[type="checkbox"].element_3_zoom:checked ~ div.element:nth-of-type(3) nav > label > span,
+div.wrapper div.container input[type="checkbox"].element_4_zoom:checked ~ div.element:nth-of-type(4) nav > label > span,
+div.wrapper div.container input[type="checkbox"].element_5_zoom:checked ~ div.element:nth-of-type(5) nav > label > span {
   color: #000000;
   background: #ffffff;
 }
 
 /******************************************************************************/
-/* Pentagon Stuff */
+/* DEFAULT: Pentagon Stuff */
 /******************************************************************************/
 
-div.wrapper div.container > div.element:nth-child(1) {
+div.wrapper div.container > div.element:nth-of-type(1) {
   transform: rotateY(0deg) translateZ(18rem);
 }
 
-div.wrapper div.container > div.element:nth-child(2) {
+div.wrapper div.container > div.element:nth-of-type(2) {
   transform: rotateY(-72deg) translateZ(18rem);
 }
 
-div.wrapper div.container > div.element:nth-child(3) {
+div.wrapper div.container > div.element:nth-of-type(3) {
   transform: rotateY(-144deg) translateZ(18rem);
 }
 
-div.wrapper div.container > div.element:nth-child(4) {
+div.wrapper div.container > div.element:nth-of-type(4) {
   transform: rotateY(144deg) translateZ(18rem);
 }
 
-div.wrapper div.container > div.element:nth-child(5) {
+div.wrapper div.container > div.element:nth-of-type(5) {
   transform: rotateY(72deg) translateZ(18rem);
 }
 
+/******************************************************************************/
+/* Element Checked Behavior */
 /******************************************************************************/
 
 div.wrapper input[type="radio"].element_1:checked ~ div.container {
@@ -305,91 +330,93 @@ div.wrapper input[type="radio"].element_5:checked ~ div.container {
 }
 
 /******************************************************************************/
+/* Element Face Checked Behavior */
+/******************************************************************************/
 
-div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-child(1) > ul > li {
-  opacity: 0.75;
-}
-
-div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-child(2) > ul > li {
-  opacity: 0.75;
-}
-
-div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-child(3) > ul > li {
-  opacity: 0.75;
-}
-
-div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-child(4) > ul > li {
-  opacity: 0.75;
-}
-
-div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-child(5) > ul > li {
+input[type="checkbox"].element_1_zoom:checked ~ div.element:nth-of-type(1) > ul > li,
+input[type="checkbox"].element_2_zoom:checked ~ div.element:nth-of-type(2) > ul > li,
+input[type="checkbox"].element_3_zoom:checked ~ div.element:nth-of-type(3) > ul > li,
+input[type="checkbox"].element_4_zoom:checked ~ div.element:nth-of-type(4) > ul > li,
+input[type="checkbox"].element_5_zoom:checked ~ div.element:nth-of-type(5) > ul > li {
   opacity: 0.75;
 }
 
 /******************************************************************************/
-/* Parallax Stuff */
+/* Main Control Face Checked Behavior */
 /******************************************************************************/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(1) {
-  transform: translateX(-52rem) translateZ(0rem);
-}
+/*div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-of-type(1) > ul > li,
+div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-of-type(2) > ul > li,
+div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-of-type(3) > ul > li,
+div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-of-type(4) > ul > li,
+div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-of-type(5) > ul > li {
+  opacity: 0.75;
+}*/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(2) {
-  transform: translateX(-26rem) translateZ(0rem);
-}
+/******************************************************************************/
+/* SELECTED: Parallax Stuff */
+/******************************************************************************/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(3) {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-of-type(1) {
   transform: translateX(0rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(4) {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-of-type(2) {
   transform: translateX(26rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-child(5) {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-of-type(3) {
   transform: translateX(52rem) translateZ(0rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-of-type(4) {
+  transform: translateX(78rem) translateZ(0rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper div.container > div.element:nth-of-type(5) {
+  transform: translateX(104rem) translateZ(0rem);
 }
 
 /******************************************************************************/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container {
-  transform: translateX(52rem);
-}
-
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container {
-  transform: translateX(26rem);
-}
-
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container {
   transform: translateX(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container {
   transform: translateX(-26rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container {
   transform: translateX(-52rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container {
+  transform: translateX(-78rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container {
+  transform: translateX(-104rem);
 }
 
 /******************************************************************************/
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container div.element:nth-child(1) {
-  transform: translateX(-52rem) translateZ(0rem);
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_1:checked ~ div.container div.element:nth-of-type(1) {
+  transform: translateX(0rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container div.element:nth-child(2) {
-  transform: translateX(-26rem) translateZ(0rem);
-}
-
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container div.element:nth-child(3) {
-  transform: translateX(0) translateZ(0rem);
-}
-
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container div.element:nth-child(4) {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_2:checked ~ div.container div.element:nth-of-type(2) {
   transform: translateX(26rem) translateZ(0rem);
 }
 
-input[type="radio"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container div.element:nth-child(5) {
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_3:checked ~ div.container div.element:nth-of-type(3) {
   transform: translateX(52rem) translateZ(0rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_4:checked ~ div.container div.element:nth-of-type(4) {
+  transform: translateX(78rem) translateZ(0rem);
+}
+
+input[type="checkbox"].wrapper_2:checked ~ div.wrapper input[type="radio"].element_5:checked ~ div.container div.element:nth-of-type(5) {
+  transform: translateX(104rem) translateZ(0rem);
 }
