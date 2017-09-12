@@ -176,9 +176,9 @@ nav.controls.zoom {
   align-items: center;
   justify-content: center;
   align-content: center;
-  top: inherit;
+  top: 0;
   right: inherit;
-  left: inherit;
+  left: 0;
   margin: 0;
   padding: 0.625rem;
   background: transparent;
@@ -203,9 +203,10 @@ nav.controls.zoom > label > span {
 /* Defining Container and Elements */
 /******************************************************************************/
 
-div.wrapper div.container {
-  width: 30rem;
-  height: 30rem;
+div.wrapper div.container,
+div.wrapper div.container > div.element {
+  width: 25rem;
+  height: 22rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
 }
@@ -214,55 +215,55 @@ div.wrapper div.container {
 
 div.wrapper div.container > div.element {
   position: absolute;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: left;
-  width: 100%;
-  height: 100%;
   overflow: hidden;
   /*background: #ffffff;*/
   /*-webkit-backface-visibility: hidden;*/
   /*backface-visibility: hidden;*/
-  transition: all 600ms ease;
 }
 
 /******************************************************************************/
 
 div.wrapper div.container > div.element > ul {
-  margin: 0;
+  display: flex;
+	/* flex-direction: column; */
+	/* flex-direction: column-reverse; */
+	/* flex-direction: row; */
+	/* flex-direction: row-reverse; */
+	flex-direction: row;
+	/* flex-wrap: nowrap; */
+	/* flex-wrap: wrap; */
+	/* flex-wrap: wrap-reverse; */
+	flex-wrap: wrap;
+	/* align-items: flex-start; */
+	/* align-items: flex-end; */
+	/* align-items: center; */
+	/* align-items: baseline; */
+	/* align-items: stretch; */
+	align-items: center;
+	/* justify-content: flex-start; */
+	/* justify-content: flex-end; */
+	/* justify-content: center; */
+	/* justify-content: space-between; */
+	/* justify-content: space-around; */
+	justify-content: space-between;
+	/* align-content: flex-start; */
+	/* align-content: flex-end; */
+	/* align-content: center; */
+	/* align-content: stretch; */
+	/* align-content: space-between; */
+	/* align-content: space-around; */
+	align-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 div.wrapper div.container > div.element > ul > li {
   width: 8rem;
   height: 7rem;
-  margin: 0 0.625rem 0 0;
-  padding: 0;
   text-align: left;
   background: #222222;
   opacity: 0.15;
   transition: all 600ms ease;
-}
-
-div.wrapper div.container > div.element > ul:last-child > li {
-  margin: 0 0.625rem 0 0;
-}
-div.wrapper div.container > div.element > ul > li:last-child {
-  margin: 0 0 0.625rem 0;
-}
-
-div.wrapper div.container > div.element > ul:last-child > li:last-child {
-  margin: 0;
-}
-
-div.wrapper div.container > div.element > ul > li > p {
-  font-size: 0.75rem;
-  color: #ffffff;
-  padding: 5px;
 }
 
 /******************************************************************************/
