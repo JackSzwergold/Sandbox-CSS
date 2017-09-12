@@ -152,7 +152,7 @@ nav.controls > label:last-child > span {
   margin-right: 0.5rem;
 }
 
-nav.controls > label span:after {
+nav.controls > label > span:after {
   content: "";
   display: inline-block;
   flex-grow: 0;
