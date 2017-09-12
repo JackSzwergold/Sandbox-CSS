@@ -205,7 +205,7 @@ nav.controls.zoom > label > span {
 
 div.wrapper div.container,
 div.wrapper div.container > div.element {
-  width: 25rem;
+  width: 22rem;
   height: 22rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
@@ -258,7 +258,7 @@ div.wrapper div.container > div.element > ul {
 }
 
 div.wrapper div.container > div.element > ul > li {
-  width: 8rem;
+  width: 7rem;
   height: 7rem;
   text-align: left;
   background: #222222;
