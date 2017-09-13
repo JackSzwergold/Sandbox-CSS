@@ -209,6 +209,7 @@ div.wrapper div.container > div.element {
   height: 22rem;
   transform-style: preserve-3d;
   transition: all 600ms ease;
+  cursor: pointer;
 }
 
 /******************************************************************************/

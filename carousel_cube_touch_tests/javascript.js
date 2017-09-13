@@ -34,8 +34,8 @@ $(document).ready(function() {
   // iterateElements('body input[type=checkbox][id*="wrapper_"]', 1800);
 
   // TODO: Touch tests.
-  var hammer_instance = new Hammer($('div.container')[0]);
-  hammer_instance.on('tap press', function(event) {
+  var hammer_container = new Hammer($('div.container')[0]);
+  hammer_container.on('tap press', function(event) {
     var element = $('body input[type=checkbox][id*="wrapper_"]');
     $(element).prop('checked', !$(element).attr('checked'));
     // console.log(event.type);
