@@ -17,7 +17,7 @@ $(document).ready(function() {
     $(element_selector).each(function(index) {
       var element = $(this);
       setTimeout( function(){
-        $(element).prop("checked", true);
+        $(element).prop('checked', !$(element).attr('checked'));
       }, delay);
       delay += iteration;
     }).promise().done(function() {
@@ -35,8 +35,15 @@ $(document).ready(function() {
 
   // TODO: Touch tests.
   var hammer_container = new Hammer($('div.container')[0]);
-  hammer_container.on('tap press', function(event) {
+  hammer_container.on('tap', function(event) {
     var element = $('body input[type=checkbox][id*="wrapper_"]');
+    $(element).prop('checked', !$(element).attr('checked'));
+    // console.log(event.type);
+  });
+
+  var hammer_wrapper = new Hammer($('div.wrapper')[0]);
+  hammer_wrapper.on('tap', function(event) {
+    var element = $('div.wrapper input[type=checkbox][id*="element_"]');
     $(element).prop('checked', !$(element).attr('checked'));
     // console.log(event.type);
   });
