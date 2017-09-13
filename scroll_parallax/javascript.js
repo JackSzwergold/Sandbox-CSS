@@ -17,7 +17,7 @@ $(document).ready(function() {
     $(element_selector).each(function(index) {
       var element = $(this);
       setTimeout( function(){
-        $(element).prop("checked", true);
+        $(element).prop('checked', !$(element).attr('checked'));
       }, delay);
       delay += iteration;
     }).promise().done(function() {
