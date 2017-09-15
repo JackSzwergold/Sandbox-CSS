@@ -40,23 +40,30 @@ $(document).ready(function() {
   // var elements_count = $('div.wrapper input[type=radio][id*="element_"]');
   var elements_count = $('div.wrapper div.container > div.element');
   var count = 0;
-  // var limit = elements_count.length + 1;
-  var limit = 5;
+  var limit = elements_count.length + 1;
+  // var limit = 7;
 
   var hammer_container = new Hammer($('div.container')[0]);
-  hammer_container.on('tap', function(event) {
+  hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  hammer_container.on('tap swipeleft swiperight', function(event) {
 
-    // Increment.
-    count = (count + 1) % limit;
-    count = count == 0 ? count += 1 : count;
-
-    // Decrement.
-    // count = (count + limit - 1) % limit;
-    // count = count == 0 ? count = (limit - 1) : count;
+    // if (event.type == 'swiperight') {
+    if (true) {
+      // Increment.
+      count = (count + 1) % limit;
+      count = count == 0 ? count += 1 : count;
+    }
+    else {
+      // Decrement.
+      count = (count + limit - 1) % limit;
+      count = count == 0 ? count = (limit - 1) : count;
+    }
 
     var element = $('div.wrapper input[type=radio][id="element_' + count + '"]');
     $(element).prop('checked', !$(element).attr('checked'));
+
     console.log(elements_count.length + ' | ' + event.type + ' | ' + count + ' | ' + limit);
+
   });
 
   // var hammer_wrapper = new Hammer($('div.wrapper')[0]);
