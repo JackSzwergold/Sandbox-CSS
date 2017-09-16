@@ -55,22 +55,19 @@ $(document).ready(function() {
     var element_index = $(event.target).closest('div.element').index();
     // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
 
-    if (event.type == 'tap') {
-      var selected_index = Math.abs(element_index + 1);
+    if (true) {
+      // Increment.
+      next_index = (next_index + 1) % limit;
+      next_index = next_index == 0 ? next_index += 1 : next_index;
     }
     else {
-      if (true) {
-        // Increment.
-        next_index = (next_index + 1) % limit;
-        next_index = next_index == 0 ? next_index += 1 : next_index;
-      }
-      else {
-        // Decrement.
-        next_index = (next_index + limit - 1) % limit;
-        next_index = next_index == 0 ? next_index = (limit - 1) : next_index;
-      }
-      var selected_index = next_index;
+      // Decrement.
+      next_index = (next_index + limit - 1) % limit;
+      next_index = next_index == 0 ? next_index = (limit - 1) : next_index;
     }
+
+    // var selected_index = next_index;
+    var selected_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
