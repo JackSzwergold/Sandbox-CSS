@@ -14,7 +14,7 @@ $(document).ready(function() {
   function iterateElements(element_selector, iteration) {
     var iteration = ((typeof iteration !== 'undefined') ? iteration : 900);
     var delay = iteration;
-    $(element_selector).each(function(next_index) {
+    $(element_selector).each(function(tapped_index) {
       var element = $(this);
       setTimeout( function(){
         $(element).prop('checked', !$(element).attr('checked'));
@@ -54,7 +54,7 @@ $(document).ready(function() {
   // TODO: Touch tests.
 
   // Set some variables.
-  var next_index = 0;
+  var tapped_index = 0;
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
@@ -68,20 +68,20 @@ $(document).ready(function() {
   // Main Hammer stuff.
   hammer_container.on('tap', function(event) {
 
-    // Determine the the next_index value of the clicked element.
+    // Determine the the tapped_index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
-    // next_index = newIndexValue(next_index, limit, false);
-    next_index = Math.abs(element_index + 1);
+    // tapped_index = newIndexValue(tapped_index, limit, false);
+    tapped_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + next_index + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + tapped_index + '"]');
 
     // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | ' + element_index + ' | ' + next_index + ' | ' + limit);
+    console.log(event.type + ' | ' + element_index + ' | ' + tapped_index + ' | ' + limit);
 
   });
 
