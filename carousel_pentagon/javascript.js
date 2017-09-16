@@ -14,7 +14,7 @@ $(document).ready(function() {
   function iterateElements(element_selector, iteration) {
     var iteration = ((typeof iteration !== 'undefined') ? iteration : 900);
     var delay = iteration;
-    $(element_selector).each(function(index) {
+    $(element_selector).each(function(next_index) {
       var element = $(this);
       setTimeout( function(){
         $(element).prop('checked', !$(element).attr('checked'));
@@ -25,6 +25,23 @@ $(document).ready(function() {
         iterateElements(element_selector, iteration);
       }, delay -= iteration);
     });
+  }
+
+  // This iterates through the list of inputs and checks each element.
+  function fooBar(index_value, limit) {
+    var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
+    var limit = ((typeof limit !== 'undefined') ? limit : 4);
+    if (true) {
+      // Increment.
+      index_value = (index_value + 1) % limit;
+      index_value = index_value == 0 ? index_value += 1 : index_value;
+    }
+    else {
+      // Decrement.
+      index_value = (index_value + limit - 1) % limit;
+      index_value = index_value == 0 ? index_value = (limit - 1) : index_value;
+    }
+    return index_value;
   }
 
   // Different ways to call the functions.
@@ -51,7 +68,7 @@ $(document).ready(function() {
   // Main Hammer stuff.
   hammer_container.on('tap', function(event) {
 
-    // Determine the the index value of the clicked element.
+    // Determine the the next_index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
     // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
 
@@ -66,11 +83,11 @@ $(document).ready(function() {
       next_index = next_index == 0 ? next_index = (limit - 1) : next_index;
     }
 
-    // var selected_index = next_index;
-    var selected_index = Math.abs(element_index + 1);
+    // var selected_next_index = next_index;
+    var selected_next_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_next_index + '"]');
 
     // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
