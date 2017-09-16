@@ -31,7 +31,7 @@ $(document).ready(function() {
   function newIndexValue(index_value, limit, increment) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
-    var increment = ((typeof increment !== 'undefined') ? increment : false);
+    var increment = ((typeof increment !== 'undefined') ? increment : true);
     if (increment) {
 
       index_value = (index_value + 1) % limit;
@@ -66,13 +66,17 @@ $(document).ready(function() {
   // hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
 
   // Main Hammer stuff.
-  hammer_container.on('tap', function(event) {
+  hammer_container.on('press tap', function(event) {
 
     // Determine the the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
-    // selected_index = newIndexValue(selected_index, limit, false);
-    selected_index = Math.abs(element_index + 1);
+    if (event.type == 'press') {
+      selected_index = newIndexValue(selected_index, limit, true);
+    }
+    else if (event.type == 'tap') {
+      selected_index = Math.abs(element_index + 1);
+    }
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
