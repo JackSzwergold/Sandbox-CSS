@@ -68,7 +68,7 @@ $(document).ready(function() {
   // Main Hammer stuff.
   hammer_container.on('tap', function(event) {
 
-    // Determine the the tapped_index value of the clicked element.
+    // Determine the the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
     // tapped_index = newIndexValue(tapped_index, limit, false);
@@ -81,7 +81,7 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | ' + element_index + ' | ' + tapped_index + ' | ' + limit);
+    console.log(event.type + ' | element_index: ' + element_index + ' | tapped_index: ' + tapped_index + ' | limit: ' + limit);
 
   });
 
