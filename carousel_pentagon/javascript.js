@@ -27,6 +27,10 @@ $(document).ready(function() {
     });
   }
 
+  //////////////////////////////////////////////////////////////////////////////
+  // TODO: Touch tests.
+
+  //////////////////////////////////////////////////////////////////////////////
   // This iterates through the list of inputs and checks each element.
   function newIndexValue(index_value, limit, increment) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
@@ -45,8 +49,6 @@ $(document).ready(function() {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // TODO: Touch tests.
-
   // Set some variables.
   var selected_index = 0;
   var element_index = 1;
