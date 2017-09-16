@@ -28,16 +28,16 @@ $(document).ready(function() {
   }
 
   // This iterates through the list of inputs and checks each element.
-  function fooBar(index_value, limit) {
+  function newIndexValue(index_value, limit, increment) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
-    if (true) {
-      // Increment.
+    var increment = ((typeof increment !== 'undefined') ? increment : false);
+    if (increment) {
+
       index_value = (index_value + 1) % limit;
       index_value = index_value == 0 ? index_value += 1 : index_value;
     }
     else {
-      // Decrement.
       index_value = (index_value + limit - 1) % limit;
       index_value = index_value == 0 ? index_value = (limit - 1) : index_value;
     }
@@ -72,22 +72,11 @@ $(document).ready(function() {
     var element_index = $(event.target).closest('div.element').index();
     // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
 
-    if (true) {
-      // Increment.
-      next_index = (next_index + 1) % limit;
-      next_index = next_index == 0 ? next_index += 1 : next_index;
-    }
-    else {
-      // Decrement.
-      next_index = (next_index + limit - 1) % limit;
-      next_index = next_index == 0 ? next_index = (limit - 1) : next_index;
-    }
-
-    // var selected_next_index = next_index;
-    var selected_next_index = Math.abs(element_index + 1);
+    // next_index = newIndexValue(next_index, limit, false);
+    next_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_next_index + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + next_index + '"]');
 
     // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
