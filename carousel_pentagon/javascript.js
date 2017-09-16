@@ -54,7 +54,7 @@ $(document).ready(function() {
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
-  var direction = false;
+
 
   // Init Hammer.
   var hammer_container = new Hammer($('div.wrapper div.container')[0]);
@@ -69,11 +69,11 @@ $(document).ready(function() {
     // Determine the clicked element.
     var element = $(event.target).closest('div.element');
 
+    // Determine the horizontal direction.
+    var direction = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
+
     // Determine the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
-
-    // Determine the horizontal direction.
-    direction = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
 
     if (event.type == 'tap') {
       selected_index = Math.abs(element_index + 1);
