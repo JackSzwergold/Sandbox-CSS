@@ -44,12 +44,6 @@ $(document).ready(function() {
     return index_value;
   }
 
-  // Different ways to call the functions.
-  // deselectElement('div.wrapper [id*="element_"]', 600);
-  // iterateElements('div.wrapper input[type=checkbox][id*="element_"]', 600);
-  // iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
-  // iterateElements('body input[type=checkbox][id*="wrapper_"]', 1800);
-
   //////////////////////////////////////////////////////////////////////////////
   // TODO: Touch tests.
 
@@ -58,7 +52,6 @@ $(document).ready(function() {
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
-  var direction = true;
 
   // Init Hammer.
   var hammer_container = new Hammer($('div.wrapper div.container')[0]);
@@ -70,28 +63,23 @@ $(document).ready(function() {
   // Main Hammer stuff.
   hammer_container.on('press tap', function(event) {
 
-    // Determine the the index value of the clicked element.
-    var element_index = $(event.target).closest('div.element').index();
+    // Determine the clicked element.
+    var element = $(event.target).closest('div.element');
 
+    // Determine the index value of the clicked element.
+    var element_index = element.index();
 
-    $('div.wrapper').click(function(event) {
-      direction = event.pageX >= ($(this).offset().left + $(this).width()/2) ? false : true;
-      console.log(direction);
-    });
+    // Determine the horizontal direction.
+    var direction = event.center.x >= (element.offset().left + element.width()/2) ? false : true;
 
-    // selected_index = newIndexValue(selected_index, limit, direction);
-
-
-    // alert(event.pageX >= ($(this).offset().left + $(this).width()/2) ? 'right' : 'left');
-
-    // if (event.type == 'tap') {
-    //   selected_index = Math.abs(element_index + 1);
-    // }
+    if (event.type == 'press') {
+      // selected_index = Math.abs(element_index + 1);
+      selected_index = newIndexValue(element_index, limit, direction);
+    }
     // else if (event.type == 'press') {
-    //   selected_index = newIndexValue(selected_index, limit, direction);
+    //   selected_index = newIndexValue(element_index, limit, direction);
+    //   // selected_index = newIndexValue(selected_index, limit, direction);
     // }
-
-
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
@@ -100,8 +88,14 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    // console.log(event.type + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
+    console.log(event.type + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
 
   });
+
+  // Different ways to call the functions.
+  // deselectElement('div.wrapper [id*="element_"]', 600);
+  // iterateElements('div.wrapper input[type=checkbox][id*="element_"]', 600);
+  // iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
+  // iterateElements('body input[type=checkbox][id*="wrapper_"]', 1800);
 
 });
