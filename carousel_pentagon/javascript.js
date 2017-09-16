@@ -14,7 +14,7 @@ $(document).ready(function() {
   function iterateElements(element_selector, iteration) {
     var iteration = ((typeof iteration !== 'undefined') ? iteration : 900);
     var delay = iteration;
-    $(element_selector).each(function(tapped_index) {
+    $(element_selector).each(function(selected_index) {
       var element = $(this);
       setTimeout( function(){
         $(element).prop('checked', !$(element).attr('checked'));
@@ -54,7 +54,7 @@ $(document).ready(function() {
   // TODO: Touch tests.
 
   // Set some variables.
-  var tapped_index = 0;
+  var selected_index = 0;
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
@@ -71,17 +71,17 @@ $(document).ready(function() {
     // Determine the the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
-    // tapped_index = newIndexValue(tapped_index, limit, false);
-    tapped_index = Math.abs(element_index + 1);
+    // selected_index = newIndexValue(selected_index, limit, false);
+    selected_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + tapped_index + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
 
     // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | element_index: ' + element_index + ' | tapped_index: ' + tapped_index + ' | limit: ' + limit);
+    console.log(event.type + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
 
   });
 
