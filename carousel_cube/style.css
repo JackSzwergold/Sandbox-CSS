@@ -168,34 +168,22 @@ nav.controls > label:active > span {
 }
 
 /******************************************************************************/
-/* Zoom Specific Controls */
+/* H1 Stuff */
 /******************************************************************************/
 
-nav.controls.zoom {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
+div.wrapper div.container > div.element > h1 {
+  position: absolute;
   top: 0;
-  right: inherit;
   left: 0;
-  margin: 0;
-  padding: 0.625rem;
-  background: transparent;
-  border-radius: 0;
-  z-index: 999;
-}
-
-nav.controls.zoom > label > span {
-  display: block;
   font-size: 1rem;
-  background-color: transparent;
+  font-weight: normal;
+  background-color: #000000;
   color: #ffffff;
   width: 1rem;
   height: 1rem;
   text-align: center;
   padding: 0.625rem;
-  margin: 0;
+  margin: 0.625rem 0 0 0.625rem;
   border-radius: 50%;
 }
 
@@ -268,18 +256,12 @@ div.wrapper div.container > div.element > ul > li {
 
 /******************************************************************************/
 
-div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-of-type(1) nav > label > span,
-div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-of-type(2) nav > label > span,
-div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-of-type(3) nav > label > span,
-div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-of-type(4) nav > label > span,
-div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-of-type(5) nav > label > span,
-div.wrapper input[type="radio"].element_6:checked ~ div.container > div.element:nth-of-type(6) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_1_zoom:checked ~ div.element:nth-of-type(1) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_2_zoom:checked ~ div.element:nth-of-type(2) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_3_zoom:checked ~ div.element:nth-of-type(3) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_4_zoom:checked ~ div.element:nth-of-type(4) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_5_zoom:checked ~ div.element:nth-of-type(5) nav > label > span,
-div.wrapper div.container input[type="checkbox"].element_6_zoom:checked ~ div.element:nth-of-type(6) nav > label > span {
+div.wrapper input[type="radio"].element_1:checked ~ div.container > div.element:nth-of-type(1) h1,
+div.wrapper input[type="radio"].element_2:checked ~ div.container > div.element:nth-of-type(2) h1,
+div.wrapper input[type="radio"].element_3:checked ~ div.container > div.element:nth-of-type(3) h1,
+div.wrapper input[type="radio"].element_4:checked ~ div.container > div.element:nth-of-type(4) h1,
+div.wrapper input[type="radio"].element_5:checked ~ div.container > div.element:nth-of-type(5) h1,
+div.wrapper input[type="radio"].element_6:checked ~ div.container > div.element:nth-of-type(6) h1 {
   color: #000000;
   background: #ffffff;
 }
@@ -338,19 +320,6 @@ div.wrapper input[type="radio"].element_5:checked ~ div.container {
 
 div.wrapper input[type="radio"].element_6:checked ~ div.container {
   transform: rotateX(90deg) rotateY(0deg);
-}
-
-/******************************************************************************/
-/* Element Face Checked Behavior */
-/******************************************************************************/
-
-input[type="checkbox"].element_1_zoom:checked ~ div.element:nth-of-type(1) > ul > li,
-input[type="checkbox"].element_2_zoom:checked ~ div.element:nth-of-type(2) > ul > li,
-input[type="checkbox"].element_3_zoom:checked ~ div.element:nth-of-type(3) > ul > li,
-input[type="checkbox"].element_4_zoom:checked ~ div.element:nth-of-type(4) > ul > li,
-input[type="checkbox"].element_5_zoom:checked ~ div.element:nth-of-type(5) > ul > li,
-input[type="checkbox"].element_6_zoom:checked ~ div.element:nth-of-type(6) > ul > li {
-  opacity: 0.75;
 }
 
 /******************************************************************************/

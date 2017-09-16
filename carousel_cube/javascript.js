@@ -36,27 +36,51 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////////////////////////
   // TODO: Touch tests.
 
+  // Select the elements.
+  // var elements = $('div.wrapper input[type=radio][id*="element_"]');
+  var elements = $('div.wrapper div.container > div.element');
+
   // Set some variables.
-  // var elements_count = $('div.wrapper input[type=radio][id*="element_"]');
-  var elements_count = $('div.wrapper div.container > div.element');
   var count = 0;
-  // var limit = elements_count.length + 1;
-  var limit = 5;
+  var clicked_element = 1;
+  var limit = elements.length + 1;
+  // var limit = 7;
 
-  var hammer_container = new Hammer($('div.container')[0]);
-  hammer_container.on('tap', function(event) {
+  // Init Hammer.
+  var hammer_container = new Hammer($('div.wrapper div.container')[0]);
 
-    // Increment.
-    count = (count + 1) % limit;
-    count = count == 0 ? count += 1 : count;
+  // Set configuration options.
+  hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
 
-    // Decrement.
-    // count = (count + limit - 1) % limit;
-    // count = count == 0 ? count = (limit - 1) : count;
+  // Main Hammer stuff.
+  hammer_container.on('tap swipeleft swiperight', function(event) {
 
-    var element = $('div.wrapper input[type=radio][id="element_' + count + '"]');
-    $(element).prop('checked', !$(element).attr('checked'));
-    console.log(elements_count.length + ' | ' + event.type + ' | ' + count + ' | ' + limit);
+    // if (event.type == 'swiperight') {
+    if (true) {
+      // Increment.
+      count = (count + 1) % limit;
+      count = count == 0 ? count += 1 : count;
+    }
+    else {
+      // Decrement.
+      count = (count + limit - 1) % limit;
+      count = count == 0 ? count = (limit - 1) : count;
+    }
+
+    // Determine the the index value of the clicked element.
+    var clicked_element = $(event.target).closest('div.element').index();
+    // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
+
+    // Determine the control elemement for the clicked element.
+    // var control_element = $('div.wrapper input[type=radio][id="element_' + count + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + Math.abs(clicked_element + 1) + '"]');
+
+    // Toggle the 'checked' value of the control element.
+    control_element.prop('checked', !$(control_element).attr('checked'));
+
+    // Log stuff for debugging.
+    console.log(event.type + ' | ' + clicked_element + ' | ' + count + ' | ' + limit);
+
   });
 
   // var hammer_wrapper = new Hammer($('div.wrapper')[0]);
@@ -80,8 +104,8 @@ $(document).ready(function() {
   // hammer_container.on('swiperight', function(event) {
   //   var element_selector = 'div.wrapper input[type=radio][id="element_2"]';
   //   var element = $(element_selector);
-  //   var elements_count = $('div.wrapper input[type=radio][id*="element_"]');
-  //   console.log(elements_count.length);
+  //   var elements = $('div.wrapper input[type=radio][id*="element_"]');
+  //   console.log(elements.length);
   //   $(element).prop('checked', !$(element).attr('checked'));
   //   console.log(event.target.className + ' - ' + event.type);
   // });
