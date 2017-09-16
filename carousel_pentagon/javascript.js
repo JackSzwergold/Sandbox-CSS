@@ -62,8 +62,9 @@ $(document).ready(function() {
   // Init Hammer.
   var hammer_container = new Hammer($('div.wrapper div.container')[0]);
 
-  // Set configuration options.
-  // hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+  // Set Hammer configuration options.
+  hammer_container.get('press').set({ threshold: 9, time: 181 });
+  hammer_container.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
 
   // Main Hammer stuff.
   hammer_container.on('press tap', function(event) {
@@ -71,11 +72,11 @@ $(document).ready(function() {
     // Determine the the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
-    if (event.type == 'press') {
-      selected_index = newIndexValue(selected_index, limit, true);
-    }
-    else if (event.type == 'tap') {
+    if (event.type == 'tap') {
       selected_index = Math.abs(element_index + 1);
+    }
+    else if (event.type == 'press') {
+      selected_index = newIndexValue(selected_index, limit, true);
     }
 
     // Determine the control elemement for the clicked element.
