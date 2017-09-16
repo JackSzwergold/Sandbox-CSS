@@ -30,7 +30,7 @@ $(document).ready(function() {
   // Different ways to call the functions.
   // deselectElement('div.wrapper [id*="element_"]', 600);
   // iterateElements('div.wrapper input[type=checkbox][id*="element_"]', 600);
-  iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
+  // iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
   // iterateElements('body input[type=checkbox][id*="wrapper_"]', 1800);
 
   //////////////////////////////////////////////////////////////////////////////
