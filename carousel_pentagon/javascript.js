@@ -37,7 +37,7 @@ $(document).ready(function() {
   // TODO: Touch tests.
 
   // Set some variables.
-  var count = 0;
+  var next_index = 0;
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
@@ -58,16 +58,16 @@ $(document).ready(function() {
     // if (event.type == 'swiperight') {
     if (true) {
       // Increment.
-      count = (count + 1) % limit;
-      count = count == 0 ? count += 1 : count;
+      next_index = (next_index + 1) % limit;
+      next_index = next_index == 0 ? next_index += 1 : next_index;
     }
     else {
       // Decrement.
-      count = (count + limit - 1) % limit;
-      count = count == 0 ? count = (limit - 1) : count;
+      next_index = (next_index + limit - 1) % limit;
+      next_index = next_index == 0 ? next_index = (limit - 1) : next_index;
     }
 
-    // var selected_index = count;
+    // var selected_index = next_index;
     var selected_index = Math.abs(element_index + 1);
 
     // Determine the control elemement for the clicked element.
@@ -77,7 +77,7 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | ' + element_index + ' | ' + count + ' | ' + limit);
+    console.log(event.type + ' | ' + element_index + ' | ' + next_index + ' | ' + limit);
 
   });
 
