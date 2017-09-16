@@ -29,6 +29,7 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // TODO: Touch tests.
+  //////////////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////////
   // This iterates through the list of inputs and checks each element.
@@ -37,7 +38,6 @@ $(document).ready(function() {
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
     var increment = ((typeof increment !== 'undefined') ? increment : true);
     if (increment) {
-
       index_value = (index_value + 1) % limit;
       index_value = index_value == 0 ? index_value += 1 : index_value;
     }
@@ -54,6 +54,7 @@ $(document).ready(function() {
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
+  var direction = false;
 
   // Init Hammer.
   var hammer_container = new Hammer($('div.wrapper div.container')[0]);
@@ -69,14 +70,14 @@ $(document).ready(function() {
     var element = $(event.target).closest('div.element');
 
     // Determine the index value of the clicked element.
-    var element_index = element.index();
+    var element_index = $(event.target).closest('div.element').index();
 
     // Determine the horizontal direction.
-    var direction = event.center.x >= (element.offset().left + element.width()/2) ? false : true;
+    direction = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
 
-    if (event.type == 'press') {
-      // selected_index = Math.abs(element_index + 1);
-      selected_index = newIndexValue(element_index, limit, direction);
+    if (event.type == 'tap') {
+      selected_index = Math.abs(element_index + 1);
+      // selected_index = newIndexValue(element_index, limit, direction);
     }
     // else if (event.type == 'press') {
     //   selected_index = newIndexValue(element_index, limit, direction);
@@ -90,7 +91,7 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
+    console.log(event.type + ' | direction: ' + direction + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
 
   });
 
