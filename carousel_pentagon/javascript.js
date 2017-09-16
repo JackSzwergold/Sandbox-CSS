@@ -55,34 +55,28 @@ $(document).ready(function() {
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
 
-
   // Init Hammer.
-  var hammer_container = new Hammer($('div.wrapper div.container')[0]);
+  var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
 
   // Set Hammer configuration options.
-  hammer_container.get('press').set({ threshold: 9, time: 181 });
-  hammer_container.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
+  // hammer_instance.get('press').set({ threshold: 9, time: 181 });
+  hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
 
   // Main Hammer stuff.
-  hammer_container.on('press tap', function(event) {
+  hammer_instance.on('tap', function(event) {
 
     // Determine the clicked element.
     var element = $(event.target).closest('div.element');
 
-    // Determine the horizontal direction.
-    var direction = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
+    // Determine the horizontal clicked_side.
+    var clicked_side = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
 
     // Determine the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
 
-    if (event.type == 'tap') {
-      selected_index = Math.abs(element_index + 1);
-      // selected_index = newIndexValue(element_index, limit, direction);
-    }
-    // else if (event.type == 'press') {
-    //   selected_index = newIndexValue(element_index, limit, direction);
-    //   // selected_index = newIndexValue(selected_index, limit, direction);
-    // }
+    // Ideas on how to shift the whole thing around.
+    // selected_index = Math.abs(element_index + 1);
+    selected_index = newIndexValue(selected_index, limit, clicked_side);
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
@@ -91,7 +85,7 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | direction: ' + direction + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
+    console.log(event.type + ' | clicked_side: ' + (clicked_side == true ? 'right' : 'left') + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
 
   });
 
