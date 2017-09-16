@@ -70,7 +70,6 @@ $(document).ready(function() {
 
     // Determine the the next_index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
-    // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
 
     // next_index = newIndexValue(next_index, limit, false);
     next_index = Math.abs(element_index + 1);
