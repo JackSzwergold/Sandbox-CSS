@@ -36,15 +36,11 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////////////////////////
   // TODO: Touch tests.
 
-  // Select the elements.
-  // var elements = $('div.wrapper input[type=radio][id*="element_"]');
-  var elements = $('div.wrapper div.container > div.element');
-
   // Set some variables.
   var count = 0;
   var element_index = 1;
-  var limit = elements.length;
-  // var limit = 7;
+  // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
+  var limit = $('div.wrapper div.container > div.element').length + 1;
 
   // Init Hammer.
   var hammer_container = new Hammer($('div.wrapper div.container')[0]);
@@ -71,9 +67,11 @@ $(document).ready(function() {
       count = count == 0 ? count = (limit - 1) : count;
     }
 
+    // var selected_index = count;
+    var selected_index = Math.abs(element_index + 1);
+
     // Determine the control elemement for the clicked element.
-    // var control_element = $('div.wrapper input[type=radio][id="element_' + count + '"]');
-    var control_element = $('div.wrapper input[type=radio][id="element_' + Math.abs(element_index + 1) + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
 
     // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
