@@ -55,14 +55,9 @@ $(document).ready(function() {
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
 
-  // Init Hammer.
+  // Core Hammer stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
-
-  // Set Hammer configuration options.
-  // hammer_instance.get('press').set({ threshold: 9, time: 181 });
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
-
-  // Main Hammer stuff.
   hammer_instance.on('tap', function(event) {
 
     // Determine the clicked element.
