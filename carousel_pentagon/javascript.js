@@ -35,7 +35,7 @@ $(document).ready(function() {
   function directionalIndexValue(clicked_side, new_index, limit, loop) {
 
     var new_index = ((typeof new_index !== 'undefined') ? new_index : 1);
-    var limit = ((typeof limit !== 'undefined') ? limit : 4);
+    var limit = ((typeof limit !== 'undefined') ? limit : 5);
     var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
     var loop = ((typeof loop !== 'undefined') ? loop : false);
 
