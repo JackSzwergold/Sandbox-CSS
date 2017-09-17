@@ -33,11 +33,11 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // This calculates a new index value.
-  function directionalIndexValue(index_value, limit, increment) {
+  function directionalIndexValue(clicked_side, index_value, limit) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
-    var increment = ((typeof increment !== 'undefined') ? increment : true);
-    if (increment) {
+    var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
+    if (clicked_side) {
       index_value = (index_value + 1) % limit;
       index_value = index_value == 0 ? index_value += 1 : index_value;
     }
@@ -46,6 +46,12 @@ $(document).ready(function() {
       index_value = index_value == 0 ? index_value = (limit - 1) : index_value;
     }
     return index_value;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+  // This determines what side of an element was clicked.
+  function clickedSide(event, element) {
+    return event.center.x >= (element.offset().left + element.width()/2) ? true : false;
   }
 
   //////////////////////////////////////////////////////////////////////////////
@@ -64,7 +70,7 @@ $(document).ready(function() {
     var element = $(event.target).closest('div.element');
 
     // Determine the horizontal clicked_side.
-    var clicked_side = event.center.x >= (element.offset().left + element.width()/2) ? true : false;
+    var clicked_side = clickedSide(event, element);
 
     // Determine the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
@@ -74,7 +80,7 @@ $(document).ready(function() {
       selected_index = Math.abs(element_index + 1);
     }
     else {
-      selected_index = directionalIndexValue(selected_index, limit, clicked_side);
+      selected_index = directionalIndexValue(clicked_side, selected_index, limit);
     }
 
     // Determine the control elemement for the clicked element.
