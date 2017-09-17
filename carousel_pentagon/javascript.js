@@ -76,10 +76,8 @@ $(document).ready(function() {
       selected_index = directionalIndexValue(clicked_side, selected_index, limit);
     }
 
-    // Determine the control elemement for the clicked element.
+    // Determine the control elemement and toggle the 'checked' value of the control element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
-
-    // Toggle the 'checked' value of the control element.
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
