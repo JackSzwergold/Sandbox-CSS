@@ -33,7 +33,7 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // This calculates a new index value.
-  function newIndexValue(index_value, limit, increment) {
+  function directionalIndexValue(index_value, limit, increment) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
     var increment = ((typeof increment !== 'undefined') ? increment : true);
@@ -71,7 +71,7 @@ $(document).ready(function() {
 
     // Ideas on how to shift the whole thing around.
     // selected_index = Math.abs(element_index + 1);
-    selected_index = newIndexValue(selected_index, limit, clicked_side);
+    selected_index = directionalIndexValue(selected_index, limit, clicked_side);
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
