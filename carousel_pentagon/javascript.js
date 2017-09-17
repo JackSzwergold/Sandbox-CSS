@@ -14,7 +14,7 @@ $(document).ready(function() {
   function iterateElements(element_selector, iteration) {
     var iteration = ((typeof iteration !== 'undefined') ? iteration : 900);
     var delay = iteration;
-    $(element_selector).each(function(selected_index) {
+    $(element_selector).each(function(value_index) {
       var element = $(this);
       setTimeout( function(){
         $(element).prop('checked', !$(element).attr('checked'));
@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // Set some variables.
-  var selected_index = 0;
+  var value_index = 0;
   var element_index = 1;
   // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
   var limit = $('div.wrapper div.container > div.element').length + 1;
@@ -69,25 +69,25 @@ $(document).ready(function() {
     // Stuff to do depending on interaction type.
     if (event.type == 'press') {
       var element_index = $(event.target).closest('div.element').index();
-      selected_index = Math.abs(element_index + 1);
+      value_index = Math.abs(element_index + 1);
     }
     else if (event.type == 'swipeleft') {
-      selected_index = directionalIndexValue(false, selected_index, limit);
+      value_index = directionalIndexValue(false, value_index, limit);
     }
     else if (event.type == 'swiperight') {
-      selected_index = directionalIndexValue(true, selected_index, limit);
+      value_index = directionalIndexValue(true, value_index, limit);
     }
     else if (event.type == 'tap') {
       var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
-      selected_index = directionalIndexValue(clicked_side, selected_index, limit);
+      value_index = directionalIndexValue(clicked_side, value_index, limit);
     }
 
     // Determine the control elemement and toggle the 'checked' value of the control element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + value_index + '"]');
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
+    console.log(event.type + ' | value_index: ' + value_index + ' | limit: ' + limit);
 
   });
 
