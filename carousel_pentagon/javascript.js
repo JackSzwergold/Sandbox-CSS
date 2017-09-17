@@ -32,31 +32,39 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // This calculates a new index value.
-  function directionalIndexValue(clicked_side, index_value, limit) {
-    var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
+  function directionalIndexValue(clicked_side, new_index, limit) {
+    var new_index = ((typeof new_index !== 'undefined') ? new_index : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
     var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
     if (clicked_side) {
 
       if (false) {
-        index_value = (index_value + 1) % limit;
-        if (index_value == 0) {
-          index_value = index_value += 1;
+        new_index = (new_index + 1) % limit;
+        if (new_index == 0) {
+          new_index = new_index += 1;
         }
       }
       else {
-        index_value = index_value + 1;
-        if (index_value >= limit) {
-          index_value = limit;
+        new_index = new_index + 1;
+        if (new_index >= limit) {
+          new_index = limit;
         }
       }
 
     }
     else {
-      index_value = (index_value + limit - 1) % limit;
-      index_value = index_value == 0 ? index_value = (limit - 1) : index_value;
+
+      if (false) {
+      }
+      else {
+        new_index = (new_index + limit - 1) % limit;
+        if (new_index == 0) {
+          new_index = (limit - 1);
+        }
+      }
+
     }
-    return index_value;
+    return new_index;
   }
 
   //////////////////////////////////////////////////////////////////////////////
