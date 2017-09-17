@@ -64,12 +64,18 @@ $(document).ready(function() {
   // Core Hammer stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
-  hammer_instance.on('press tap', function(event) {
+  hammer_instance.on('press swipeleft swiperight', function(event) {
 
     // Stuff to do depending on interaction type.
     if (event.type == 'press') {
       var element_index = $(event.target).closest('div.element').index();
       selected_index = Math.abs(element_index + 1);
+    }
+    else if (event.type == 'swipeleft') {
+      selected_index = directionalIndexValue(true, selected_index, limit);
+    }
+    else if (event.type == 'swiperight') {
+      selected_index = directionalIndexValue(false, selected_index, limit);
     }
     else if (event.type == 'tap') {
       var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
