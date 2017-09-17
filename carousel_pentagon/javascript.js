@@ -72,10 +72,10 @@ $(document).ready(function() {
       selected_index = Math.abs(element_index + 1);
     }
     else if (event.type == 'swipeleft') {
-      selected_index = directionalIndexValue(true, selected_index, limit);
+      selected_index = directionalIndexValue(false, selected_index, limit);
     }
     else if (event.type == 'swiperight') {
-      selected_index = directionalIndexValue(false, selected_index, limit);
+      selected_index = directionalIndexValue(true, selected_index, limit);
     }
     else if (event.type == 'tap') {
       var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
