@@ -58,7 +58,7 @@ $(document).ready(function() {
   // Core Hammer stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
-  hammer_instance.on('tap', function(event) {
+  hammer_instance.on('press tap', function(event) {
 
     // Determine the clicked element.
     var element = $(event.target).closest('div.element');
@@ -70,8 +70,12 @@ $(document).ready(function() {
     var element_index = $(event.target).closest('div.element').index();
 
     // Ideas on how to shift the whole thing around.
-    // selected_index = Math.abs(element_index + 1);
-    selected_index = directionalIndexValue(selected_index, limit, clicked_side);
+    if (event.type == 'press') {
+      selected_index = Math.abs(element_index + 1);
+    }
+    else {
+      selected_index = directionalIndexValue(selected_index, limit, clicked_side);
+    }
 
     // Determine the control elemement for the clicked element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + selected_index + '"]');
