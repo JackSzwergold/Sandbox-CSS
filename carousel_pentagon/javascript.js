@@ -41,8 +41,9 @@ $(document).ready(function() {
 
     if (clicked_side) {
 
+      // Swipe right.
       if (loop) {
-        new_index = (new_index + 1) % limit;
+        new_index = (new_index + 1) % (limit + 1);
         if (new_index == 0) {
           new_index = new_index += 1;
         }
@@ -57,10 +58,11 @@ $(document).ready(function() {
     }
     else {
 
+      // Swipe left.
       if (loop) {
         new_index = (new_index + limit - 1) % limit;
         if (new_index <= 0) {
-          new_index = (limit - 1);
+          new_index = limit;
         }
       }
       else {
@@ -83,7 +85,7 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////////////////////////
   // Hammer specific stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
-  hammer_instance.on('swipeleft swiperight', function(event) {
+  hammer_instance.on('tap press swipeleft swiperight', function(event) {
 
     // Set some variables.
     new_index = ((typeof new_index !== 'undefined') ? new_index : 0);
@@ -92,25 +94,23 @@ $(document).ready(function() {
 
     // Stuff to do depending on interaction type.
     if (event.type == 'swipeleft') {
-      new_index = directionalIndexValue(false, new_index, limit);
+      new_index = directionalIndexValue(false, new_index, limit, false);
     }
     if (event.type == 'swiperight') {
-      new_index = directionalIndexValue(true, new_index, limit);
+      new_index = directionalIndexValue(true, new_index, limit, false);
     }
-
-    // Commented out for reference’s sake only.
-    // if (event.type == 'press') {
-    //   var element_index = $(event.target).closest('div.element').index();
-    //   new_index = Math.abs(element_index + 1);
-    // }
-    // if (event.type == 'tap') {
-    //   var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
-    //   new_index = directionalIndexValue(clicked_side, new_index, limit);
-    // }
+    if (event.type == 'press') {
+      var element_index = $(event.target).closest('div.element').index();
+      new_index = Math.abs(element_index + 1);
+    }
+    if (event.type == 'tap') {
+      var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
+      new_index = directionalIndexValue(clicked_side, new_index, limit, true);
+    }
 
     // Determine the control elemement and toggle the 'checked' value of the control element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + new_index + '"]');
-    control_element.prop('checked', !$(control_element).attr('checked'));
+    control_element.prop('checked', true);
 
     // Log stuff for debugging.
     console.log(event.type + ' | new_index: ' + new_index + ' | limit: ' + limit);
