@@ -37,8 +37,20 @@ $(document).ready(function() {
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
     var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
     if (clicked_side) {
-      index_value = (index_value + 1) % limit;
-      index_value = index_value == 0 ? index_value += 1 : index_value;
+
+      if (false) {
+        index_value = (index_value + 1) % limit;
+        if (index_value == 0) {
+          index_value = index_value += 1;
+        }
+      }
+      else {
+        index_value = index_value + 1;
+        if (index_value >= limit) {
+          index_value = limit;
+        }
+      }
+
     }
     else {
       index_value = (index_value + limit - 1) % limit;
