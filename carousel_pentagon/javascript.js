@@ -29,7 +29,6 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // TODO: Touch tests.
-  //////////////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////////
   // This calculates a new index value.
@@ -55,18 +54,15 @@ $(document).ready(function() {
   }
 
   //////////////////////////////////////////////////////////////////////////////
-  // Set some variables.
-  var element_index = 1;
-  // var limit = $('div.wrapper input[type=radio][id*="element_"]').length;
-  var limit = $('div.wrapper div.container > div.element').length + 1;
-
-  // Core Hammer stuff.
+  // Hammer specific stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
   hammer_instance.on('press swipeleft swiperight', function(event) {
 
     // Set some variables.
     new_index = ((typeof new_index !== 'undefined') ? new_index : 0);
+    element_index = ((typeof element_index !== 'undefined') ? element_index : 1);
+    var limit = $('div.wrapper div.container > div.element').length + 1;
 
     // Stuff to do depending on interaction type.
     if (event.type == 'press') {
