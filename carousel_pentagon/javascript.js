@@ -32,13 +32,16 @@ $(document).ready(function() {
 
   //////////////////////////////////////////////////////////////////////////////
   // This calculates a new index value.
-  function directionalIndexValue(clicked_side, new_index, limit) {
+  function directionalIndexValue(clicked_side, new_index, limit, loop) {
+
     var new_index = ((typeof new_index !== 'undefined') ? new_index : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
     var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
+    var loop = ((typeof loop !== 'undefined') ? loop : false);
+
     if (clicked_side) {
 
-      if (false) {
+      if (loop) {
         new_index = (new_index + 1) % limit;
         if (new_index == 0) {
           new_index = new_index += 1;
@@ -54,17 +57,21 @@ $(document).ready(function() {
     }
     else {
 
-      if (false) {
+      if (loop) {
+        new_index = (new_index + limit - 1) % limit;
+        if (new_index <= 0) {
+          new_index = (limit - 1);
+        }
       }
       else {
-        new_index = (new_index + limit - 1) % limit;
-        if (new_index == 0) {
-          new_index = (limit - 1);
+        new_index = new_index - 1;
+        if (new_index <= 0) {
+          new_index = 1;
         }
       }
 
     }
-    return new_index;
+    return Math.abs(new_index);
   }
 
   //////////////////////////////////////////////////////////////////////////////
