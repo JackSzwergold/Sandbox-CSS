@@ -56,8 +56,7 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////////////////////////
   // Hammer specific stuff.
   var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
-  hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
-  hammer_instance.on('press swipeleft swiperight', function(event) {
+  hammer_instance.on('swipeleft swiperight', function(event) {
 
     // Set some variables.
     new_index = ((typeof new_index !== 'undefined') ? new_index : 0);
@@ -65,20 +64,22 @@ $(document).ready(function() {
     var limit = $('div.wrapper div.container > div.element').length + 1;
 
     // Stuff to do depending on interaction type.
-    if (event.type == 'press') {
-      var element_index = $(event.target).closest('div.element').index();
-      new_index = Math.abs(element_index + 1);
-    }
-    else if (event.type == 'swipeleft') {
+    if (event.type == 'swipeleft') {
       new_index = directionalIndexValue(false, new_index, limit);
     }
-    else if (event.type == 'swiperight') {
+    if (event.type == 'swiperight') {
       new_index = directionalIndexValue(true, new_index, limit);
     }
-    else if (event.type == 'tap') {
-      var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
-      new_index = directionalIndexValue(clicked_side, new_index, limit);
-    }
+
+    // Commented out for reference’s sake only.
+    // if (event.type == 'press') {
+    //   var element_index = $(event.target).closest('div.element').index();
+    //   new_index = Math.abs(element_index + 1);
+    // }
+    // if (event.type == 'tap') {
+    //   var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
+    //   new_index = directionalIndexValue(clicked_side, new_index, limit);
+    // }
 
     // Determine the control elemement and toggle the 'checked' value of the control element.
     var control_element = $('div.wrapper input[type=radio][id="element_' + new_index + '"]');
