@@ -66,17 +66,13 @@ $(document).ready(function() {
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
   hammer_instance.on('press tap', function(event) {
 
-    // Determine the horizontal clicked_side.
-    var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
-
-    // Determine the index value of the clicked element.
-    var element_index = $(event.target).closest('div.element').index();
-
-    // Ideas on how to shift the whole thing around.
+    // Stuff to do depending on interaction type.
     if (event.type == 'press') {
+      var element_index = $(event.target).closest('div.element').index();
       selected_index = Math.abs(element_index + 1);
     }
-    else {
+    else if (event.type == 'tap') {
+      var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
       selected_index = directionalIndexValue(clicked_side, selected_index, limit);
     }
 
@@ -87,7 +83,7 @@ $(document).ready(function() {
     control_element.prop('checked', !$(control_element).attr('checked'));
 
     // Log stuff for debugging.
-    console.log(event.type + ' | clicked_side: ' + (clicked_side == true ? 'right' : 'left') + ' | element_index: ' + element_index + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
+    console.log(event.type + ' | selected_index: ' + selected_index + ' | limit: ' + limit);
 
   });
 
