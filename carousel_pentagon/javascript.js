@@ -66,11 +66,8 @@ $(document).ready(function() {
   hammer_instance.get('tap').set({ taps: 1, interval: 300, time: 180, threshold: 2, posThreshold: 10 });
   hammer_instance.on('press tap', function(event) {
 
-    // Determine the clicked element.
-    var element = $(event.target).closest('div.element');
-
     // Determine the horizontal clicked_side.
-    var clicked_side = clickedSide(event, element);
+    var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
 
     // Determine the index value of the clicked element.
     var element_index = $(event.target).closest('div.element').index();
