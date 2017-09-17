@@ -32,7 +32,7 @@ $(document).ready(function() {
   //////////////////////////////////////////////////////////////////////////////
 
   //////////////////////////////////////////////////////////////////////////////
-  // This iterates through the list of inputs and checks each element.
+  // This calculates a new index value.
   function newIndexValue(index_value, limit, increment) {
     var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
     var limit = ((typeof limit !== 'undefined') ? limit : 4);
