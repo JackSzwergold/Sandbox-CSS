@@ -88,7 +88,7 @@ $(document).ready(function() {
     // Set some variables.
     new_index = ((typeof new_index !== 'undefined') ? new_index : 0);
     element_index = ((typeof element_index !== 'undefined') ? element_index : 1);
-    var limit = $('div.wrapper div.container > div.element').length + 1;
+    var limit = $('div.wrapper div.container > div.element').length;
 
     // Stuff to do depending on interaction type.
     if (event.type == 'swipeleft') {
