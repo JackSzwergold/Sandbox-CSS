@@ -14,7 +14,7 @@ $(document).ready(function() {
   function iterateElements(element_selector, iteration) {
     var iteration = ((typeof iteration !== 'undefined') ? iteration : 900);
     var delay = iteration;
-    $(element_selector).each(function(index_value) {
+    $(element_selector).each(function(index) {
       var element = $(this);
       setTimeout( function(){
         $(element).prop('checked', !$(element).attr('checked'));
@@ -27,126 +27,87 @@ $(document).ready(function() {
     });
   }
 
-  //////////////////////////////////////////////////////////////////////////////
-  // TODO: Touch tests.
-
-  //////////////////////////////////////////////////////////////////////////////
-  // This calculates a new index value.
-  function directionalIndexValue(clicked_side, index_value, limit, loop) {
-
-    var index_value = ((typeof index_value !== 'undefined') ? index_value : 1);
-    var limit = ((typeof limit !== 'undefined') ? limit : 5);
-    var clicked_side = ((typeof clicked_side !== 'undefined') ? clicked_side : true);
-    var loop = ((typeof loop !== 'undefined') ? loop : false);
-
-    if (clicked_side) {
-
-      // Swipe right.
-      if (loop) {
-        index_value = (index_value + 1) % (limit + 1);
-        if (index_value == 0) {
-          index_value = index_value += 1;
-        }
-      }
-      else {
-        index_value = index_value + 1;
-        if (index_value >= limit) {
-          index_value = limit;
-        }
-      }
-
-    }
-    else {
-
-      // Swipe left.
-      if (loop) {
-        index_value = (index_value + limit - 1) % limit;
-        if (index_value <= 0) {
-          index_value = limit;
-        }
-      }
-      else {
-        index_value = index_value - 1;
-        if (index_value <= 0) {
-          index_value = 1;
-        }
-      }
-
-    }
-    return Math.abs(index_value);
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // This determines what side of an element was clicked.
-  function clickedSide(event, element) {
-    return event.center.x >= (element.offset().left + element.width()/2) ? true : false;
-  }
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Touch action specific stuff.
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Initialize the HammerJS instance.
-  delete Hammer.defaults.cssProps.userSelect;
-  var hammer_instance = new Hammer($('div.wrapper div.container')[0]);
-  hammer_instance.get('swipe').set({ threshold: 10, velocity: 0.7 });
-
-  //////////////////////////////////////////////////////////////////////////////
-  // Now do something with the HammerJS instance.
-  hammer_instance.on('press tap swipeleft swiperight', function(event) {
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Deselect all text selection if we are doing this stuff.
-    document.getSelection().removeAllRanges();
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Get the index of the event.
-    event_index = $(event.target).closest('div.element').index();
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Set the initial index value.
-    if (event_index >= 0) {
-      index_value = event_index + 1;
-    }
-    if (typeof index_value == 'undefined') {
-      index_value = 0;
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Set the limit.
-    var limit = $('div.wrapper div.container > div.element').length;
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Set the new index value based on the event type.
-    if (event.type == 'swipeleft') {
-      index_value = directionalIndexValue(true, index_value, limit, false);
-    }
-    if (event.type == 'swiperight') {
-      index_value = directionalIndexValue(false, index_value, limit, false);
-    }
-
-    if (event.type == 'press') {
-      index_value = Math.abs($(event.target).closest('div.element').index() + 1);
-    }
-    if (event.type == 'tap') {
-      var clicked_side = clickedSide(event, $(event.target).closest('div.element'));
-      index_value = directionalIndexValue(clicked_side, index_value, limit, true);
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    // Determine the control elemement and toggle the 'checked' value of the control element.
-    var control_element = $('div.wrapper input[type=radio][id="element_' + index_value + '"]');
-    control_element.prop('checked', true);
-
-    // Log stuff for debugging.
-    console.log(event.type + ' | index_value: ' + index_value + ' | limit: ' + limit);
-
-  });
-
-  // Different functions to call.
+  // Different ways to call the functions.
   // deselectElement('div.wrapper [id*="element_"]', 600);
   // iterateElements('div.wrapper input[type=checkbox][id*="element_"]', 600);
   // iterateElements('div.wrapper input[type=radio][id*="element_"]', 600);
   // iterateElements('body input[type=checkbox][id*="wrapper_"]', 1800);
+
+  //////////////////////////////////////////////////////////////////////////////
+  // TODO: Touch tests.
+
+  // Select the elements.
+  // var elements = $('div.wrapper input[type=radio][id*="element_"]');
+  var elements = $('div.wrapper div.container > div.element');
+
+  // Set some variables.
+  var count = 0;
+  var clicked_element = 1;
+  var limit = elements.length + 1;
+  // var limit = 7;
+
+  // Init Hammer.
+  var hammer_container = new Hammer($('div.wrapper div.container')[0]);
+
+  // Set configuration options.
+  hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+  // Main Hammer stuff.
+  hammer_container.on('tap swipeleft swiperight', function(event) {
+
+    // if (event.type == 'swiperight') {
+    if (true) {
+      // Increment.
+      count = (count + 1) % limit;
+      count = count == 0 ? count += 1 : count;
+    }
+    else {
+      // Decrement.
+      count = (count + limit - 1) % limit;
+      count = count == 0 ? count = (limit - 1) : count;
+    }
+
+    // Determine the the index value of the clicked element.
+    var clicked_element = $(event.target).closest('div.element').index();
+    // $(event.target).closest('div.element').css('backgroundColor', '#cfc');
+
+    // Determine the control elemement for the clicked element.
+    // var control_element = $('div.wrapper input[type=radio][id="element_' + count + '"]');
+    var control_element = $('div.wrapper input[type=radio][id="element_' + Math.abs(clicked_element + 1) + '"]');
+
+    // Toggle the 'checked' value of the control element.
+    control_element.prop('checked', !$(control_element).attr('checked'));
+
+    // Log stuff for debugging.
+    console.log(event.type + ' | ' + clicked_element + ' | ' + count + ' | ' + limit);
+
+  });
+
+  // var hammer_wrapper = new Hammer($('div.wrapper')[0]);
+  // hammer_wrapper.on('tap', function(event) {
+  //   var element = $('div.wrapper input[type=checkbox][id*="element_"]');
+  //   $(element).prop('checked', !$(element).attr('checked'));
+  //   // console.log(event.type);
+  // });
+
+  // var hammer_container = new Hammer($('div.container')[0]);
+  // // var hammer_container = new Hammer($('div.element')[0]);
+  // hammer_container.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+  // hammer_container.on('swipeleft', function(event) {
+  //   var element_selector = 'div.wrapper input[type=radio][id="element_1"]';
+  //   var element = $(element_selector);
+  //   $(element).prop('checked', !$(element).attr('checked'));
+  //   console.log(event.target.className + ' - ' + event.type);
+  // });
+
+  // hammer_container.on('swiperight', function(event) {
+  //   var element_selector = 'div.wrapper input[type=radio][id="element_2"]';
+  //   var element = $(element_selector);
+  //   var elements = $('div.wrapper input[type=radio][id*="element_"]');
+  //   console.log(elements.length);
+  //   $(element).prop('checked', !$(element).attr('checked'));
+  //   console.log(event.target.className + ' - ' + event.type);
+  // });
 
 });
